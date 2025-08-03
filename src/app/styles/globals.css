@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "./font-family.css";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, luxury;
+}
+
+/* Let daisyUI luxury theme handle colors */
+p {
+  font-family: "Monserrat", sans-serif;
+}

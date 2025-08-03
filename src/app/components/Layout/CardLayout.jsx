@@ -16,12 +16,12 @@ function RenderImage({ src }) {
 }
 
 function RenderText({ children }) {
-  return <div className="p-4 bg-white h-full">{children}</div>;
+  return <div className="p-4 h-full">{children}</div>;
 }
 
 export default function CardLayout({ isLeft = false, image, children }) {
   return (
-    <div className="w-full bg-white text-black grid grid-cols-2">
+    <div className="w-full grid grid-cols-2">
       {isLeft ? (
         <>
           <RenderImage src={image} />

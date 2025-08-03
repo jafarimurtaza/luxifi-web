@@ -1,0 +1,41 @@
+/*  -----------------------------------------------------> start fonts <--------------------------------------------- */
+@font-face {
+    font-family: "Filosofia Italic";
+    src: url("/fonts/Filosofia-Italic.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Filosofia Regular";
+    src: url("/fonts/Filosofia\ Regular\ \(1\).otf");
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Monserrat */
+@font-face {
+    font-family: "Monserrat";
+    src: url("/fonts/Metropolis-SemiBold.otf");
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.filosofiaRegular {
+    font-family: "Filosofia Regular", serif;
+}
+
+.filosofiaItalic {
+    font-family: "Filosofia Italic", serif;
+}
+
+
+.monserrat-bold {
+    font-family: "Monserrat", sans-serif;
+    font-weight: 900;
+}
+
+
+.monserrat {
+    font-family: "Monserrat", sans-serif;
+}
