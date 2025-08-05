@@ -10,3 +10,29 @@
 p {
   font-family: "Monserrat", sans-serif;
 }
+
+
+
+
+
+
+
+
+/* my code  */
+@keyframes lux-glow {
+  0% {
+    box-shadow: 0 0 0 0 #eab308, 0 0 20px 5px rgba(234,179,8,0.3);
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(234,179,8,0.1), 0 0 40px 10px rgba(234,179,8,0.2);
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 0 40px rgba(234,179,8,0), 0 0 60px 15px rgba(234,179,8,0);
+    opacity: 0;
+  }
+}
+.animate-lux-glow {
+  animation: lux-glow 2s infinite;
+}
