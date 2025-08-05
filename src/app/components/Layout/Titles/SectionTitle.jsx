@@ -19,7 +19,7 @@ export default function SectionTitle({ title, subTitle = "" }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-16"
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16"
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight text-primary uppercase">
         {title}

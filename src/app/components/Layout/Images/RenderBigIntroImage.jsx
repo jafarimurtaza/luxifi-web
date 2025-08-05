@@ -10,6 +10,7 @@ export default function RenderBigIntroImage({ src }) {
         fill
         className="object-contain"
         priority
+        style={{ filter: "hue-rotate(45deg)" }}
         sizes="(max-width: 640px) 100vw, (max-width: 1280px) 90vw, 1800px"
       />
     </div>
