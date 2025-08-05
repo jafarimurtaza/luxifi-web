@@ -55,7 +55,7 @@ export default function FAQComponent({
               <motion.span 
                 animate={{ rotate: openIndex === index ? 180 : 0 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="text-primary text-xl sm:text-2xl md:text-3xl flex-shrink-0 ml-3 sm:ml-4"
+                className="text-primary text-xl sm:text-2xl md:text-3xl flex-shrink-0 ml-3 sm:ml-4 cursor-pointer"
               >
                 {openIndex === index ? <FaMinus /> : <FaPlus />}
               </motion.span>

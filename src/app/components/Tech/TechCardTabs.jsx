@@ -25,7 +25,7 @@ export default function TechCardTabs({ description, features, dimensions }) {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`pb-2 font-medium text-base-content/70 hover:text-primary transition-colors ${
+            className={`pb-2 font-medium text-base-content/70 hover:text-primary transition-colors cursor-pointer uppercase ${
               activeTab === tab ? 'border-b-2 border-primary text-primary' : ''
             }`}
           >
