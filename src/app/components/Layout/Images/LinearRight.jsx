@@ -13,7 +13,7 @@ export default function LinearRight() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="w-full absolute left-0 right-0 -mt-12"
+      className="w-full relative left-0 right-0"
     >
       <Image
         src="/images/tech/linear2.svg"
