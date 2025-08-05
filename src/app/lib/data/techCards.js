@@ -4,11 +4,10 @@ import {
   FaCloud,
   FaServer,
   FaCamera,
-  FaVideo,
   FaTv,
   FaShieldAlt,
   FaDoorOpen,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 export const techCards = [
   {
@@ -21,7 +20,7 @@ export const techCards = [
     dimensions:
       "What It Helps:\n• Eliminates clutter from extenders and cables\n• Keeps performance high in rooms that need strong WiFi\n• Lets you hardwire smart TVs, gaming consoles, and desktops\n\nWhere It Works:\n• Bedrooms, offices, media rooms, condos, apartments",
     features:
-      "What It Does:\n• WiFi 6 technology\n• 4 built-in gigabit ethernet ports\n• Low profile, less than 1\" protrusion\n• Easy to install",
+      'What It Does:\n• WiFi 6 technology\n• 4 built-in gigabit ethernet ports\n• Low profile, less than 1" protrusion\n• Easy to install',
     isLeft: true,
   },
   {
