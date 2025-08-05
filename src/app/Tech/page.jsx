@@ -1,12 +1,13 @@
 import HeroSection from "@/app/components/Tech/HeroSection";
 import TechSection from "@/app/components/Tech/TechSection";
-import Container from "../components/Layout/Container";
+import FAQSection from "../components/Tech/FAQ/FAQSection";
 
 export default function Tech() {
   return (
-    <Container>
+    <div>
       <HeroSection />
       <TechSection />
-    </Container>
+      <FAQSection />
+    </div>
   );
 }
