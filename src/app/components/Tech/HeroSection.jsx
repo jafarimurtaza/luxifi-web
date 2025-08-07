@@ -1,36 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
 import SectionTitle from "../Layout/Titles/SectionTitle";
 import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
+import LinearLeft from "../Layout/Images/LinearLeft";
+import Description from "../Layout/Descriptions/Description";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center px-4 sm:px-6 lg:px-8 md:min-h-screen md:justify-center overflow-hidden">
+    <section className="relative flex flex-col items-center md:min-h-screen md:justify-center">
       <SectionTitle title="next level wifi" subTitle="tailored for you" />
+      <ul className="flex flex-col items-center justify-center gap-4 w-full text-left text-2xl font-bold list-disc">
+        <li>Engineered to Perform.</li>
+        <li>Installed to Disappear.</li>
+        <li>Loved for the Experience.</li>
+      </ul>
+      <Description description="Every product and service we offer is designed to give you one thing: effortless connection — everywhere in your home." />
 
-      {/* Hero Image */}
       <RenderBigIntroImage src="/images/tech/office-graphic.jpg" />
-
-      {/* Linear graphic for smaller screens */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="w-full max-w-[1000px] mt-8 block max-[1000px]:block min-[1001px]:hidden"
-      >
-        <Image
-          src="/images/tech/linear1.png"
-          alt="linear image"
-          width={1800}
-          height={500}
-          className="w-full h-auto object-contain"
-          priority
-          sizes="100vw"
-        />
-      </motion.div>
+      <LinearLeft />
     </section>
   );
 }
