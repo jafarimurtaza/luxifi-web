@@ -1,16 +1,83 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Description from "../../Layout/Descriptions/Description";
 
-export default function FAQComponent({ title = "FAQ", faqs = [] }) {
-  const [openIndex, setOpenIndex] = useState(null);
+function FAQItem({ isOpen, onToggle, question, answer, delay }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay }}
+      className="border-b border-base-content/40 pb-3"
+    >
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="flex justify-between items-start w-full text-left py-2 cursor-pointer group"
+      >
+        <h4
+          className="max-w-[85%] leading-snug text-primary font-semibold text-base sm:text-lg md:text-xl lg:text-2xl
+          group-hover:text-primary transition-colors"
+        >
+          {question}
+        </h4>
+        <motion.span
+          aria-hidden="true"
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="ml-3 text-primary text-lg sm:text-xl flex-shrink-0"
+        >
+          {isOpen ? <FaMinus /> : <FaPlus />}
+        </motion.span>
+      </button>
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.4 }}
+            className="overflow-hidden"
+          >
+            <Description
+              description={answer}
+              className="!text-left !px-1 !my-2"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
+export default function FAQComponent({ title = "FAQ", faqs = [], categories = [] }) {
+  // Store open FAQ index per category key or 'default' for ungrouped FAQs
+  const [openIndex, setOpenIndex] = useState({});
+
+  const toggleFAQ = (catKey, faqIndex) => {
+    setOpenIndex((prev) => ({
+      ...prev,
+      [catKey]: prev[catKey] === faqIndex ? null : faqIndex,
+    }));
   };
+
+  const renderFAQs = (items, catKey = "default") =>
+    items.map((faq, idx) => (
+      <FAQItem
+        key={`${catKey}-${idx}`}
+        isOpen={openIndex[catKey] === idx}
+        onToggle={() => toggleFAQ(catKey, idx)}
+        question={faq.question}
+        answer={faq.answer}
+        delay={idx * 0.1}
+      />
+    ));
 
   return (
     <section className="bg-base-100 text-base-content py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
@@ -19,59 +86,32 @@ export default function FAQComponent({ title = "FAQ", faqs = [] }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-6 sm:mb-8 md:mb-10 text-left"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-10 text-left"
       >
         {title}
       </motion.h2>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="space-y-2 sm:space-y-3 md:space-y-4"
-      >
-        {faqs?.map((faq, index) => (
-          <motion.div
-            key={`faq-${index}-id-${faq.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="border-b border-base-content/50 pb-3 sm:pb-4 transition-all duration-300"
-          >
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="flex justify-between items-start w-full text-left group py-2 sm:py-3 cursor-pointer"
+      {categories.length > 0 ? (
+        categories.map((category, idx) => (
+          <div key={`category-${idx}`} className="mb-10">
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-4"
             >
-              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-primary group-hover:text-primary transition-colors max-w-[85%] sm:max-w-[90%] leading-relaxed">
-                {faq.question}
-              </h3>
-              <motion.span
-                animate={{ rotate: openIndex === index ? 180 : 0 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="text-primary text-xl sm:text-2xl md:text-3xl flex-shrink-0 ml-3 sm:ml-4 cursor-pointer"
-              >
-                {openIndex === index ? <FaMinus /> : <FaPlus />}
-              </motion.span>
-            </button>
-            {openIndex === index && (
-              <motion.div
-                initial={{ opacity: 0, height: 0, y: -10 }}
-                animate={{ opacity: 1, height: "auto", y: 0 }}
-                exit={{ opacity: 0, height: 0, y: -10 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="overflow-hidden"
-              >
-                <Description
-                  description={faq.answer}
-                  className="!text-left !px-1 !my-2"
-                />
-              </motion.div>
-            )}
-          </motion.div>
-        ))}
-      </motion.div>
+              {category.title}
+            </motion.h3>
+
+            <div className="space-y-3 sm:space-y-4">
+              {renderFAQs(category.items, idx)}
+            </div>
+          </div>
+        ))
+      ) : (
+        <div className="space-y-3 sm:space-y-4">{renderFAQs(faqs)}</div>
+      )}
     </section>
   );
 }

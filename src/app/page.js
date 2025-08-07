@@ -1,4 +1,4 @@
-import CardLayout from "./components/Layout/CardLayout";
+import CardLayout from "./components/Layout/Cards/CardLayout";
 import CardTitlte from "./components/Layout/CardTitlte";
 import Container from "./components/Layout/Container";
 import Description from "./components/Layout/Descriptions/Description";

@@ -71,4 +71,74 @@ export const faqCategories = {
       },
     ],
   },
+  maintenance: {
+  title: "Luxifi Maintenance FAQ",
+  categories: [
+    {
+      title: "Maintenance Questions",
+      items: [
+        {
+          question: "Why do I need a maintenance plan if everything works now?",
+          answer:
+            "Because true luxury is never having to think about it. Our plans keep your system running smoothly behind the scenes — no drop-offs, no surprises.",
+        },
+        {
+          question: "Didn’t you already configure everything during installation?",
+          answer:
+            "Yes — and we did it right. But like any modern system, your network benefits from updates, tuning, and monitoring to stay secure and at peak performance.",
+        },
+        {
+          question: "My network is running perfectly — why change anything?",
+          answer:
+            "That’s exactly the time to maintain it. Regular checkups prevent future issues, protect your investment, and keep everything working beautifully.",
+        },
+        {
+          question: "Can I just update and manage things on my own?",
+          answer:
+            "Technically yes, but it's not about ability — it's about ease. Our plans take that responsibility off your plate, so you never have to lift a finger or worry about what’s next.",
+        },
+        {
+          question: "What if I just leave it alone and never update it?",
+          answer:
+            "Over time, performance may degrade, and vulnerabilities can appear. Updates are about protection, speed, and stability — all handled quietly with Luxifi Care.",
+        },
+        {
+          question: "Don’t most routers or mesh systems update themselves?",
+          answer:
+            "Some do — but automated updates don’t replace professional oversight. We don’t just run updates — we analyze, adjust, and optimize your network based on your actual usage and needs.",
+        },
+      ],
+    },
+    {
+      title: "Support Questions",
+      items: [
+        {
+          question: "Do Luxifi Care Plans include free support?",
+          answer:
+            "Yes — every plan includes discounted or prioritized remote support. The higher the plan, the faster the response and the deeper the diagnostics.",
+        },
+        {
+          question: "Is there a minimum charge for remote support or visits?",
+          answer:
+            "With a Care Plan, basic remote support is included. For on-site service, we keep costs clear and client-friendly — and many plans receive preferred rates.",
+        },
+      ],
+    },
+    {
+      title: "Response Time Questions",
+      items: [
+        {
+          question: "What does Rapid Response mean?",
+          answer:
+            "It means we treat your issue with urgency. You’ll get priority access to our team, faster diagnostics, and quicker resolutions — usually same-day.",
+        },
+        {
+          question: "Does Rapid Response mean someone will fix it in 2 hours?",
+          answer:
+            "We aim to address all critical issues ASAP — often within hours — but resolution time depends on the issue. The difference is: you’ll never be left waiting.",
+        },
+      ],
+    },
+  ],
+},
 }; 

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import CardLayout from '@/app/components/Layout/CardLayout';
+import CardLayout from '@/app/components/Layout/Cards/CardLayout';
 import TechCardTabs from './TechCardTabs';
 
 const itemVariants = {
