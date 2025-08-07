@@ -1,10 +1,9 @@
-
-import HomeMain from "./components/HomeMain/HomeMain";
+import HomeMain from "./components/LastHome/HomeMain";
 
 export default function Home() {
   return (
-    <div className="w-full justify-center flex ">
+    <main>
       <HomeMain />
-    </div>
+    </main>
   );
 }
