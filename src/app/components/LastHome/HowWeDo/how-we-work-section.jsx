@@ -1,40 +1,40 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { SectionLayout } from "../luxifi/section-layout"
-import { ProcessStepCard } from "./process-step-card"
+import { motion } from "framer-motion";
+import { SectionLayout } from "../luxifi/section-layout";
+import { ProcessStepCard } from "./process-step-card";
 
 export function HowWeWorkSection() {
-  const accentColor = "#FCD34D"
-
   const steps = [
     {
       stepNumber: "01.",
       title: "CONSULTATION",
-      description: "Fill out the form below to request a complimentary phone consult. We will call you at our earliest opportunity to answer questions about our products, service, price range, and approach."
+      description:
+        "Fill out the form below to request a complimentary phone consult. We will call you at our earliest opportunity to answer questions about our products, service, price range, and approach.",
     },
     {
       stepNumber: "02.",
       title: "ONSITE ASSESSMENT",
-      description: "Our implementation specialist will visit your property to assess your space, including construction materials and their impact on WiFi signal quality. We'll answer any technical questions about the installation and provide a precise project estimate."
+      description:
+        "Our implementation specialist will visit your property to assess your space, including construction materials and their impact on WiFi signal quality. We'll answer any technical questions about the installation and provide a precise project estimate.",
     },
     {
       stepNumber: "03.",
       title: "PROFESSIONAL INSTALLATION",
-      description: "Once the estimate is approved, we schedule an installation date. Installations (including wiring + hardware installation and network configuration) in finished homes are typically completed within 1-2 days."
-    }
-  ]
+      description:
+        "Once the estimate is approved, we schedule an installation date. Installations (including wiring + hardware installation and network configuration) in finished homes are typically completed within 1-2 days.",
+    },
+  ];
 
   const handleLearnMore = () => {
-    console.log("Learn More clicked for How We Work section")
+    console.log("Learn More clicked for How We Work section");
     // Add navigation or specific action here
-  }
+  };
 
   return (
     <SectionLayout backgroundColor="#0000" className="py-20">
-     
       <div className="col-span-2 text-center mb-12">
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl font-extrabold text-white mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export function HowWeWorkSection() {
         >
           HOW WE WORK
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-lg text-base-content max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,8 +75,8 @@ export function HowWeWorkSection() {
       >
         <button
           onClick={handleLearnMore}
-          className="px-10 py-4 text-lg font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-          style={{ 
+          className="px-10 py-4 text-lg cursor-pointer font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+          style={{
             backgroundColor: "transparent",
             color: "white",
             border: "1px solid white",
@@ -87,5 +87,5 @@ export function HowWeWorkSection() {
         </button>
       </motion.div>
     </SectionLayout>
-  )
+  );
 }

@@ -15,17 +15,17 @@ export default function HomeMain() {
     <main>
    
       <BackgroundPaths />
-      <WifiNightmareSection />
-      <FailedSolutions />
-      <LuxifiSolution />
        <HeroSection />
+      <WifiNightmareSection />
+      {/* <FailedSolutions /> */}
+      <LuxifiSolution />
       <SolidFoundationsSection />
-     
-      <LuxifiPromiseSection />
-      
       <CoreServicesSection />
-      <TestimonialsSection />
+     
+      
       <HowWeWorkSection />
+      <LuxifiPromiseSection />
+      <TestimonialsSection />
     </main>
   );
 }

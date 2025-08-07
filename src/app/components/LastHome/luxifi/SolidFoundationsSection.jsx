@@ -119,6 +119,7 @@ export function SolidFoundationsSection() {
           "Future-proof infrastructure that lasts",
         ]}
         animationDelay={0.2}
+        ctaText="learn more"
       />
     </SectionLayout>
   );

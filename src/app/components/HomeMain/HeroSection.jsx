@@ -3,7 +3,7 @@ import { WifiDevice } from "./WifiDevice";
 
 export function HeroSection() {
   return (
-    <div className="relative py-2 flex flex-col bg-black items-center justify-center min-h-[150vh] w-full overflow-hidden ">
+    <div className="relative py-2 flex flex-col bg-black items-center justify-center min-h-[30vh] w-full overflow-hidden ">
       <h1 className=" text-primary max-w-2xl text-center text-3xl font-bold md:text-3xl lg:text-4xl ">
       SEAMLESS WIFI
       </h1>

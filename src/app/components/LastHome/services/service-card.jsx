@@ -1,27 +1,28 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-import { ServiceVisual } from "./service-visual" 
+import { ServiceVisual } from "./service-visual";
+import Description from "../../Layout/Descriptions/Description";
+import CardTitlte from "../../Layout/CardTitlte";
 
-export function ServiceCard({ 
-  IconComponent, 
-  title, 
-  description, 
+export function ServiceCard({
+  IconComponent,
+  title,
+  description,
   accentColor = "#DCA54D",
-  delay = 0 
+  delay = 0,
 }) {
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleLearnMore = () => {
-    console.log(`Learn More clicked for: ${title}`)
-   
-  }
+    console.log(`Learn More clicked for: ${title}`);
+  };
 
   const handleClick = () => {
-    setIsClicked(!isClicked)
-  }
+    setIsClicked(!isClicked);
+  };
 
   return (
     <motion.div
@@ -30,23 +31,23 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: delay, ease: "easeOut" }}
-      whileHover={{ 
-        scale: 1.02, 
-        boxShadow: "0 20px 40px rgba(0,0,0,0.5), 0 0 25px rgba(255,255,255,0.05)", // Deeper shadow with subtle white glow
+      whileHover={{
+        scale: 1.02,
+        boxShadow:
+          "0 20px 40px rgba(0,0,0,0.5), 0 0 25px rgba(255,255,255,0.05)", // Deeper shadow with subtle white glow
         y: -5, // Slight lift
-        transition: { duration: 0.3 }
+        transition: { duration: 0.3 },
       }}
-      onClick={handleClick} 
+      onClick={handleClick}
     >
- 
       <motion.div
         className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{
           background: `radial-gradient(circle at 50% 0%, ${accentColor}30 0%, transparent 70%)`, // Increased opacity for stronger glow
-          filter: 'blur(80px)', 
+          filter: "blur(80px)",
           zIndex: 0,
         }}
-        animate={{ scale: [1, 1.05, 1] }} 
+        animate={{ scale: [1, 1.05, 1] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       />
 
@@ -54,60 +55,64 @@ export function ServiceCard({
         className="absolute inset-0 rounded-xl pointer-events-none z-20" // Higher z-index to be on top
         style={{
           background: `linear-gradient(45deg, transparent 0%, ${accentColor}80 20%, ${accentColor}80 80%, transparent 100%)`,
-          backgroundSize: '200% 200%', 
-          backgroundPosition: '0% 0%', 
+          backgroundSize: "200% 200%",
+          backgroundPosition: "0% 0%",
           opacity: 0,
-          padding: '2px', 
-          backgroundClip: 'content-box', 
-          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
-          WebkitMaskComposite: 'xor',
-          maskComposite: 'exclude',
+          padding: "2px",
+          backgroundClip: "content-box",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
         }}
         initial={{ opacity: 0 }}
         group-hover={{ opacity: 1 }}
-        animate={{ backgroundPosition: ['0% 0%', '100% 100%'] }} 
-        transition={{ duration: 3, repeat: Infinity, ease: "linear" }} 
+        animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
       />
 
-    
       <motion.div
-        className="absolute inset-0 rounded-xl pointer-events-none z-30" 
+        className="absolute inset-0 rounded-xl pointer-events-none z-30"
         style={{
-          border: `2px solid ${accentColor}`, 
+          border: `2px solid ${accentColor}`,
           boxShadow: `0 0 15px ${accentColor}80`,
         }}
         initial={{ opacity: 0, scale: 0.98 }}
-        animate={isClicked ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98 }}
+        animate={
+          isClicked ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98 }
+        }
         transition={{ duration: 0.3, ease: "easeOut" }}
       />
 
-     
-      <motion.div 
+      <motion.div
         className="relative w-28 h-28 flex items-center justify-center mb-4 z-10"
-        style={{ 
+        style={{
           background: `radial-gradient(circle at center, ${accentColor}10 0%, transparent 100%)`, // Very subtle background for the visual container
         }}
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: delay + 0.2, duration: 0.6, ease: "easeOut" }}
-        whileHover={{ scale: 1.05 }} 
+        whileHover={{ scale: 1.05 }}
       >
-        <ServiceVisual IconComponent={IconComponent} accentColor={accentColor} />
+        <ServiceVisual
+          IconComponent={IconComponent}
+          accentColor={accentColor}
+        />
       </motion.div>
 
-      <h3 className="text-3xl font-bold text-white mb-2 z-10">{title}</h3>
-      <p className=" text-base-content leading-relaxed flex-grow z-10">{description}</p>
+      <CardTitlte title={title} />
+
+      <Description description={description} />
       <button
         onClick={handleLearnMore}
-        className="px-8 btn btn-primary py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg z-10"
-        style={{ 
-          
+        className="px-8 btn mt-auto btn-primary py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg z-10"
+        style={{
           color: "#0A1128",
-          boxShadow: `0 6px 18px ${accentColor}40`
+          boxShadow: `0 6px 18px ${accentColor}40`,
         }}
       >
         LEARN MORE
       </button>
     </motion.div>
-  )
+  );
 }

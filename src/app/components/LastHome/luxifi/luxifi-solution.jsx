@@ -1,17 +1,18 @@
-"use client"
+"use client";
 
-import { SectionLayout } from "./section-layout"
-import { ContentBlock } from "./content-block"
-import { WifiVisualization } from "./wifi-visualization"
+import { SectionLayout } from "./section-layout";
+import { ContentBlock } from "./content-block";
+import { WifiVisualization } from "./wifi-visualization";
 
 export function LuxifiSolution() {
   const handleGetStarted = () => {
-
-    console.log("Get Started clicked")
-  }
+    console.log("Get Started clicked");
+  };
 
   return (
-    <SectionLayout backgroundColor="#000">
+    <SectionLayout backgroundColor="#000" reverse>
+      {/* Visualization */}
+      <WifiVisualization type="luxifi-solution" />
       {/* Content */}
       <ContentBlock
         subtitle="THE SOLUTION?"
@@ -21,9 +22,6 @@ export function LuxifiSolution() {
         ctaAction={handleGetStarted}
         animationDelay={0.1}
       />
-
-      {/* Visualization */}
-      <WifiVisualization type="luxifi-solution" />
     </SectionLayout>
-  )
+  );
 }

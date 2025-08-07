@@ -2,6 +2,8 @@ import React from "react";
 
 export default function CardTitlte({ title }) {
   return (
-    <div className="text-3xl md:text-4xl uppercase font-bold p-4">{title}</div>
+    <h3 className="text-2xl md:text-3xl uppercase font-bold p-4 text-white">
+      {title}
+    </h3>
   );
 }

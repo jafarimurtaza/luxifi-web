@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionLayout } from "./luxifi/section-layout";
+import Description from "../Layout/Descriptions/Description";
 
 const testimonials = [
   {
@@ -141,9 +142,8 @@ export function TestimonialsSection() {
               </motion.span>
             </div>
 
-            <p className="relative z-10 text-base-content mb-4 line-clamp-3 italic">
-              "{testimonial.text}"
-            </p>
+            <Description description={testimonial.text} />
+
             <div className="relative z-10 border-t border-white/10 pt-4">
               <div className="font-bold text-white">{testimonial.name}</div>
               <div className="text-sm text-primary/70">{testimonial.title}</div>
