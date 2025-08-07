@@ -1,7 +1,6 @@
 "use client";
 
 import CountUp from "react-countup";
-import PropTypes from "prop-types";
 
 export default function PriceCard({ plan, price, isAnnual }) {
   const billingLabel = isAnnual ? " / year" : " / mo";
@@ -17,15 +16,13 @@ export default function PriceCard({ plan, price, isAnnual }) {
       {price !== null ? (
         <div className="mb-6 flex items-baseline whitespace-nowrap rounded-md bg-white px-4 py-2 text-2xl font-extrabold text-black w-fit">
           <span className="mr-1">$</span>
-          <CountUp
-            end={price}
-            duration={0.6}
-            preserveValue
-          />
+          <CountUp end={price} duration={0.6} preserveValue />
           <span className="ml-1 text-sm font-normal">{billingLabel}</span>
         </div>
       ) : (
-        <div className="mb-6 text-xl font-extrabold text-white">Custom Quote</div>
+        <div className="mb-6 text-xl font-extrabold text-white">
+          Custom Quote
+        </div>
       )}
 
       {/* Description */}

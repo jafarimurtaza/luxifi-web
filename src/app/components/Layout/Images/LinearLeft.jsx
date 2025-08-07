@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
  * Reusable LinearLeft component
  */
 
-export default function LinearRight() {
+export default function LinearLeft() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -14,6 +14,7 @@ export default function LinearRight() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="w-full relative left-0 right-0"
+      style={{ filter: "hue-rotate(192deg)" }}
     >
       <Image
         src="/images/tech/linear2.svg"

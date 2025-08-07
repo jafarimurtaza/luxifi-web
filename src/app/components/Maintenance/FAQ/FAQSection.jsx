@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import FAQComponent from '@/app/components/Tech/FAQ/FAQComponent';
-import { faqCategories } from '@/app/lib/data/faqData';
+import FAQComponent from "../../Tech/FAQ/FAQComponent";
+import { faqCategories } from "../../../lib/data/faqData";
 
 export default function FAQSection() {
   return (

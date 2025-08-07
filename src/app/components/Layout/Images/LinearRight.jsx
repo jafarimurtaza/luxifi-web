@@ -14,6 +14,7 @@ export default function LinearRight() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
       className="w-full relative left-0 right-0"
+      style={{ filter: "hue-rotate(192deg)", rotate: "179deg" }}
     >
       <Image
         src="/images/tech/linear2.svg"

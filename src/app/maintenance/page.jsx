@@ -1,9 +1,8 @@
-import HeroSection from "@/app/components/Maintenance/HeroSection";
-import PricingSection from "../components/Maintenance/Pricing/PricingSection";
 import FAQSection from "../components/Maintenance/FAQ/FAQSection";
+import HeroSection from "../components/Maintenance/HeroSection";
+import PricingSection from "../components/Maintenance/Pricing/PricingSection";
 
-
-export default function Tech() {
+export default function Maintenance() {
   return (
     <div>
       <HeroSection />

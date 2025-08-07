@@ -1,20 +1,17 @@
 "use client";
 
-import SectionTitle from "../Layout/Titles/SectionTitle";
-import Description from "../Layout/Descriptions/Description";
-import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
-import LinearLeft from "../Layout/Images/LinearLeft";
 import FeatureCards from "../Layout/Cards/FeatureCards";
-import { featureCards } from "@/app/lib/data/maintenanceData";
+import Description from "../Layout/Descriptions/Description";
+import LinearRight from "../Layout/Images/LinearRight";
+import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
+import SectionTitle from "../Layout/Titles/SectionTitle";
+import { featureCards } from "../../lib/data/maintenanceData";
 
 export default function HeroSection() {
   return (
     <section className="relative px-4 flex flex-col items-center justify-center md:min-h-screen">
       {/* Section Title */}
-      <SectionTitle
-        title="Effortless Performance,"
-        subTitle="Always On"
-      />
+      <SectionTitle title="Effortless Performance," subTitle="Always On" />
       {/* Description Paragraph */}
       <Description
         description={`We maintain it, so you never have to think about it.
@@ -27,7 +24,7 @@ Because real luxury isn’t just about speed — it’s about never having to as
       {/* Hero Image */}
       <RenderBigIntroImage src="/images/maintenance/maintenace-hero-image.webp" />
       {/* Decorative Layer */}
-      <LinearLeft />
+      <LinearRight />
     </section>
   );
 }

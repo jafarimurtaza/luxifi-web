@@ -1,7 +1,8 @@
 "use client";
 
-import { techCards } from "@/app/lib/data/techCards";
+import { techCards } from "../../lib/data/techCards";
 import Container from "../Layout/Container";
+import LinearLeft from "../Layout/Images/LinearLeft";
 import LinearRight from "../Layout/Images/LinearRight";
 import SectionTitle from "../Layout/Titles/SectionTitle";
 import TechCard from "./TechCard";
@@ -39,8 +40,6 @@ export default function TechSection() {
         </div>
       </section>
 
-      <LinearRight />
-
       {/* INTEGRATED SECURITY & VIDEO */}
       <section className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24">
         <div className="relative z-10">
@@ -52,6 +51,7 @@ export default function TechSection() {
           </Container>
         </div>
       </section>
+      <LinearLeft />
     </>
   );
 }

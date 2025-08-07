@@ -23,7 +23,6 @@ export default function HeroSection() {
       <FeatureCards features={features} />
 
       <RenderBigIntroImage src="/images/tech/office-graphic.jpg" />
-      <LinearLeft />
     </section>
   );
 }

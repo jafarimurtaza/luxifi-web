@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import CardLayout from '@/app/components/Layout/Cards/CardLayout';
-import TechCardTabs from './TechCardTabs';
+import CardLayout from "../Layout/Cards/CardLayout";
+import TechCardTabs from "./TechCardTabs";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
@@ -10,7 +9,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.8, ease: 'easeOut' },
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 

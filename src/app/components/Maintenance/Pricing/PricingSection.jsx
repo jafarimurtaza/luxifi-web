@@ -4,10 +4,10 @@ import { useState } from "react";
 import Container from "../../Layout/Container";
 import SectionTitle from "../../Layout/Titles/SectionTitle";
 import LinearLeft from "../../Layout/Images/LinearLeft";
-import PriceCard from "@/app/components/Maintenance/Pricing/PriceCard";
-import BillingToggle from "@/app/components/Maintenance/Pricing/BillingToggle";
-import { commonFeatures, plans } from "@/app/lib/data/maintenanceData";
+import PriceCard from "./PriceCard";
+import { commonFeatures, plans } from "../../../lib/data/maintenanceData";
 import FeaturesList from "../../Layout/Cards/FeaturesList";
+import BillingToggle from "./BillingToggle";
 
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true);

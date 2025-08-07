@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import FAQComponent from './FAQComponent';
-import { faqCategories } from '@/app/lib/data/faqData';
+import FAQComponent from "./FAQComponent";
+import { faqCategories } from "../../../lib/data/faqData";
 
 export default function FAQSection() {
   return (
-    <FAQComponent 
+    <FAQComponent
       title={faqCategories.tech.title}
       faqs={faqCategories.tech.faqs}
     />

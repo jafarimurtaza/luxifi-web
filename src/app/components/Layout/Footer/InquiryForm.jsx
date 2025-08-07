@@ -9,7 +9,7 @@ export function InquiryForm() {
           <input
             id="firstName"
             placeholder="First Name*"
-            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2"
+            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 w-full"
           />
         </div>
         <div className="relative">
@@ -19,39 +19,42 @@ export function InquiryForm() {
           <input
             id="lastName"
             placeholder="Last Name*"
-            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2"
+            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 w-full"
           />
         </div>
       </div>
-      <div className="relative">
-        <label htmlFor="email" className="sr-only">
-          Email
-        </label>
-        <input
-          id="email"
-          type="email"
-          placeholder="Email*"
-          className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2"
-        />
+      <div className="flex items-center w-full gap-4">
+        <div className="relative w-full">
+          <label htmlFor="email" className="sr-only">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email*"
+            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 w-full"
+          />
+        </div>
+        <div className="relative w-full">
+          <label htmlFor="serviceAddress" className="sr-only">
+            Service Address
+          </label>
+          <input
+            id="serviceAddress"
+            placeholder="Service Address*"
+            className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 w-full"
+          />
+        </div>
       </div>
-      <div className="relative">
-        <label htmlFor="serviceAddress" className="sr-only">
-          Service Address
-        </label>
-        <input
-          id="serviceAddress"
-          placeholder="Service Address*"
-          className="bg-transparent border-0 border-b  focus:border-b-2 focus:border-primary focus:outline-none  border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2"
-        />
-      </div>
-      <div className="relative">
+
+      <div className="relative w-full">
         <label htmlFor="comments" className="sr-only">
           Comments
         </label>
         <textarea
           id="comments"
-          placeholder="Comments"
-          className="bg-transparent border-b border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 min-h-[100px] resize-y pr-6"
+          placeholder="Your message here..."
+          className="bg-transparent w-full border-b border-gray-600 rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 py-2 min-h-[100px] resize-y pr-6"
         />
 
         <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-gray-600 transform rotate-45 translate-x-1/2 translate-y-1/2 pointer-events-none" />

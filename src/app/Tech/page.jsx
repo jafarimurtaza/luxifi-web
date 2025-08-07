@@ -1,7 +1,6 @@
-import HeroSection from "@/app/components/Tech/HeroSection";
-import TechSection from "@/app/components/Tech/TechSection";
+import TechSection from "../components/Tech/TechSection";
 import FAQSection from "../components/Tech/FAQ/FAQSection";
-
+import HeroSection from "../components/Tech/HeroSection";
 export default function Tech() {
   return (
     <div>
