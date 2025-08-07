@@ -9,9 +9,11 @@ import { LuxifiPromiseSection } from "./promise/luxifi-promise-section";
 import { TestimonialsSection } from "./testimonials-section";
 import { HeroSection } from "../HomeMain/HeroSection";
 
+
 export default function HomeMain() {
   return (
     <main>
+   
       <BackgroundPaths />
       <WifiNightmareSection />
       <FailedSolutions />
