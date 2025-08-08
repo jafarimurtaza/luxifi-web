@@ -11,7 +11,7 @@ const descriptionVariants = {
     transition: { duration: 0.8, ease: "easeOut" },
   },
 };
-// relative z-10 text-base-content text-base leading-relaxed flex-grow
+
 export default function Description({ subtitle, description, className = "" }) {
   return (
     <motion.div

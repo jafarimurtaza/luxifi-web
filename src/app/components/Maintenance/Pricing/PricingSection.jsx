@@ -1,13 +1,17 @@
 "use client";
 
+import { Construction, HandFist, Satellite } from "lucide-react";
 import { useState } from "react";
-import Container from "../../Layout/Container";
-import SectionTitle from "../../Layout/Titles/SectionTitle";
-import LinearLeft from "../../Layout/Images/LinearLeft";
-import PriceCard from "./PriceCard";
-import { commonFeatures, plans } from "../../../lib/data/maintenanceData";
+import {
+  commonFeatures,
+  plans
+} from "../../../lib/data/maintenanceData";
 import FeaturesList from "../../Layout/Cards/FeaturesList";
+import Container from "../../Layout/Container";
+import LinearLeft from "../../Layout/Images/LinearLeft";
+import SectionTitle from "../../Layout/Titles/SectionTitle";
 import BillingToggle from "./BillingToggle";
+import PriceCard from "./PriceCard";
 import Table from "./Table";
 
 export default function PricingSection() {
@@ -18,6 +22,21 @@ export default function PricingSection() {
     <>
       <Container>
         <SectionTitle title="🌟 Luxifi Care Plans" />
+        {/* <FeatureCards features={featureCards} /> */}
+        <ul className="flex flex-col gap-2 max-w-6xl mx-auto list-disc list-inside text-2xl">
+          <li className="flex items-center gap-2">
+            {" "}
+            <HandFist /> Expert support
+          </li>
+          <li className="flex items-center gap-2">
+            {" "}
+            <Construction /> Proactive maintenance
+          </li>
+          <li className="flex items-center gap-2">
+            {" "}
+            <Satellite /> Long-term peace of mind
+          </li>
+        </ul>
         <FeaturesList features={commonFeatures} />
         <BillingToggle isAnnual={isAnnual} onToggle={toggleBillingPeriod} />
 
