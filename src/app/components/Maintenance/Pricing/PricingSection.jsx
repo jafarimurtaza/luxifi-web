@@ -8,6 +8,7 @@ import PriceCard from "./PriceCard";
 import { commonFeatures, plans } from "../../../lib/data/maintenanceData";
 import FeaturesList from "../../Layout/Cards/FeaturesList";
 import BillingToggle from "./BillingToggle";
+import Table from "./Table";
 
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true);
@@ -35,6 +36,7 @@ export default function PricingSection() {
           })}
         </div>
       </Container>
+      <Table />
       <LinearLeft />
     </>
   );
