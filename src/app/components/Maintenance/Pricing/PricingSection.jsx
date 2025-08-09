@@ -13,6 +13,14 @@ import SectionTitle from "../../Layout/Titles/SectionTitle";
 import BillingToggle from "./BillingToggle";
 import PriceCard from "./PriceCard";
 import Table from "./Table";
+import FeatureCards from "../../Layout/Cards/FeatureCards";
+
+
+const featureCards = [
+  { title: "Expert Support" },
+  { title: "Proactive Maintenance" },
+  { title: "Long-term Peace of Mind" },
+];
 
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true);
@@ -22,8 +30,8 @@ export default function PricingSection() {
     <>
       <Container>
         <SectionTitle title="🌟 Luxifi Care Plans" />
-        {/* <FeatureCards features={featureCards} /> */}
-        <ul className="flex flex-col gap-2 max-w-6xl mx-auto list-disc list-inside text-2xl">
+        <FeatureCards features={featureCards} />
+        {/* <ul className="flex flex-col gap-2 max-w-6xl mx-auto list-disc list-inside text-2xl">
           <li className="flex items-center gap-2">
             {" "}
             <HandFist /> Expert support
@@ -36,7 +44,7 @@ export default function PricingSection() {
             {" "}
             <Satellite /> Long-term peace of mind
           </li>
-        </ul>
+        </ul> */}
         <FeaturesList features={commonFeatures} />
         <BillingToggle isAnnual={isAnnual} onToggle={toggleBillingPeriod} />
 
