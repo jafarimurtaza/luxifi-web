@@ -4,6 +4,7 @@ import Description from "../Layout/Descriptions/Description";
 import LinearRight from "../Layout/Images/LinearRight";
 import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
 import SectionTitle from "../Layout/Titles/SectionTitle";
+import RenderSectionVideo from "../Layout/Video/RenderSectionVideo";
 
 export default function HeroSection() {
   return (
@@ -17,10 +18,8 @@ export default function HeroSection() {
 Whether you're streaming, working, or simply living, your system stays protected, updated, and performing at its peak — without a single tech headache.`}
       />
       <Description description="Because real luxury isn’t just about speed — it’s about never having to ask." />
-      {/* Feature Cards */}
-      {/* Hero Image */}
-      <RenderBigIntroImage src="/images/maintenance/maintenace-hero-image.webp" />
-      {/* Decorative Layer */}
+
+      {/* <RenderSectionVideo videoPath="/videos/U6+.mp4" /> */}
       <LinearRight />
     </section>
   );

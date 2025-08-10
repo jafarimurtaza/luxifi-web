@@ -29,7 +29,7 @@ export default function LuxifiPromiseSection() {
   const visibleItems = promiseItems.slice(currentIndex, currentIndex + 5);
 
   return (
-    <div className="min-h-screen container px-15 bg-black text-primary flex items-center justify-center">
+    <div className="min-h-screen container mx-auto px-15 bg-black text-primary flex items-center justify-center">
       <div className="w-full max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-6">
@@ -99,7 +99,9 @@ export default function LuxifiPromiseSection() {
                   setIsAutoPlaying(false);
                 }}
                 className={`w-3 h-3 rounded-full ${
-                  idx === currentIndex ? "text-base-content" : "bg-yellow-400/30"
+                  idx === currentIndex
+                    ? "text-base-content"
+                    : "bg-yellow-400/30"
                 }`}
               />
             ))}
