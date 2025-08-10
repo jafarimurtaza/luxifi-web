@@ -1,11 +1,12 @@
 "use client"
 
 import { workSteps } from "../../../lib/data/homedata"
+import LinearRight from "../../Layout/Images/LinearRight"
 import { StepCard } from "./StepCard"
 
 export default function HowWeWork() {
   return (
-    <div className="min-h-screen bg-black text-white py-20">
+    <div className="min-h-screen bg-black text-white py-20 px-3">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -35,6 +36,7 @@ export default function HowWeWork() {
           </button>
         </div>
       </div>
+        {/* <LinearRight/> */}
     </div>
   )
 }

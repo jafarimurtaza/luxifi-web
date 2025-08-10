@@ -124,6 +124,7 @@ export default function WifiShowcase() {
             isTransitioning={isTransitioning}
           />
         </div>
+        
       </div>
     </div>
   )

@@ -3,6 +3,7 @@
 import { services } from "../../../lib/data/homedata"
 import { useState, useEffect, useRef } from "react"
 import { ServiceCard } from "./ServiceCard"
+import LinearRight from "../../Layout/Images/LinearRight"
 
 export default function CoreServicesSection() {
   const [visibleServices, setVisibleServices] = useState(new Set())
@@ -28,8 +29,9 @@ export default function CoreServicesSection() {
   }, [])
 
   return (
-    <div className="min-h-screen text-primary pt-3">
-      <div className="container mx-auto px-6 " ref={sectionRef}>
+    <div className="min-h-screen text-primary pt-3 px-3">
+        <LinearRight />
+      <div className="container mx-auto px-6 py-18 " ref={sectionRef}>
         {/* Section Header */}
         <div className="text-center mb-0">
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight animate-fade-in-up">

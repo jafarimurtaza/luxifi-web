@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import LinearRight from "../../Layout/Images/LinearRight"
 
 export default function SolutionSection() {
   const [animationKey, setAnimationKey] = useState(0)
@@ -182,6 +183,9 @@ export default function SolutionSection() {
           </div>
         </div>
       </div>
+
+
+     
     </div>
   )
 }
