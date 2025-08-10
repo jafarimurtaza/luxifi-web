@@ -1,4 +1,5 @@
-import HomeMain from "./components/LastHome/HomeMain";
+import HomeMain from "./components/HomeMain/HomeMain";
+
 
 export default function Home() {
   return (
