@@ -22,11 +22,11 @@ export default function Description({ subtitle, description, className = "" }) {
       className={`max-w-6xl p-2 ${className}`}
     >
       {subtitle && (
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-base-content/80 font-light leading-relaxed mb-4">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-base-content font-light leading-relaxed mb-4">
           {subtitle}
         </p>
       )}
-      <p className="text-base md:text-lg lg:text-xl text-base-content/70 leading-relaxed">
+      <p className="text-base md:text-lg lg:text-xl text-base-content leading-relaxed">
         {description}
       </p>
     </motion.div>

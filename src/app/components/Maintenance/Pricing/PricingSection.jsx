@@ -12,8 +12,9 @@ import LinearLeft from "../../Layout/Images/LinearLeft";
 import SectionTitle from "../../Layout/Titles/SectionTitle";
 import BillingToggle from "./BillingToggle";
 import PriceCard from "./PriceCard";
-import Table from "./Table";
+import Table from "../../Layout/Table/Table";
 import FeatureCards from "../../Layout/Cards/FeatureCards";
+import { maintenanceTableData } from "../../../lib/data/maintenanceTableData";
 
 
 const featureCards = [
@@ -63,7 +64,7 @@ export default function PricingSection() {
           })}
         </div>
       </Container>
-      <Table />
+      <Table title="The Luxifi Plan" planData={maintenanceTableData}/>
       <LinearLeft />
     </>
   );
