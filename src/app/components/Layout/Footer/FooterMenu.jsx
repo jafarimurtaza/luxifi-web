@@ -14,8 +14,8 @@ export function FooterMenu() {
   return (
     <footer className="bg-background text-foreground py-8 px-8 md:px-12 lg:px-16 xl:px-20 border-t border-gray-800">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6">
-        <Link href="mailto:hello@brilliantconnectivity.com" className="text-gray-400 hover:underline">
-          hello@brilliantconnectivity.com
+        <Link href="mailto:hello@luxifi.us" className="text-gray-400 hover:underline">
+          hello@luxifi.us
         </Link>
         <nav className="flex flex-wrap justify-center gap-6 text-sm font-medium">
           {navItems.map(item => (
@@ -26,7 +26,7 @@ export function FooterMenu() {
         </nav>
         <Link href="tel:+16282363433" className="flex items-center gap-2 text-gray-400 hover:underline">
           <Phone className="h-4 w-4" />
-          <span>Call us at +1628 236 3433</span>
+          <span>Call us at 832 810 4045</span>
         </Link>
       </div>
 

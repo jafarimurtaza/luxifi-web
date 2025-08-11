@@ -11,7 +11,7 @@ export default function BackgroundPaths({
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-      <RenderSectionVideo videoPath="/videos/AI Turret.mp4" />
+      <RenderSectionVideo videoPath="/videos/home-page-video.mp4" />
       <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
         <motion.div
           initial={{ opacity: 0 }}
