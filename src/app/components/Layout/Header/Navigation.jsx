@@ -33,10 +33,7 @@ export default function Navigation() {
       label: "Maintenance",
       href: "/maintenance",
     },
-    {
-      label: "Team",
-      href: "/team",
-    },
+
     {
       label: "Blog",
       href: "/blog",

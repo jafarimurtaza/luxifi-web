@@ -23,9 +23,9 @@ export default function SolutionSection() {
       },
       {
         id: 2,
-        x: "75%", // Right side of house roof
-        y: "30%", // On top of house structure
-        size: "240px",
+        x: "70%", // Right side of house roof
+        y: "40%", // On top of house structure
+        size: "440px",
         innerSize: "210px",
         color: "#DCA54D",
         ringColor: "#DCA54D",
@@ -39,15 +39,15 @@ export default function SolutionSection() {
         color: "#DCA54D",
         ringColor: "#DCA54D",
       },
-      {
-        id: 4,
-        x: "40%", // Pool area - right side
-        y: "65%", // Pool position
-        size: "100px",
-        innerSize: "185px",
-        color: "#DCA54D",
-        ringColor: "#DCA54D",
-      },
+      // {
+      //   id: 4,
+      //   x: "40%", // Pool area - right side
+      //   y: "65%", // Pool position
+      //   size: "100px",
+      //   innerSize: "185px",
+      //   color: "#DCA54D",
+      //   ringColor: "#DCA54D",
+      // },
     ],
   }
 
@@ -80,10 +80,9 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          {/* Right Side - House with Complete Coverage INCLUDING POOL */}
           <div className="relative">
             <div className="relative w-full h-[480px]  ">
-              {/* Enhanced House Image Container */}
+        
               <div className="relative w-full h-full overflow-hidden  p-4">
                 <img
                   src="/images/home/house.webp"
@@ -91,7 +90,7 @@ export default function SolutionSection() {
                   className="w-full h-full object-contain contrast-130 saturate-110"
                
                 />
-                {/* Complete WiFi Coverage - 4 Large Signals Covering EVERYTHING */}
+               
                 <div className="absolute inset-0">
                   {luxifiSolution.signals.map((signal, index) => (
                     <div key={`${signal.id}-${animationKey}`} className="absolute inset-0">
@@ -135,8 +134,8 @@ export default function SolutionSection() {
                           style={{
                             left: signal.x,
                             top: signal.y,
-                            width: `${80 + wave * 10}px`,
-                            height: `${80 + wave * 10}px`,
+                            width: `${100 + wave * 10}px`,
+                            height: `${100 + wave * 10}px`,
                             transform: "translate(-50%, -50%)",
                             borderColor: signal.ringColor,
                             borderWidth: "1px",
@@ -170,7 +169,7 @@ export default function SolutionSection() {
                           width: "10px",
                           height: "10px",
                           transform: "translate(-50%, -50%)",
-                          backgroundColor: "rgba(255,255,255,0.95)",
+                          backgroundColor: "rgba(255, 255, 255, 0.95)",
                           animation: `signal-inner-glow 2.5s ease-in-out infinite ${index * 0.4}s`,
                           boxShadow: `0 0 15px rgba(255,255,255,0.9)`,
                         }}

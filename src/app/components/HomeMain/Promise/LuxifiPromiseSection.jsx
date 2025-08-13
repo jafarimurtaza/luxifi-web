@@ -1,113 +1,88 @@
-"use client";
-import { useState, useEffect } from "react";
-import PromiseItem from "./PromiseItem";
-import { promiseItems } from "../../../lib/data/homedata";
+"use client"
+import { useRef, useCallback } from "react"
+import { Splide, SplideSlide } from "@splidejs/react-splide"
+import "@splidejs/react-splide/css"
+import PromiseItem from "./PromiseItem"
+import { promiseItems } from "../../../lib/data/homedata"
 
 export default function LuxifiPromiseSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const maxSlides = Math.max(0, promiseItems.length - 5);
+  const splideRef = useRef(null)
 
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxSlides ? 0 : prev + 1));
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, maxSlides]);
+  const handleSlideChange = useCallback(() => {
+    if (splideRef.current) {
+      const splideInstance = splideRef.current.splide
+      const activeIndex = splideInstance.index
 
-  const nextSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev >= maxSlides ? 0 : prev + 1));
-  };
+      const slides = document.querySelectorAll(".splide__slide")
+      slides.forEach((slide) => slide.classList.remove("is-center"))
 
-  const prevSlide = () => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prev) => (prev <= 0 ? maxSlides : prev - 1));
-  };
+      const centerSlide = document.querySelector(`.splide__slide:nth-child(${activeIndex + 1})`)
+      if (centerSlide) {
+        centerSlide.classList.add("is-center")
+      }
+    }
+  }, [])
 
-  const visibleItems = promiseItems.slice(currentIndex, currentIndex + 5);
+  const splideOptions = {
+    type: "loop",
+    perPage: 5,
+    perMove: 1,
+    gap: "1.5rem",
+    autoplay: true,
+    interval: 3000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    arrows: true,
+    pagination: false,
+    focus: "center",
+    trimSpace: false,
+    breakpoints: {
+      1024: {
+        perPage: 3,
+        gap: "1rem",
+        arrows: false,
+        pagination: true,
+      },
+      768: {
+        perPage: 1,
+        gap: "0.5rem",
+        arrows: false,
+        pagination: true,
+      },
+    },
+  }
 
   return (
-    <div className="min-h-screen container mx-auto px-15 bg-black text-primary flex items-center justify-center">
-      <div className="w-full max-w-7xl mx-auto px-4">
+    <div className="container mx-auto px-8 bg-black text-white py-16 min-h-screen">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-5xl font-black mb-4">
-            <span className="text-primary">THE LUXIFI</span>
+          <h1 className="text-6xl  mb-4 font-extrabold">
+            <span className="text-base-content drop-shadow-2xl">THE LUXIFI</span>
             <br />
-            <span className="text-base-content">PROMISE</span>
+            <span className="text-primary font-black">PROMISE</span>
           </h1>
-          <p className="text-lg text-primary/80">
-            More than service — it's an experience.
-          </p>
+          <p className="text-xl text-primary font-bold">More than service — it's an experience.</p>
         </div>
 
-        {/* Slider */}
-        <div className="relative">
-          {/* Arrows */}
-          <div className="hidden lg:block ">
-            <button
-              onClick={prevSlide}
-              disabled={currentIndex === 0}
-              aria-label="previous"
-              className={`absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center border-2 border-yellow-400 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                currentIndex === 0
-                  ? "opacity-30 cursor-not-allowed"
-                  : "hover:scale-110 hover:bg-yellow-400/10"
-              }`}
-            >
-              <span className="text-yellow-400 text-lg leading-none select-none">
-                {"<"}
-              </span>
-            </button>
-
-            <button
-              onClick={nextSlide}
-              disabled={currentIndex >= maxSlides}
-              aria-label="next"
-              className={`absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center border-2 border-yellow-400 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                currentIndex >= maxSlides
-                  ? "opacity-30 cursor-not-allowed"
-                  : "hover:scale-110 hover:bg-yellow-400/10"
-              }`}
-            >
-              <span className="text-base-content text-lg leading-none select-none">
-                {">"}
-              </span>
-            </button>
-          </div>
-
-          {/* Items */}
-          <div className="flex justify-center gap-6">
-            {visibleItems.map((item, index) => (
-              <PromiseItem
-                key={`${item.id}-${currentIndex}`}
-                item={item}
-                isCenter={index === 2}
-              />
+        {/* Splide Slider */}
+        <div className="relative splide-promise-container">
+          <Splide
+            ref={splideRef}
+            options={splideOptions}
+            aria-label="Luxifi Promise Items"
+            onMoved={handleSlideChange}
+            onMounted={handleSlideChange}
+          >
+            {promiseItems.map((item, index) => (
+              <SplideSlide key={item.id}>
+                <PromiseItem item={item} index={index} />
+              </SplideSlide>
             ))}
-          </div>
-
-          {/* Dots */}
-          <div className="lg:hidden flex justify-center mt-6 gap-2">
-            {Array.from({ length: maxSlides + 1 }).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setCurrentIndex(idx);
-                  setIsAutoPlaying(false);
-                }}
-                className={`w-3 h-3 rounded-full ${
-                  idx === currentIndex
-                    ? "text-base-content"
-                    : "bg-yellow-400/30"
-                }`}
-              />
-            ))}
-          </div>
+          </Splide>
         </div>
       </div>
+
     </div>
-  );
+  )
 }

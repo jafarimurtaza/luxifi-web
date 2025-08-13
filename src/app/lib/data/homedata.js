@@ -1,38 +1,166 @@
 export const wifiConfigurations = {
   mesh: {
     zones: [
-      { id: "router", top: "45%", left: "35%", size: "28%", delay: 0, duration: 1.5, intensity: "strong" },
-      { id: "living", top: "35%", left: "55%", size: "32%", delay: 0.8, duration: 2, intensity: "strong" },
-      { id: "kitchen", top: "55%", left: "55%", size: "30%", delay: 1.2, duration: 2, intensity: "strong" },
-      { id: "bedroom1", top: "25%", left: "75%", size: "28%", delay: 2, duration: 2.5, intensity: "strong" },
-      { id: "bedroom2", top: "65%", left: "75%", size: "26%", delay: 2.4, duration: 2.5, intensity: "strong" },
-      { id: "bathroom", top: "45%", left: "85%", size: "22%", delay: 3.2, duration: 2, intensity: "medium" },
-      { id: "garage", top: "45%", left: "15%", size: "24%", delay: 3.8, duration: 2, intensity: "medium" },
-      { id: "outdoor", top: "80%", left: "45%", size: "38%", delay: 4.5, duration: 3, intensity: "medium" },
+      {
+        id: "router",
+        top: "45%",
+        left: "35%",
+        size: "28%",
+        delay: 0,
+        duration: 1.5,
+        intensity: "strong",
+      },
+      {
+        id: "living",
+        top: "35%",
+        left: "55%",
+        size: "32%",
+        delay: 0.8,
+        duration: 2,
+        intensity: "strong",
+      },
+      {
+        id: "kitchen",
+        top: "55%",
+        left: "55%",
+        size: "30%",
+        delay: 1.2,
+        duration: 2,
+        intensity: "strong",
+      },
+      {
+        id: "bedroom1",
+        top: "25%",
+        left: "75%",
+        size: "28%",
+        delay: 2,
+        duration: 2.5,
+        intensity: "strong",
+      },
+      {
+        id: "bedroom2",
+        top: "65%",
+        left: "75%",
+        size: "26%",
+        delay: 2.4,
+        duration: 2.5,
+        intensity: "strong",
+      },
+      {
+        id: "bathroom",
+        top: "45%",
+        left: "85%",
+        size: "22%",
+        delay: 3.2,
+        duration: 2,
+        intensity: "medium",
+      },
+      {
+        id: "garage",
+        top: "45%",
+        left: "15%",
+        size: "24%",
+        delay: 3.8,
+        duration: 2,
+        intensity: "medium",
+      },
+      {
+        id: "outdoor",
+        top: "80%",
+        left: "45%",
+        size: "38%",
+        delay: 4.5,
+        duration: 3,
+        intensity: "medium",
+      },
     ],
     color: "#FCD34D",
   },
 
   standard: {
     zones: [
-      { id: "router", top: "45%", left: "35%", size: "32%", delay: 0, duration: 2, intensity: "strong" },
-      { id: "nearby", top: "40%", left: "55%", size: "28%", delay: 1, duration: 2, intensity: "medium" },
-      { id: "weak", top: "55%", left: "65%", size: "20%", delay: 2.5, duration: 1.5, intensity: "weak" },
+      {
+        id: "router",
+        top: "45%",
+        left: "35%",
+        size: "32%",
+        delay: 0,
+        duration: 2,
+        intensity: "strong",
+      },
+      {
+        id: "nearby",
+        top: "40%",
+        left: "55%",
+        size: "28%",
+        delay: 1,
+        duration: 2,
+        intensity: "medium",
+      },
+      {
+        id: "weak",
+        top: "55%",
+        left: "65%",
+        size: "20%",
+        delay: 2.5,
+        duration: 1.5,
+        intensity: "weak",
+      },
     ],
     color: "#F59E0B",
   },
 
   enterprise: {
     zones: [
-      { id: "ap1", top: "30%", left: "25%", size: "38%", delay: 0, duration: 1.5, intensity: "strong" },
-      { id: "ap2", top: "30%", left: "70%", size: "38%", delay: 0.3, duration: 1.5, intensity: "strong" },
-      { id: "ap3", top: "70%", left: "50%", size: "42%", delay: 0.6, duration: 1.5, intensity: "strong" },
-      { id: "overlap1", top: "45%", left: "47%", size: "35%", delay: 1, duration: 2, intensity: "strong" },
-      { id: "outdoor", top: "85%", left: "45%", size: "48%", delay: 1.5, duration: 2, intensity: "strong" },
+      {
+        id: "ap1",
+        top: "30%",
+        left: "25%",
+        size: "38%",
+        delay: 0,
+        duration: 1.5,
+        intensity: "strong",
+      },
+      {
+        id: "ap2",
+        top: "30%",
+        left: "70%",
+        size: "38%",
+        delay: 0.3,
+        duration: 1.5,
+        intensity: "strong",
+      },
+      {
+        id: "ap3",
+        top: "70%",
+        left: "50%",
+        size: "42%",
+        delay: 0.6,
+        duration: 1.5,
+        intensity: "strong",
+      },
+      {
+        id: "overlap1",
+        top: "45%",
+        left: "47%",
+        size: "35%",
+        delay: 1,
+        duration: 2,
+        intensity: "strong",
+      },
+      {
+        id: "outdoor",
+        top: "85%",
+        left: "45%",
+        size: "48%",
+        delay: 1.5,
+        duration: 2,
+        intensity: "strong",
+      },
     ],
     color: "#3B82F6",
   },
-}
+};
 
 export const wifiTabs = [
   {
@@ -71,7 +199,7 @@ export const wifiTabs = [
       overallExperience: "Outstanding",
     },
   },
-]
+];
 
 export const luxifiSolutionTabs = [
   {
@@ -89,9 +217,30 @@ export const luxifiSolutionTabs = [
       type: "problem",
       baseColor: "#EF4444",
       signalPoints: [
-        { id: "main-router", top: "45%", left: "35%", type: "standard", isActive: true, delay: 0 },
-        { id: "weak-zone1", top: "30%", left: "65%", type: "standard", isActive: false, delay: 1 },
-        { id: "weak-zone2", top: "60%", left: "70%", type: "standard", isActive: false, delay: 1.5 },
+        {
+          id: "main-router",
+          top: "45%",
+          left: "35%",
+          type: "standard",
+          isActive: true,
+          delay: 0,
+        },
+        {
+          id: "weak-zone1",
+          top: "30%",
+          left: "65%",
+          type: "standard",
+          isActive: false,
+          delay: 1,
+        },
+        {
+          id: "weak-zone2",
+          top: "60%",
+          left: "70%",
+          type: "standard",
+          isActive: false,
+          delay: 1.5,
+        },
       ],
       label: "Unreliable Coverage",
     },
@@ -110,10 +259,38 @@ export const luxifiSolutionTabs = [
       type: "failed-solutions",
       baseColor: "#F59E0B",
       signalPoints: [
-        { id: "main-router", top: "45%", left: "35%", type: "standard", isActive: true, delay: 0.5 },
-        { id: "extender1", top: "30%", left: "60%", type: "standard", isActive: true, delay: 1 },
-        { id: "extender2", top: "60%", left: "65%", type: "standard", isActive: true, delay: 1.5 },
-        { id: "dead-spot", top: "20%", left: "80%", type: "standard", isActive: false, delay: 2 },
+        {
+          id: "main-router",
+          top: "45%",
+          left: "35%",
+          type: "standard",
+          isActive: true,
+          delay: 0.5,
+        },
+        {
+          id: "extender1",
+          top: "30%",
+          left: "60%",
+          type: "standard",
+          isActive: true,
+          delay: 1,
+        },
+        {
+          id: "extender2",
+          top: "60%",
+          left: "65%",
+          type: "standard",
+          isActive: true,
+          delay: 1.5,
+        },
+        {
+          id: "dead-spot",
+          top: "20%",
+          left: "80%",
+          type: "standard",
+          isActive: false,
+          delay: 2,
+        },
       ],
       label: "Partial Solutions",
     },
@@ -133,15 +310,43 @@ export const luxifiSolutionTabs = [
       type: "luxifi-solution",
       baseColor: "#10B981",
       signalPoints: [
-        { id: "ap1", top: "40%", left: "30%", type: "luxifi", isActive: true, delay: 0 },
-        { id: "ap2", top: "30%", left: "70%", type: "luxifi", isActive: true, delay: 0.3 },
-        { id: "ap3", top: "70%", left: "50%", type: "luxifi", isActive: true, delay: 0.6 },
-        { id: "garage", top: "45%", left: "15%", type: "luxifi", isActive: true, delay: 0.9 },
+        {
+          id: "ap1",
+          top: "40%",
+          left: "30%",
+          type: "luxifi",
+          isActive: true,
+          delay: 0,
+        },
+        {
+          id: "ap2",
+          top: "30%",
+          left: "70%",
+          type: "luxifi",
+          isActive: true,
+          delay: 0.3,
+        },
+        {
+          id: "ap3",
+          top: "70%",
+          left: "50%",
+          type: "luxifi",
+          isActive: true,
+          delay: 0.6,
+        },
+        {
+          id: "garage",
+          top: "45%",
+          left: "15%",
+          type: "luxifi",
+          isActive: true,
+          delay: 0.9,
+        },
       ],
       label: "Complete LuxiFi Coverage",
     },
   },
-]
+];
 
 export const wifiNightmareTabs = [
   {
@@ -249,7 +454,7 @@ export const wifiNightmareTabs = [
       color: "#3B82F6", // Blue for Mesh Systems
     },
   },
-]
+];
 
 export const services = [
   {
@@ -257,7 +462,7 @@ export const services = [
     title: "STRUCTURED CABLING",
     description:
       "We build your network from the ground up using the highest-quality copper cable or fiber cabling. It's the invisible powerhouse behind your reliable, high-speed internet.",
-    image: "/images/home/service1.webp",
+    image: "/images/home/service3.webp",
     imageAlt: "Structured Cabling - Ethernet Cable",
     layout: "image-left",
   },
@@ -275,16 +480,11 @@ export const services = [
     title: "SMART SECURITY CAMERAS",
     description:
       "See your property from anywhere with Luxifi-installed UniFi Protect cameras. AI alerts, night vision, and remote access are just the beginning.",
-    image: "/images/home/service3.webp",
+    image: "/images/home/service1.webp",
     imageAlt: "Smart Security Cameras - UniFi Protect",
     layout: "image-left",
   },
-]
-
-
-
-
-
+];
 
 export const promiseItems = [
   {
@@ -332,9 +532,30 @@ export const promiseItems = [
         </defs>
         {/* WiFi signal waves */}
         <circle cx="40" cy="40" r="6" fill="url(#grad2)" />
-        <circle cx="40" cy="40" r="15" fill="none" stroke="url(#grad2)" strokeWidth="3" />
-        <circle cx="40" cy="40" r="25" fill="none" stroke="url(#grad2)" strokeWidth="3" />
-        <circle cx="40" cy="40" r="35" fill="none" stroke="url(#grad2)" strokeWidth="3" />
+        <circle
+          cx="40"
+          cy="40"
+          r="15"
+          fill="none"
+          stroke="url(#grad2)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="40"
+          cy="40"
+          r="25"
+          fill="none"
+          stroke="url(#grad2)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="40"
+          cy="40"
+          r="35"
+          fill="none"
+          stroke="url(#grad2)"
+          strokeWidth="3"
+        />
         {/* Signal strength bars */}
         <rect x="10" y="60" width="4" height="8" fill="url(#grad2)" />
         <rect x="16" y="55" width="4" height="13" fill="url(#grad2)" />
@@ -356,11 +577,43 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* Truck body */}
-        <rect x="15" y="35" width="35" height="20" rx="2" fill="none" stroke="url(#grad3)" strokeWidth="3" />
-        <rect x="50" y="40" width="15" height="15" rx="2" fill="none" stroke="url(#grad3)" strokeWidth="3" />
+        <rect
+          x="15"
+          y="35"
+          width="35"
+          height="20"
+          rx="2"
+          fill="none"
+          stroke="url(#grad3)"
+          strokeWidth="3"
+        />
+        <rect
+          x="50"
+          y="40"
+          width="15"
+          height="15"
+          rx="2"
+          fill="none"
+          stroke="url(#grad3)"
+          strokeWidth="3"
+        />
         {/* Wheels */}
-        <circle cx="25" cy="60" r="6" fill="none" stroke="url(#grad3)" strokeWidth="3" />
-        <circle cx="55" cy="60" r="6" fill="none" stroke="url(#grad3)" strokeWidth="3" />
+        <circle
+          cx="25"
+          cy="60"
+          r="6"
+          fill="none"
+          stroke="url(#grad3)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="55"
+          cy="60"
+          r="6"
+          fill="none"
+          stroke="url(#grad3)"
+          strokeWidth="3"
+        />
         {/* Package */}
         <rect x="20" y="25" width="8" height="8" fill="url(#grad3)" />
         <path d="M20 29 L28 29 M24 25 L24 33" stroke="#000" strokeWidth="1" />
@@ -380,10 +633,38 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* Network diagram */}
-        <circle cx="40" cy="25" r="8" fill="none" stroke="url(#grad4)" strokeWidth="3" />
-        <circle cx="20" cy="50" r="6" fill="none" stroke="url(#grad4)" strokeWidth="3" />
-        <circle cx="60" cy="50" r="6" fill="none" stroke="url(#grad4)" strokeWidth="3" />
-        <circle cx="40" cy="65" r="6" fill="none" stroke="url(#grad4)" strokeWidth="3" />
+        <circle
+          cx="40"
+          cy="25"
+          r="8"
+          fill="none"
+          stroke="url(#grad4)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="20"
+          cy="50"
+          r="6"
+          fill="none"
+          stroke="url(#grad4)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="60"
+          cy="50"
+          r="6"
+          fill="none"
+          stroke="url(#grad4)"
+          strokeWidth="3"
+        />
+        <circle
+          cx="40"
+          cy="65"
+          r="6"
+          fill="none"
+          stroke="url(#grad4)"
+          strokeWidth="3"
+        />
         {/* Connections */}
         <path
           d="M35 32 L25 45 M45 32 L55 45 M40 33 L40 59 M26 52 L34 62 M54 52 L46 62"
@@ -409,8 +690,26 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* Router/Hardware */}
-        <rect x="20" y="30" width="40" height="25" rx="3" fill="none" stroke="url(#grad5)" strokeWidth="3" />
-        <rect x="25" y="60" width="30" height="8" rx="2" fill="none" stroke="url(#grad5)" strokeWidth="3" />
+        <rect
+          x="20"
+          y="30"
+          width="40"
+          height="25"
+          rx="3"
+          fill="none"
+          stroke="url(#grad5)"
+          strokeWidth="3"
+        />
+        <rect
+          x="25"
+          y="60"
+          width="30"
+          height="8"
+          rx="2"
+          fill="none"
+          stroke="url(#grad5)"
+          strokeWidth="3"
+        />
         {/* Antenna */}
         <rect x="35" y="20" width="2" height="10" fill="url(#grad5)" />
         <rect x="43" y="20" width="2" height="10" fill="url(#grad5)" />
@@ -439,14 +738,26 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* Battery */}
-        <rect x="25" y="35" width="30" height="18" rx="2" fill="none" stroke="url(#grad6)" strokeWidth="3" />
+        <rect
+          x="25"
+          y="35"
+          width="30"
+          height="18"
+          rx="2"
+          fill="none"
+          stroke="url(#grad6)"
+          strokeWidth="3"
+        />
         <rect x="55" y="40" width="3" height="8" fill="url(#grad6)" />
         {/* Battery level */}
         <rect x="28" y="38" width="6" height="12" fill="url(#grad6)" />
         <rect x="36" y="38" width="6" height="12" fill="url(#grad6)" />
         <rect x="44" y="38" width="6" height="12" fill="url(#grad6)" />
         {/* Lightning bolt */}
-        <path d="M40 15 L35 30 L42 30 L37 50 L45 35 L38 35 L43 20 Z" fill="url(#grad6)" />
+        <path
+          d="M40 15 L35 30 L42 30 L37 50 L45 35 L38 35 L43 20 Z"
+          fill="url(#grad6)"
+        />
       </svg>
     ),
   },
@@ -463,11 +774,33 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* Monitor/Screen */}
-        <rect x="20" y="25" width="40" height="25" rx="2" fill="none" stroke="url(#grad7)" strokeWidth="3" />
-        <rect x="35" y="50" width="10" height="5" fill="none" stroke="url(#grad7)" strokeWidth="2" />
+        <rect
+          x="20"
+          y="25"
+          width="40"
+          height="25"
+          rx="2"
+          fill="none"
+          stroke="url(#grad7)"
+          strokeWidth="3"
+        />
+        <rect
+          x="35"
+          y="50"
+          width="10"
+          height="5"
+          fill="none"
+          stroke="url(#grad7)"
+          strokeWidth="2"
+        />
         <rect x="30" y="55" width="20" height="3" fill="url(#grad7)" />
         {/* Graph/Chart */}
-        <path d="M25 45 L30 35 L35 40 L40 30 L45 35 L50 25 L55 30" stroke="url(#grad7)" strokeWidth="2" fill="none" />
+        <path
+          d="M25 45 L30 35 L35 40 L40 30 L45 35 L50 25 L55 30"
+          stroke="url(#grad7)"
+          strokeWidth="2"
+          fill="none"
+        />
         {/* Data points */}
         <circle cx="30" cy="35" r="2" fill="url(#grad7)" />
         <circle cx="40" cy="30" r="2" fill="url(#grad7)" />
@@ -495,7 +828,14 @@ export const promiseItems = [
           strokeWidth="3"
         />
         {/* Lock */}
-        <circle cx="40" cy="40" r="6" fill="none" stroke="url(#grad8)" strokeWidth="2" />
+        <circle
+          cx="40"
+          cy="40"
+          r="6"
+          fill="none"
+          stroke="url(#grad8)"
+          strokeWidth="2"
+        />
         <rect x="37" y="45" width="6" height="8" fill="url(#grad8)" />
         {/* Keyhole */}
         <circle cx="40" cy="40" r="2" fill="#000" />
@@ -516,24 +856,82 @@ export const promiseItems = [
           </linearGradient>
         </defs>
         {/* House */}
-        <path d="M25 50 L40 30 L55 50 L25 50" fill="none" stroke="url(#grad9)" strokeWidth="3" />
-        <rect x="30" y="50" width="20" height="15" fill="none" stroke="url(#grad9)" strokeWidth="3" />
+        <path
+          d="M25 50 L40 30 L55 50 L25 50"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="3"
+        />
+        <rect
+          x="30"
+          y="50"
+          width="20"
+          height="15"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="3"
+        />
         {/* Door */}
-        <rect x="37" y="57" width="6" height="8" fill="none" stroke="url(#grad9)" strokeWidth="2" />
+        <rect
+          x="37"
+          y="57"
+          width="6"
+          height="8"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="2"
+        />
         {/* Windows */}
-        <rect x="32" y="53" width="4" height="4" fill="none" stroke="url(#grad9)" strokeWidth="1" />
-        <rect x="44" y="53" width="4" height="4" fill="none" stroke="url(#grad9)" strokeWidth="1" />
+        <rect
+          x="32"
+          y="53"
+          width="4"
+          height="4"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="1"
+        />
+        <rect
+          x="44"
+          y="53"
+          width="4"
+          height="4"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="1"
+        />
         {/* WiFi signals around house */}
-        <circle cx="20" cy="40" r="8" fill="none" stroke="url(#grad9)" strokeWidth="2" strokeDasharray="2,2" />
-        <circle cx="60" cy="40" r="8" fill="none" stroke="url(#grad9)" strokeWidth="2" strokeDasharray="2,2" />
-        <circle cx="40" cy="20" r="6" fill="none" stroke="url(#grad9)" strokeWidth="2" strokeDasharray="2,2" />
+        <circle
+          cx="20"
+          cy="40"
+          r="8"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="2"
+          strokeDasharray="2,2"
+        />
+        <circle
+          cx="60"
+          cy="40"
+          r="8"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="2"
+          strokeDasharray="2,2"
+        />
+        <circle
+          cx="40"
+          cy="20"
+          r="6"
+          fill="none"
+          stroke="url(#grad9)"
+          strokeWidth="2"
+          strokeDasharray="2,2"
+        />
       </svg>
     ),
   },
-]
-
-
-
+];
 
 export const workSteps = [
   {
@@ -557,9 +955,7 @@ export const workSteps = [
     description:
       "Our team handles everything: cabling, hardware, configuration, testing, and training. Most installs are done in 1-2 days.",
   },
-]
-
-
+];
 
 export const testimonials = [
   {
