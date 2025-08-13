@@ -56,8 +56,25 @@ function FAQItem({ isOpen, onToggle, question, answer, delay }) {
   );
 }
 
-export default function FAQComponent({ title = "FAQ", faqs = [], categories = [] }) {
-  // Store open FAQ index per category key or 'default' for ungrouped FAQs
+function FAQTitle({ title }) {
+  return (
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wide mb-10 text-left"
+    >
+      {title}
+    </motion.h2>
+  );
+}
+
+export default function FAQComponent({
+  title = "FAQ",
+  faqs = [],
+  categories = [],
+}) {
   const [openIndex, setOpenIndex] = useState({});
 
   const toggleFAQ = (catKey, faqIndex) => {
@@ -94,15 +111,7 @@ export default function FAQComponent({ title = "FAQ", faqs = [], categories = []
       {categories.length > 0 ? (
         categories.map((category, idx) => (
           <div key={`category-${idx}`} className="mb-10">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-4"
-            >
-              {category.title}
-            </motion.h3>
+            <FAQTitle title={category.title} />
 
             <div className="space-y-3 sm:space-y-4">
               {renderFAQs(category.items, idx)}

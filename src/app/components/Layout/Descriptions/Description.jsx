@@ -12,7 +12,12 @@ const descriptionVariants = {
   },
 };
 
-export default function Description({ subtitle, description, className = "" }) {
+export default function Description({
+  subtitle,
+  description,
+  className = "",
+  textClassName = "text-base-content",
+}) {
   return (
     <motion.div
       variants={descriptionVariants}
@@ -22,11 +27,15 @@ export default function Description({ subtitle, description, className = "" }) {
       className={`max-w-6xl p-2 ${className}`}
     >
       {subtitle && (
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-base-content font-light leading-relaxed mb-4">
+        <p
+          className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-4 ${textClassName}`}
+        >
           {subtitle}
         </p>
       )}
-      <p className="text-base md:text-lg lg:text-xl text-base-content leading-relaxed">
+      <p
+        className={`text-base md:text-lg lg:text-xl leading-relaxed ${textClassName}`}
+      >
         {description}
       </p>
     </motion.div>

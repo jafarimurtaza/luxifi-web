@@ -128,6 +128,22 @@ html {
   }
 }
 
+/* Hero Section Custom Animations */
+@keyframes bounce-slow {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
 /* Animation Classes */
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
@@ -147,6 +163,10 @@ html {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
 }
 
 /* stepCard */
@@ -326,4 +346,8 @@ html {
             padding: 1.5rem 0 5rem 0;
           }
         }
+      
+.text-soft-shadow {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
       

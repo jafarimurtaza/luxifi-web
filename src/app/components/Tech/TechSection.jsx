@@ -15,7 +15,10 @@ export default function TechSection() {
   return (
     <>
       {/* NETWORK TECHNOLOGY */}
-      <section className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24">
+      <section
+        id="network"
+        className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
+      >
         <div className="relative z-10">
           <SectionTitle title="🔌 NETWORK" subTitle="TECHNOLOGY" />
           <Container>
@@ -29,7 +32,10 @@ export default function TechSection() {
       <LinearRight />
 
       {/* PREMIUM CABLING & HARDWARE */}
-      <section className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24">
+      <section
+        id="premium"
+        className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
+      >
         <div className="relative z-10">
           <SectionTitle title="⚙️ PREMIUM CABLING" subTitle="& HARDWARE" />
           <Container>
@@ -41,7 +47,10 @@ export default function TechSection() {
       </section>
 
       {/* INTEGRATED SECURITY & VIDEO */}
-      <section className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24">
+      <section
+        id="security"
+        className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
+      >
         <div className="relative z-10">
           <SectionTitle title="🔐 INTEGRATED SECURITY" subTitle="& VIDEO" />
           <Container>

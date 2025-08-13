@@ -1,19 +1,17 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
-import SectionTitle from "../../Layout/Titles/SectionTitle";
 import Description from "../../Layout/Descriptions/Description";
 import LinearLeft from "../../Layout/Images/LinearLeft";
-import PromiseGrid from "./PromiseGrid";
-import { approachTableData } from "../../../lib/data/approachTableData";
-import Table from "../../Layout/Table/Table";
+import SectionTitle from "../../Layout/Titles/SectionTitle";
+import PromiseOrbit from "./PromiseOrbit";
 
 const promiseItems = [
   {
     id: 1,
     title: "BUILT BY SPECIALISTS",
     description:
-      'We don\'t "also do WiFi" — it\'s our core. Every decision is made to ensure a fast, stable, and future-ready network tailored to your home.',
+      "We don't \"also do WiFi\" — it's our core. Every decision is made to ensure a fast, stable, and future-ready network tailored to your home.",
     iconType: "network",
   },
   {
@@ -87,20 +85,26 @@ export default function PromiseSection() {
   return (
     <>
       <motion.section
+        id="promise"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         className="my-20 px-8 max-w-7xl mx-auto"
       >
-        <SectionTitle title="OUR PROMISE" />
+        <SectionTitle title="OUR PROMISE" textClassName="text-white" />
         <Description
+          textClassName="text-white/90"
           description="At Luxifi, we deliver more than WiFi — we bring confidence, clarity, and calm. From start to finish, we ensure peace of mind and seamless results."
+          className="mx-auto text-center"
         />
-        <PromiseGrid items={promiseItems} />
+
+        {/* Orbit on large screens, grid on small */}
+        <div className="mt-10">
+          <PromiseOrbit items={promiseItems} />
+        </div>
       </motion.section>
       <LinearLeft />
-      <Table title="⭐ THE LUXIFI DIFFERENCE" planData={approachTableData} />
     </>
   );
 }

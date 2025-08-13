@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
  * Reusable LinearLeft component
  */
 
-export default function LinearLeft() {
+export default function LinearLeft({ image, className }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -17,9 +17,9 @@ export default function LinearLeft() {
       style={{ filter: "hue-rotate(192deg)" }}
     >
       <Image
-        src="/images/tech/linear2.svg"
+        src={image ? image : "/images/tech/linear2.svg"}
         alt="wave design"
-        className="w-full h-auto block"
+        className={`${className} w-full h-[50%] block object-contain`}
         width={1920}
         height={1080}
       />

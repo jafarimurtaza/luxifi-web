@@ -6,7 +6,6 @@ import LuxifiPromiseSection from "./Promise/LuxifiPromiseSection";
 import CoreServicesSection from "./Services/CoreServicesSection";
 import { TestimonialsSlider } from "./Testimonial/TestimonialsSlider";
 
-
 export default function HomeMain() {
   return (
     <main>
