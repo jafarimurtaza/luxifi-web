@@ -1,10 +1,10 @@
 "use client";
 
 import Description from "../Layout/Descriptions/Description";
-import LinearRight from "../Layout/Images/LinearRight";
+import LinearLeft from "../Layout/Images/LinearLeft";
 import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
 import SectionTitle from "../Layout/Titles/SectionTitle";
-import RenderSectionVideo from "../Layout/Video/RenderSectionVideo";
+
 
 export default function HeroSection() {
   return (
@@ -19,29 +19,8 @@ export default function HeroSection() {
 Whether you're streaming, working, or simply living, your system stays protected, updated, and performing at its peak — without a single tech headache.`}
       />
       <Description description="Because real luxury isn’t just about speed — it’s about never having to ask." />
-
-      {/* Responsive video, background removed */}
-      <div
-        className="
-          static-video
-          mt-8
-          w-full
-          max-w-7xl
-          mx-auto
-          rounded-lg
-          overflow-hidden
-          aspect-video
-          [&>div]:relative
-          [&>div]:w-full
-          [&>div]:h-full
-          [&>div]:inset-auto
-          [&>div>div]:hidden
-        "
-      >
-        <RenderSectionVideo videoPath="/videos/U6+.mp4" />
-      </div>
-
-      <LinearRight />
+      <RenderBigIntroImage src="/images/maintenance/maintenace-hero-image.webp" />
+      <LinearLeft />
     </section>
   );
 }
