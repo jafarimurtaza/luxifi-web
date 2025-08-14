@@ -2,6 +2,7 @@
 
 import BlogSection from "../components/Blog/BlogSection";
 import HeroSection from "../components/Blog/HeroSection";
+import IntroImage from "../components/Layout/Images/IntroImage";
 
 export default function BlogPage() {
   const posts = [
@@ -53,6 +54,12 @@ export default function BlogPage() {
 
   return (
     <main className="bg-base-100 text-base-content">
+      <IntroImage
+        src={"/images/blog/hero.jpg"}
+        alt="Hero Image - Blog"
+        className="!top-0"
+      />
+
       <HeroSection />
       <BlogSection posts={posts} />
     </main>

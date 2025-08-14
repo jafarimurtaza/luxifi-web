@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import LinearRight from "../../Layout/Images/LinearRight"
+import { useState, useEffect } from "react";
+import LinearRight from "../../Layout/Images/LinearRight";
+import Link from "next/link";
 
 export default function SolutionSection() {
-  const [animationKey, setAnimationKey] = useState(0)
+  const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
-    setAnimationKey((prev) => prev + 1)
-  }, [])
+    setAnimationKey((prev) => prev + 1);
+  }, []);
 
   const luxifiSolution = {
     signals: [
@@ -49,7 +50,7 @@ export default function SolutionSection() {
       //   ringColor: "#DCA54D",
       // },
     ],
-  }
+  };
 
   return (
     <div className="min-h-screen px-10 text-white">
@@ -67,33 +68,36 @@ export default function SolutionSection() {
               </h2>
             </div>
 
-            <div >
+            <div>
               <p className="text-lg text-primary leading-relaxed mb-8">
-                Luxifi delivers high-performance, enterprise-grade WiFi throughout your home using a fully wired network
-                foundation. Every access point is hardwired for maximum speed, stability, and reach — giving you
-                flawless coverage from room to room and wall to wall.
+                Luxifi delivers high-performance, enterprise-grade WiFi
+                throughout your home using a fully wired network foundation.
+                Every access point is hardwired for maximum speed, stability,
+                and reach — giving you flawless coverage from room to room and
+                wall to wall.
               </p>
 
               <button className="px-8 py-4 btn btn-primary  font-semibold rounded-lg transition-all duration-300  hover:scale-105 hover:shadow-lg hover:shadow-yellow-400-500/25">
-                GET STARTED
+                <Link href="/contact">GET STARTED</Link>
               </button>
             </div>
           </div>
 
           <div className="relative">
             <div className="relative w-full h-[480px]  ">
-        
               <div className="relative w-full h-full overflow-hidden  p-4">
                 <img
                   src="/images/home/house.webp"
                   alt="Smart Home with Complete Coverage Including Pool"
                   className="w-full h-full object-contain contrast-130 saturate-110"
-               
                 />
-               
+
                 <div className="absolute inset-0">
                   {luxifiSolution.signals.map((signal, index) => (
-                    <div key={`${signal.id}-${animationKey}`} className="absolute inset-0">
+                    <div
+                      key={`${signal.id}-${animationKey}`}
+                      className="absolute inset-0"
+                    >
                       {/* Extra Large Coverage Area - Covers house + pool + courtyard */}
                       <div
                         className="absolute rounded-full transition-all duration-2000 ease-out"
@@ -106,7 +110,9 @@ export default function SolutionSection() {
                           background: `radial-gradient(circle, ${signal.color}40 0%, ${signal.color}25 30%, ${signal.color}15 60%, ${signal.color}08 80%, transparent 90%)`,
                           filter: "blur(30px)",
                           opacity: 0.7,
-                          animation: `gentle-pulse 4s ease-in-out infinite ${index * 0.8}s`,
+                          animation: `gentle-pulse 4s ease-in-out infinite ${
+                            index * 0.8
+                          }s`,
                         }}
                       />
 
@@ -122,7 +128,9 @@ export default function SolutionSection() {
                           background: `radial-gradient(circle, ${signal.color}50 0%, ${signal.color}30 40%, ${signal.color}20 70%, ${signal.color}10 85%, transparent 95%)`,
                           filter: "blur(20px)",
                           opacity: 0.8,
-                          animation: `gentle-pulse 3.5s ease-in-out infinite ${index * 0.6}s`,
+                          animation: `gentle-pulse 3.5s ease-in-out infinite ${
+                            index * 0.6
+                          }s`,
                         }}
                       />
 
@@ -140,7 +148,9 @@ export default function SolutionSection() {
                             borderColor: signal.ringColor,
                             borderWidth: "1px",
                             opacity: 0.5 - wave * 0.08,
-                            animation: `gentle-expand 6s ease-out infinite ${index * 0.8 + wave * 0.7}s`,
+                            animation: `gentle-expand 6s ease-out infinite ${
+                              index * 0.8 + wave * 0.7
+                            }s`,
                           }}
                         />
                       ))}
@@ -155,7 +165,9 @@ export default function SolutionSection() {
                           height: "16px",
                           transform: "translate(-50%, -50%)",
                           backgroundColor: signal.ringColor,
-                          animation: `signal-point-glow 2.5s ease-in-out infinite ${index * 0.4}s`,
+                          animation: `signal-point-glow 2.5s ease-in-out infinite ${
+                            index * 0.4
+                          }s`,
                           boxShadow: `0 0 25px ${signal.ringColor}, 0 0 40px ${signal.ringColor}50, inset 0 0 12px rgba(255,255,255,0.5)`,
                         }}
                       />
@@ -170,7 +182,9 @@ export default function SolutionSection() {
                           height: "10px",
                           transform: "translate(-50%, -50%)",
                           backgroundColor: "rgba(255, 255, 255, 0.95)",
-                          animation: `signal-inner-glow 2.5s ease-in-out infinite ${index * 0.4}s`,
+                          animation: `signal-inner-glow 2.5s ease-in-out infinite ${
+                            index * 0.4
+                          }s`,
                           boxShadow: `0 0 15px rgba(255,255,255,0.9)`,
                         }}
                       />
@@ -182,9 +196,6 @@ export default function SolutionSection() {
           </div>
         </div>
       </div>
-
-
-     
     </div>
-  )
+  );
 }

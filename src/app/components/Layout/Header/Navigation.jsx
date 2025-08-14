@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
+import Link from "next/link";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <button className="hidden btn btn-lg btn-outline md:block b rounded-lg cursor-pointer">
-            Get Started
+            <Link href="/contact">Get Started</Link>
           </button>
 
           {/* Mobile Menu Button */}
