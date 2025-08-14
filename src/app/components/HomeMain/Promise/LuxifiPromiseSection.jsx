@@ -8,20 +8,32 @@ import { promiseItems } from "../../../lib/data/homedata"
 export default function LuxifiPromiseSection() {
   const splideRef = useRef(null)
 
-  const handleSlideChange = useCallback(() => {
-    if (splideRef.current) {
-      const splideInstance = splideRef.current.splide
-      const activeIndex = splideInstance.index
 
-      const slides = document.querySelectorAll(".splide__slide")
-      slides.forEach((slide) => slide.classList.remove("is-center"))
 
-      const centerSlide = document.querySelector(`.splide__slide:nth-child(${activeIndex + 1})`)
-      if (centerSlide) {
-        centerSlide.classList.add("is-center")
-      }
+const handleSlideChange = useCallback(() => {
+  if (splideRef.current) {
+    const splideInstance = splideRef.current.splide;
+
+    
+    const slides = document.querySelectorAll(".splide__slide");
+    slides.forEach((slide) => slide.classList.remove("is-center"));
+
+    const activeIndex = splideInstance.index; 
+
+    
+    const centerSlide = splideInstance.Components.Slides.getAt(activeIndex)?.slide;
+
+    if (centerSlide) {
+      centerSlide.classList.add("is-center");
     }
-  }, [])
+  }
+}, []);
+
+
+
+
+
+
 
   const splideOptions = {
     type: "loop",
