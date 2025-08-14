@@ -40,7 +40,7 @@ export default function PromiseItem({ item, index }) {
           className={`relative py-4 rounded-full border-4 flex items-center justify-center transition-all duration-700 ${
             isCenter
               ? 
-                "w-32 h-32 border-yellow-400 bg-black shadow-2xl  scale-125 ring-2 ring-yellow-400/50"
+                "w-32 h-32 border-yellow-400 bg-black shadow-4xl  scale-125 ring-2 ring-yellow-400/50"
               : 
                 "w-24 h-24 border-yellow-400/60 bg-black shadow-lg shadow-yellow-400/30"
           }`}
