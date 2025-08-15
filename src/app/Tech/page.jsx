@@ -6,7 +6,6 @@ export default function Tech() {
   return (
     <div>
       <IntroImage src={"/images/tech/intro-house-image.jpg"} alt="Hero Image" />
-
       <HeroSection />
       <TechSection />
       <FAQSection />
