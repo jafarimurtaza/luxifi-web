@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* TODO: add the back to top button */}
       </body>
     </html>
   );

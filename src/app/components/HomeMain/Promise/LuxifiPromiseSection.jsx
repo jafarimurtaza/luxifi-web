@@ -61,11 +61,11 @@ export default function LuxifiPromiseSection() {
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-6xl  mb-4 font-extrabold">
-            <span className="text-base-content drop-shadow-2xl">
-              THE LUXIFI
+            <span className="text-base-content drop-shadow-2xl capitalize">
+              the luxifi
             </span>
             <br />
-            <span className="text-primary font-black">PROMISE</span>
+            <span className="text-primary font-black capitalize">promise</span>
           </h1>
           <p className="text-xl text-primary font-bold">
             More than service — it's an experience.

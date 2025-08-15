@@ -3,14 +3,14 @@ import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 export const approachTableData = {
   plans: ["Luxifi", "Other Providers"],
   features: [
-    "Designed Exclusively for Homes",
-    "Expert Wi-Fi Engineering",
-    "Seamless Indoor/Outdoor Coverage",
-    "Structured Cabling In-House",
-    "Ubiquiti Product Specialization",
-    "Remote Monitoring & Support",
-    "Personalized Security Features",
-    "Design-Minded Execution",
+    "designed exclusively for homes",
+    "expert Wi-Fi engineering",
+    "seamless indoor/outdoor coverage",
+    "structured cabling in-house",
+    "ubiquiti product specialization",
+    "remote monitoring & support",
+    "personalized security features",
+    "design-minded execution",
   ],
   matrix: [
     // Luxifi column

@@ -12,5 +12,5 @@ export function ImpactfulHeadline() {
         Fill out the following to get a quote:
       </p>
     </div>
-  )
+  );
 }

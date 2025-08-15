@@ -459,7 +459,7 @@ export const wifiNightmareTabs = [
 export const services = [
   {
     id: 1,
-    title: "STRUCTURED CABLING",
+    title: "structured cabling",
     description:
       "We build your network from the ground up using the highest-quality copper cable or fiber cabling. It's the invisible powerhouse behind your reliable, high-speed internet.",
     image: "/images/home/service3.webp",
@@ -468,7 +468,7 @@ export const services = [
   },
   {
     id: 2,
-    title: "WHOLE-HOME Wi-Fi",
+    title: "whole-home Wi-Fi",
     description:
       "We design and deploy cutting-edge UniFi systems for complete coverage, advanced control, and secure connectivity — at a price that makes sense.",
     image: "/images/home/services2.webp",
@@ -477,7 +477,7 @@ export const services = [
   },
   {
     id: 3,
-    title: "SMART SECURITY CAMERAS",
+    title: "smart security cameras",
     description:
       "See your property from anywhere with Luxifi-installed UniFi Protect cameras. AI alerts, night vision, and remote access are just the beginning.",
     image: "/images/home/service1.webp",
@@ -489,8 +489,8 @@ export const services = [
 export const promiseItems = [
   {
     id: 1,
-    title: "BUILT BY",
-    subtitle: "SPECIALISTS",
+    title: "built by",
+    subtitle: "specialists",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -520,8 +520,8 @@ export const promiseItems = [
   },
   {
     id: 2,
-    title: "ZERO DEAD",
-    subtitle: "ZONES",
+    title: "zero dead",
+    subtitle: "zones",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -566,8 +566,8 @@ export const promiseItems = [
   },
   {
     id: 3,
-    title: "FULL-SERVICE",
-    subtitle: "DELIVERY",
+    title: "full-service",
+    subtitle: "delivery",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -622,8 +622,8 @@ export const promiseItems = [
   },
   {
     id: 4,
-    title: "TURNKEY",
-    subtitle: "EXECUTION",
+    title: "turnkey",
+    subtitle: "execution",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -679,8 +679,8 @@ export const promiseItems = [
   },
   {
     id: 5,
-    title: "PREMIUM HARDWARE",
-    subtitle: "ONLY",
+    title: "premium hardware",
+    subtitle: "only",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -727,8 +727,8 @@ export const promiseItems = [
   },
   {
     id: 6,
-    title: "OUTAGE",
-    subtitle: "PROTECTION",
+    title: "outage",
+    subtitle: "protection",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -763,8 +763,8 @@ export const promiseItems = [
   },
   {
     id: 7,
-    title: "PROACTIVE",
-    subtitle: "SUPPORT",
+    title: "proactive",
+    subtitle: "support",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -810,8 +810,8 @@ export const promiseItems = [
   },
   {
     id: 8,
-    title: "SECURITY THAT",
-    subtitle: "FITS YOU",
+    title: "security that",
+    subtitle: "fits you",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -845,8 +845,8 @@ export const promiseItems = [
   },
   {
     id: 9,
-    title: "OUTDOOR &",
-    subtitle: "INDOOR",
+    title: "outdoor &",
+    subtitle: "indoor",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>

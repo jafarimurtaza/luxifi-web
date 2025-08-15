@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { workSteps } from "../../../lib/data/homedata";
 import { StepCard } from "./StepCard";
+import SectionTitle from "../../Layout/Titles/SectionTitle";
 
 export default function HowWeWork() {
   return (
@@ -10,9 +11,7 @@ export default function HowWeWork() {
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8">
-            how it works
-          </h2>
+          <SectionTitle title="how it works" />
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             From first call to final install, we make it easy.
           </p>
