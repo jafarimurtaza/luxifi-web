@@ -1,5 +1,4 @@
 export const TECH_CARD_TABS = {
-  DESCRIPTION: "description",
-  FEATURES: "features",
-  DIMENSIONS: "dimensions",
+  DESCRIPTION: "What It Does",
+  FEATURES: "Why It Helps",
 };

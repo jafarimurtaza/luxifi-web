@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { workSteps } from "../../../lib/data/homedata";
 import { StepCard } from "./StepCard";
 
@@ -10,7 +11,7 @@ export default function HowWeWork() {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8">
-            HOW IT WORKS
+            how it works
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             From first call to final install, we make it easy.
@@ -35,11 +36,10 @@ export default function HowWeWork() {
               `,
             }}
           >
-            LEARN MORE
+            <Link href="/approach">Get Started</Link>
           </button>
         </div>
       </div>
     </div>
   );
 }
-

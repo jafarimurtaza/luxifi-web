@@ -52,7 +52,7 @@ export default function HeroSection() {
         <div className="rounded-2xl border border-white/10 bg-black/35 backdrop-blur px-6 py-4">
           <Description
             textClassName="text-white/90 text-soft-shadow"
-            description={`A truly luxury experience means never worrying about your WiFi again. That’s why Luxifi offers tailored care plans designed to keep your network fast, secure, and silently optimized — all in the background.
+            description={`A truly luxury experience means never worrying about your Wi-Fi again. That’s why Luxifi offers tailored care plans designed to keep your network fast, secure, and silently optimized — all in the background.
 Whether you're streaming, working, or simply living, your system stays protected, updated, and performing at its peak — without a single tech headache.`}
           />
         </div>

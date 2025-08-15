@@ -1,12 +1,12 @@
-# 🏡 Luxifi — WiFi That Lives Up To Your Home
+# 🏡 Luxifi — Wi-Fi That Lives Up To Your Home
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.4.5-black?style=flat&logo=next.js) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat&logo=tailwindcss) ![DaisyUI](https://img.shields.io/badge/DaisyUI-5.0-5A0EF8?style=flat) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat&logo=typescript) ![Strapi](https://img.shields.io/badge/Strapi-CMS-8E75FF?style=flat&logo=strapi) ![AWS](https://img.shields.io/badge/AWS-EC2%20%7C%20S3-FF9900?style=flat&logo=amazonaws)
 
-_A premium web experience for luxury residential WiFi systems — engineered by Afghan Geeks for seamless, always-on connectivity._
+_A premium web experience for luxury residential Wi-Fi systems — engineered by Afghan Geeks for seamless, always-on connectivity._
 
 ## 🌟 Overview
 
-Luxifi delivers enterprise-grade WiFi solutions designed exclusively for large, high-end homes. The platform showcases custom network engineering, invisible performance, and proactive care plans through a sophisticated web experience that matches the quality of the service.
+Luxifi delivers enterprise-grade Wi-Fi solutions designed exclusively for large, high-end homes. The platform showcases custom network engineering, invisible performance, and proactive care plans through a sophisticated web experience that matches the quality of the service.
 
 ## 🔧 Key Features
 

@@ -5,7 +5,7 @@ import Description from "../Layout/Descriptions/Description";
 import RenderSectionVideo from "../Layout/Video/RenderSectionVideo";
 
 export default function BackgroundPaths({
-  title = "THE ULTIMATE HOME WIFI EXPERIENCE",
+  title = "THE ULTIMATE HOME Wi-Fi EXPERIENCE",
 }) {
   const words = title.split(" ");
 

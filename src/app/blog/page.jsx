@@ -13,7 +13,7 @@ export default function BlogPage() {
         "Simple tricks and tools to improve your home connectivity without upgrading your plan.",
       image: "/images/blog/blog1.avif",
       date: "Aug 14, 2025",
-      slug: "boost-wifi-speed",
+      slug: "boost-Wi-Fi-speed",
     },
     {
       id: 2,
@@ -40,7 +40,7 @@ export default function BlogPage() {
         "Our top picks for devices that can boost your signal across multiple floors.",
       image: "/images/blog/blog4.avif",
       date: "Aug 8, 2025",
-      slug: "best-wifi-extenders",
+      slug: "best-Wi-Fi-extenders",
     },
     {
       id: 5,

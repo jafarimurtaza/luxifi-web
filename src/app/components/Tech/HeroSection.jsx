@@ -27,8 +27,8 @@ export default function HeroSection() {
       >
         <div className="relative">
           <SectionTitle
-            title="NEXT LEVEL WIFI"
-            subTitle="TAILORED FOR YOU"
+            title="next level Wi-Fi"
+            subTitle="tailored for you"
             textClassName="text-white text-soft-shadow"
           />
           {/* Decorative underline */}

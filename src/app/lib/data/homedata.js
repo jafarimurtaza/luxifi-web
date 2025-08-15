@@ -299,7 +299,7 @@ export const luxifiSolutionTabs = [
     id: "luxifi",
     label: "Luxifi",
     description:
-      "Luxifi delivers high-performance, enterprise-grade WiFi throughout your home using a fully wired network foundation. Every access point is hardwired for maximum speed, stability, and reach — giving you flawless coverage from room to room and wall to wall.",
+      "Luxifi delivers high-performance, enterprise-grade Wi-Fi throughout your home using a fully wired network foundation. Every access point is hardwired for maximum speed, stability, and reach — giving you flawless coverage from room to room and wall to wall.",
     stats: {
       speed: "1 Gbps+",
       coverage: "Whole Home",
@@ -423,7 +423,7 @@ export const wifiNightmareTabs = [
     id: "mesh-systems",
     label: "Mesh systems",
     description:
-      "WiFi mesh products solve some key issues found in other systems, but are still challenged by factors such as wall density, lack of weather-resistance, and consumer-grade software constraints.",
+      "Wi-Fi mesh products solve some key issues found in other systems, but are still challenged by factors such as wall density, lack of weather-resistance, and consumer-grade software constraints.",
     stats: {
       speed: "500 Mbps",
       coverage: "Incomplete",
@@ -468,11 +468,11 @@ export const services = [
   },
   {
     id: 2,
-    title: "WHOLE-HOME WIFI",
+    title: "WHOLE-HOME Wi-Fi",
     description:
       "We design and deploy cutting-edge UniFi systems for complete coverage, advanced control, and secure connectivity — at a price that makes sense.",
     image: "/images/home/services2.webp",
-    imageAlt: "Whole-Home WiFi - UniFi System",
+    imageAlt: "Whole-Home Wi-Fi - UniFi System",
     layout: "image-right",
   },
   {
@@ -530,7 +530,7 @@ export const promiseItems = [
             <stop offset="100%" stopColor="#F59E0B" />
           </linearGradient>
         </defs>
-        {/* WiFi signal waves */}
+        {/* Wi-Fi signal waves */}
         <circle cx="40" cy="40" r="6" fill="url(#grad2)" />
         <circle
           cx="40"
@@ -900,7 +900,7 @@ export const promiseItems = [
           stroke="url(#grad9)"
           strokeWidth="1"
         />
-        {/* WiFi signals around house */}
+        {/* Wi-Fi signals around house */}
         <circle
           cx="20"
           cy="40"
@@ -960,7 +960,7 @@ export const workSteps = [
 export const testimonials = [
   {
     name: "Sarah W.",
-    text: "After years of poor WiFi in our estate, Luxifi provided a flawless solution. Professional, discreet, and now we have perfect coverage throughout. Highly recommended!",
+    text: "After years of poor Wi-Fi in our estate, Luxifi provided a flawless solution. Professional, discreet, and now we have perfect coverage throughout. Highly recommended!",
     rating: 5,
     title: "Estate Owner",
     avatar: "👩‍💼",
@@ -984,7 +984,7 @@ export const testimonials = [
   },
   {
     name: "Sam Mishael",
-    text: "Luxifi solved our weak WiFi problem with a wired access point. Timely, professional, and effective. Highly recommended!",
+    text: "Luxifi solved our weak Wi-Fi problem with a wired access point. Timely, professional, and effective. Highly recommended!",
     rating: 5,
     title: "Property Owner",
     avatar: "🏡",
