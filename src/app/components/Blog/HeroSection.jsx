@@ -69,8 +69,8 @@ export default function HeroSection() {
         >
           <div className="relative">
             <SectionTitle
-              title="SMART HOME INSIGHTS"
-              subTitle="& WiFi Trends"
+              title="smart home insights"
+              subTitle="& Wi-Fi trends"
               textClassName="text-white text-soft-shadow"
             />
             {/* Animated underline */}
@@ -96,7 +96,7 @@ export default function HeroSection() {
             <Description
               className="text-center"
               textClassName="text-white/90 text-soft-shadow"
-              description="Explore quick, expert insights on home WiFi, smart tech, and security — built to keep your home connected, reliable, and future-ready"
+              description="Explore quick, expert insights on home Wi-Fi, smart tech, and security — built to keep your home connected, reliable, and future-ready"
             />
           </div>
         </motion.div>

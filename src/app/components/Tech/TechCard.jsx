@@ -25,18 +25,11 @@ export default function TechCard({ card }) {
     >
       <div className="space-y-4 md:space-y-6">
         <div className="flex items-start gap-3 sm:gap-4">
-          <div className="flex-shrink-0 p-2 sm:p-3 rounded-lg">
-            <card.icon className="text-2xl sm:text-3xl md:text-4xl text-primary" />
-          </div>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-primary">
             {card.title}
           </h2>
         </div>
-        <TechCardTabs
-          description={card.description}
-          features={card.features}
-          dimensions={card.dimensions}
-        />
+        <TechCardTabs description={card.description} features={card.features} />
       </div>
     </CardLayout>
   );

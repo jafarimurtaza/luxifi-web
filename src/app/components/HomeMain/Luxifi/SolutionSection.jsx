@@ -70,7 +70,7 @@ export default function SolutionSection() {
 
             <div>
               <p className="text-lg text-primary leading-relaxed mb-8">
-                Luxifi delivers high-performance, enterprise-grade WiFi
+                Luxifi delivers high-performance, enterprise-grade Wi-Fi
                 throughout your home using a fully wired network foundation.
                 Every access point is hardwired for maximum speed, stability,
                 and reach — giving you flawless coverage from room to room and

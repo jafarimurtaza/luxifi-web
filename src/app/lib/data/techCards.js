@@ -1,35 +1,22 @@
-import {
-  FaNetworkWired,
-  FaWifi,
-  FaCloud,
-  FaServer,
-  FaCamera,
-  FaTv,
-  FaShieldAlt,
-  FaDoorOpen,
-} from "react-icons/fa";
-
 export const techCards = [
   {
     id: 1,
-    icon: FaWifi,
-    title: "In-Wall WiFi Access Points",
+    title: "In-Wall Wi-Fi Access Points",
     image: "/images/tech/in-wall-wifi-access-points.webp",
     description:
-      "These low-profile WiFi 6 access points mount directly on your wall and deliver powerful wireless performance. They include 4 built-in Ethernet ports to support wired connections where needed.",
+      "These low-profile Wi-Fi 6 access points mount directly on your wall and deliver powerful wireless performance. They include 4 built-in Ethernet ports to support wired connections where needed.",
     dimensions:
-      "What It Helps:\n• Eliminates clutter from extenders and cables\n• Keeps performance high in rooms that need strong WiFi\n• Lets you hardwire smart TVs, gaming consoles, and desktops\n\nWhere It Works:\n• Bedrooms, offices, media rooms, condos, apartments",
+      "What It Helps:\n• Eliminates clutter from extenders and cables\n• Keeps performance high in rooms that need strong Wi-Fi\n• Lets you hardwire smart TVs, gaming consoles, and desktops\n\nWhere It Works:\n• Bedrooms, offices, media rooms, condos, apartments",
     features:
-      'What It Does:\n• WiFi 6 technology\n• 4 built-in gigabit ethernet ports\n• Low profile, less than 1" protrusion\n• Easy to install',
+      'What It Does:\n• Wi-Fi 6 technology\n• 4 built-in gigabit ethernet ports\n• Low profile, less than 1" protrusion\n• Easy to install',
     isLeft: true,
   },
   {
     id: 2,
-    icon: FaWifi,
     title: "Ceiling-Mount Access Points",
     image: "/images/tech/ceiling-mount.webp",
     description:
-      "Ceiling-mounted units distribute a wide, balanced WiFi signal from above — perfect for open-plan layouts or large rooms.",
+      "Ceiling-mounted units distribute a wide, balanced Wi-Fi signal from above — perfect for open-plan layouts or large rooms.",
     dimensions:
       "What It Helps:\n• Ensures stable coverage across wide areas\n• Blends discreetly into ceilings\n• Handles multiple devices without drop-offs\n\nWhere It Works:\n• Living rooms, kitchens, basements, commercial zones",
     features:
@@ -38,7 +25,6 @@ export const techCards = [
   },
   {
     id: 3,
-    icon: FaCloud,
     title: "Cloud Control System – Dream Machine Pro",
     image: "/images/tech/cloud-control-systems.webp",
     description:
@@ -51,24 +37,22 @@ export const techCards = [
   },
   {
     id: 4,
-    icon: FaWifi,
-    title: "Outdoor WiFi Access Points – U6 Mesh",
+    title: "Outdoor Wi-Fi Access Points – U6 Mesh",
     image: "/images/tech/outdoor-access-points.webp",
     description:
-      "These waterproof WiFi 6 mesh access points expand your network outdoors. They cast all-directional coverage to keep your entire property connected.",
+      "These waterproof Wi-Fi 6 mesh access points expand your network outdoors. They cast all-directional coverage to keep your entire property connected.",
     dimensions:
-      "What It Helps:\n• Adds seamless WiFi to yards, patios, and garages\n• Withstands rain and heat\n• Great for smart lighting, outdoor cameras, and guests\n\nWhere It Works:\n• Backyards, gardens, rooftops, detached buildings, driveways",
+      "What It Helps:\n• Adds seamless Wi-Fi to yards, patios, and garages\n• Withstands rain and heat\n• Great for smart lighting, outdoor cameras, and guests\n\nWhere It Works:\n• Backyards, gardens, rooftops, detached buildings, driveways",
     features:
       "What It Does:\n• IPX-5 waterproof casing\n• All-directional signal coverage\n• Suitable for indoor/outdoor\n• Mesh networking capable",
     isLeft: false,
   },
   {
     id: 5,
-    icon: FaNetworkWired,
-    title: "Premium Data Cabling – Cat6a",
+    title: "Premium Data Cabling",
     image: "/images/tech/premium-data-cabling.webp",
     description:
-      "Our high-performance Cat6a cabling runs behind the walls, providing the backbone for your network — supporting ultra-fast and interference-free connectivity.",
+      "Our high-performance Cat6 cabling runs behind the walls, providing the backbone for your network — supporting ultra-fast and interference-free connectivity",
     dimensions:
       "What It Helps:\n• Keeps your network fast and reliable long-term\n• Future-proofs your home for more devices\n• Leaves no mess — installed invisibly and professionally\n\nWhere It Works:\n• Everywhere in the home (walls, ceilings, structured panels)",
     features:
@@ -77,7 +61,6 @@ export const techCards = [
   },
   {
     id: 6,
-    icon: FaCamera,
     title: "Pro Cameras – UniFi Protect",
     image: "/images/tech/camera.webp",
     description:
@@ -90,7 +73,6 @@ export const techCards = [
   },
   {
     id: 7,
-    icon: FaServer,
     title: "Network Video Recorders (NVR)",
     image: "/images/tech/network-video-recorders.webp",
     description:
@@ -103,7 +85,6 @@ export const techCards = [
   },
   {
     id: 8,
-    icon: FaTv,
     title: "ViewPort – Live Camera Streaming Display",
     image: "/images/tech/office-graphic.jpg",
     description:
@@ -116,7 +97,6 @@ export const techCards = [
   },
   {
     id: 9,
-    icon: FaShieldAlt,
     title: "Dome Cameras",
     image: "/images/tech/dome-cameras.webp",
     description:
@@ -129,7 +109,6 @@ export const techCards = [
   },
   {
     id: 10,
-    icon: FaDoorOpen,
     title: "Smart Doorbells",
     image: "/images/tech/doorbells.webp",
     description:

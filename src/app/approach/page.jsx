@@ -4,12 +4,14 @@ import PromiseSection from "../components/Approcah/Promise/PromiseSection";
 import IntroImage from "../components/Layout/Images/IntroImage";
 import FAQComponent from "../components/Tech/FAQ/FAQComponent";
 import { faqCategories } from "../lib/data/faqData";
+import HowWeWork from "../components/HomeMain/HowWeDo/HowWeWork";
 
 export default function Approach() {
   return (
     <>
       <IntroImage src={"/images/approach/villa-house.jpg"} alt="Hero Image" />
       <HeroSection />
+      <HowWeWork />
       <PromiseSection />
       <FAQComponent
         title={faqCategories.approach.title}

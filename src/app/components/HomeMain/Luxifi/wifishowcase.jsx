@@ -47,7 +47,7 @@ export default function WifiShowcase() {
     extender: {
       title: "ROUTER + EXTENDER",
       description:
-        "WiFi extenders offer a small boost to the router's range, however there is a significant trade-off in performance and user experience.",
+        "Wi-Fi extenders offer a small boost to the router's range, however there is a significant trade-off in performance and user experience.",
       signals: [
         {
           name: "extender",
@@ -72,9 +72,9 @@ export default function WifiShowcase() {
       ],
     },
     mesh: {
-      title: "WIFI MESH",
+      title: "Wi-Fi MESH",
       description:
-        "WiFi mesh products solve some key issues found in other systems, but are still challenged by factors such as wall density, lack of weather-resistance, and consumer-grade software constraints.",
+        "Wi-Fi mesh products solve some key issues found in other systems, but are still challenged by factors such as wall density, lack of weather-resistance, and consumer-grade software constraints.",
       signals: [
         {
           name: "mesh",

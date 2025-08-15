@@ -12,7 +12,7 @@ export function ContentSection({
     <div className="space-y-2 container mx-auto px-6 ">
       <div>
         <h2 className="text-2xl md:text-3xl font-bold mb-2 leading-tight text-white">
-          WE GET IT—UNRELIABLE WIFI IS A NIGHTMARE.
+          WE GET IT—UNRELIABLE Wi-Fi IS A NIGHTMARE.
         </h2>
       </div>
 

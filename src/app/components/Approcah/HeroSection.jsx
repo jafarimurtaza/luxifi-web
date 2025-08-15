@@ -139,7 +139,7 @@ export default function HeroSection() {
             <div className="rounded-xl bg-black/40 backdrop-blur px-4 py-3">
               <Description
                 textClassName="text-white/90 text-soft-shadow"
-                description="Our promise is simple: We make your WiFi invisible — because when it works flawlessly, you shouldn't have to think about it."
+                description="Our promise is simple: We make your Wi-Fi invisible — because when it works flawlessly, you shouldn't have to think about it."
               />
             </div>
           </motion.div>

@@ -11,7 +11,7 @@ const promiseItems = [
     id: 1,
     title: "BUILT BY SPECIALISTS",
     description:
-      "We don't \"also do WiFi\" — it's our core. Every decision is made to ensure a fast, stable, and future-ready network tailored to your home.",
+      "We don't \"also do Wi-Fi\" — it's our core. Every decision is made to ensure a fast, stable, and future-ready network tailored to your home.",
     iconType: "network",
   },
   {
@@ -92,10 +92,10 @@ export default function PromiseSection() {
         viewport={{ once: true, margin: "-100px" }}
         className="my-20 px-8 max-w-7xl mx-auto"
       >
-        <SectionTitle title="OUR PROMISE" textClassName="text-white" />
+        <SectionTitle title="our promise" textClassName="text-white" />
         <Description
           textClassName="text-white/90"
-          description="At Luxifi, we deliver more than WiFi — we bring confidence, clarity, and calm. From start to finish, we ensure peace of mind and seamless results."
+          description="At Luxifi, we deliver more than Wi-Fi — we bring confidence, clarity, and calm. From start to finish, we ensure peace of mind and seamless results."
           className="mx-auto text-center"
         />
 

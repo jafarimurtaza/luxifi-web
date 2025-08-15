@@ -2,11 +2,11 @@ export const faqData = [
   {
     question: "Will this finally fix the dead zones in my home?",
     answer:
-      "Yes. Unlike extenders or mesh kits, Luxifi uses hardwired access points placed strategically for full-property coverage. That means no more dropped signals, buffering, or WiFi black holes — just fast, stable connection in every room.",
+      "Yes. Unlike extenders or mesh kits, Luxifi uses hardwired access points placed strategically for full-property coverage. That means no more dropped signals, buffering, or Wi-Fi black holes — just fast, stable connection in every room.",
   },
   {
     question:
-      "Why is my current WiFi so inconsistent — and how is this different?",
+      "Why is my current Wi-Fi so inconsistent — and how is this different?",
     answer:
       "Most homes rely on a single router or plug-in extenders, which create weak or uneven coverage. Luxifi builds a professional-grade network using in-wall or ceiling access points wired directly into your system — so every device stays connected and strong.",
   },
@@ -27,7 +27,7 @@ export const faqData = [
       "Yes. Every Luxifi installation is discreet and design-conscious. Access points are sleek, cables are hidden, and everything is installed with care and craftsmanship to blend into your home's aesthetics.",
   },
   {
-    question: "What if I already have some networking gear or WiFi installed?",
+    question: "What if I already have some networking gear or Wi-Fi installed?",
     answer:
       "No problem. We'll evaluate your current setup, keep what works, and replace what doesn't. Whether you're starting from scratch or upgrading an older system, we create a solution that fits your home, your devices, and your goals.",
   },
@@ -40,14 +40,14 @@ export const faqData = [
 
 export const faqCategories = {
   tech: {
-    title: "Tech FAQ",
+    title: "tech FAQ",
     faqs: faqData,
   },
 
   support: {
     categories: [
       {
-        title: "Support FAQ",
+        title: "support FAQ",
         items: [
           {
             question: "What kind of support do you provide?",
@@ -67,7 +67,7 @@ export const faqCategories = {
   approach: {
     categories: [
       {
-        title: "Approach FAQ",
+        title: "approach FAQ",
         items: [
           {
             question: "Can I trust you to work with my existing setup?",
@@ -104,7 +104,7 @@ export const faqCategories = {
             question:
               "Why should I choose Luxifi over just doing this myself or hiring a contractor?",
             answer:
-              "Because you’re not just buying gear — you’re investing in confidence, comfort, and a WiFi experience that just works. With Luxifi, you get top-tier technology, expert installation, and long-term peace of mind — from a team that truly cares about your home.",
+              "Because you’re not just buying gear — you’re investing in confidence, comfort, and a Wi-Fi experience that just works. With Luxifi, you get top-tier technology, expert installation, and long-term peace of mind — from a team that truly cares about your home.",
           },
         ],
       },
@@ -115,7 +115,7 @@ export const faqCategories = {
     // title: "Luxifi Maintenance FAQ",
     categories: [
       {
-        title: "Maintenance Questions",
+        title: "maintenance questions",
         items: [
           {
             question:
@@ -152,7 +152,7 @@ export const faqCategories = {
         ],
       },
       {
-        title: "Support Questions",
+        title: "support questions",
         items: [
           {
             question: "Do Luxifi Care Plans include free support?",
@@ -167,7 +167,7 @@ export const faqCategories = {
         ],
       },
       {
-        title: "Response Time Questions",
+        title: "response time questions",
         items: [
           {
             question: "What does Rapid Response mean?",
