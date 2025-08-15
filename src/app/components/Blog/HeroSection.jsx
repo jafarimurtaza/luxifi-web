@@ -69,7 +69,7 @@ export default function HeroSection() {
         >
           <div className="relative">
             <SectionTitle
-              title="smart home insights"
+              title="smart home tips"
               subTitle="& Wi-Fi trends"
               textClassName="text-white text-soft-shadow"
             />

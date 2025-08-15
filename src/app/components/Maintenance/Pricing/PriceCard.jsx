@@ -48,7 +48,7 @@ export default function PriceCard({ plan, isMonthly }) {
           </div>
         ) : (
           <div className="mb-6 text-xl font-extrabold text-primary">
-            Custom Quote
+            Inquire for a personalized quote
           </div>
         )}
 

@@ -29,7 +29,7 @@ export default function TechCard({ card }) {
             {card.title}
           </h2>
         </div>
-        <TechCardTabs description={card.description} features={card.features} />
+        <TechCardTabs description={card.description} features={card.features} dimensions={card.dimensions} />
       </div>
     </CardLayout>
   );

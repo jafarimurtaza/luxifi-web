@@ -3,7 +3,7 @@ export const plans = [
     id: 1,
     name: "LUXIFI BASIC CARE",
     priceMonthly: 19,
-    priceAnnual: 228,
+    priceAnnual: 190,
     description:
       "Simple support for simple setups. Ideal for smaller homes or early-stage systems, Basic Care ensures your core network stays smooth and supported with essentials handled remotely.",
     bestFor: ["5 or fewer access points", "1 or fewer VLANs", "Light-to-moderate firewall needs"],
@@ -14,7 +14,7 @@ export const plans = [
     id: 2,
     name: "LUXIFI PLUS CARE",
     priceMonthly: 27,
-    priceAnnual: 324,
+    priceAnnual: 270,
     description:
       "Smart support for smart homes. Designed for homes with more devices, more complexity, and greater expectations. Plus Care keeps your system fine-tuned, secured, and professionally supported at all times.",
     bestFor: ["6 or more access points", "2 or more VLANs", "Advanced firewall and privacy needs"],
