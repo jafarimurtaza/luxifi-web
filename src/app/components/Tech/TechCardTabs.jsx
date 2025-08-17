@@ -11,7 +11,7 @@ function RenderTabContent({ children }) {
   );
 }
 
-export default function TechCardTabs({ description, features, dimensions }) {
+export default function TechCardTabs({ description, features }) {
   const [activeTab, setActiveTab] = useState(TECH_CARD_TABS.DESCRIPTION);
 
   const renderContent = () => {
@@ -20,17 +20,15 @@ export default function TechCardTabs({ description, features, dimensions }) {
         return <RenderTabContent>{description}</RenderTabContent>;
       case TECH_CARD_TABS.FEATURES:
         return <RenderTabContent>{features}</RenderTabContent>;
-      case TECH_CARD_TABS.DIMENSIONS:
-        return <RenderTabContent>{dimensions}</RenderTabContent>;
       default:
         return null;
     }
   };
 
-  const tabs = [TECH_CARD_TABS.DESCRIPTION, TECH_CARD_TABS.FEATURES, TECH_CARD_TABS.DIMENSIONS];
+  const tabs = [TECH_CARD_TABS.DESCRIPTION, TECH_CARD_TABS.FEATURES];
   return (
     <>
-      <div className="flex space-x-6 mb-4">
+      <div className="flex space-x-8 mb-4">
         {tabs?.map((tab) => {
           return (
             <button
