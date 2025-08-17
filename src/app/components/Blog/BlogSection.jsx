@@ -4,38 +4,57 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useInfiniteQuery } from "@tanstack/react-query";
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function BlogSection({ posts }) {
   const router = useRouter();
-  const postsPerPage = 6;
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(posts.length / postsPerPage);
 
-  const currentPosts = posts.slice(
-    (currentPage - 1) * postsPerPage,
-    currentPage * postsPerPage
-  );
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
+  const fetchBlogs = async ({ pageParam }) => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}blogs?populate=*&cursor=${pageParam}`
+    );
+    return res.json();
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  const {
+    data,
+    error,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    isFetchingNextPage,
+    status,
+  } = useInfiniteQuery({
+    queryKey: ["blogs"],
+    queryFn: fetchBlogs,
+    initialPageParam: 0,
+    getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
+  });
+
+  console.log("Checking data", data);
+
+  console.log("Checking posts", posts);
 
   return (
     <section className="relative py-20 px-4">
@@ -65,7 +84,11 @@ export default function BlogSection({ posts }) {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-base-content/80 to-base-content mx-auto rounded-full"></div>
         </motion.div>
-
+        {posts.length === 0 && (
+          <div className="text-center text-base-content/80 mx-auto">
+            No blogs available
+          </div>
+        )}
         {/* Blog Grid */}
         <motion.div
           variants={containerVariants}
@@ -74,7 +97,7 @@ export default function BlogSection({ posts }) {
           viewport={{ once: true, margin: "-100px" }}
           className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
-          {currentPosts.map((post) => (
+          {posts.map((post) => (
             <motion.article
               key={post.id}
               variants={cardVariants}
@@ -86,7 +109,7 @@ export default function BlogSection({ posts }) {
                 {/* Image Section */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
                   <Image
-                    src={post.image}
+                    src={post.cover_image.url}
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -142,68 +165,6 @@ export default function BlogSection({ posts }) {
             </motion.article>
           ))}
         </motion.div>
-
-        {/* Enhanced Pagination */}
-        {totalPages > 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex justify-center items-center mt-16 gap-2"
-          >
-            {/* Previous Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-                currentPage === 1
-                  ? "border-base-300/30 text-base-content/30 cursor-not-allowed"
-                  : "border-base-content/30 text-base-content hover:bg-base-content/10 hover:border-base-content/50"
-              }`}
-            >
-              Previous
-            </motion.button>
-
-            {/* Page Numbers */}
-            <div className="flex gap-2 mx-4">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
-                <motion.button
-                  key={num}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setCurrentPage(num)}
-                  className={`w-10 h-10 rounded-full border transition-all duration-300 ${
-                    num === currentPage
-                      ? "bg-gradient-to-r from-base-content/90 to-base-content text-primary border-transparent shadow-lg"
-                      : "border-base-300/30 text-base-content hover:bg-base-200 hover:border-base-content/30 hover:text-base-content"
-                  }`}
-                >
-                  {num}
-                </motion.button>
-              ))}
-            </div>
-
-            {/* Next Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                setCurrentPage(Math.min(totalPages, currentPage + 1))
-              }
-              disabled={currentPage === totalPages}
-              className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-                currentPage === totalPages
-                  ? "border-base-300/30 text-base-content/30 cursor-not-allowed"
-                  : "border-base-content/30 text-base-content hover:bg-base-content/10 hover:border-base-content/50"
-              }`}
-            >
-              Next
-            </motion.button>
-          </motion.div>
-        )}
       </div>
     </section>
   );

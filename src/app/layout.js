@@ -1,4 +1,5 @@
 import BackToTop from "./components/BackToTop";
+import ClientWrapper from "./components/Layout/ClientWrapper";
 import Footer from "./components/Layout/Footer/Footer";
 import { Header } from "./components/Layout/Header/Header";
 import "./styles/globals.css";
@@ -13,11 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="luxury">
       <body className="flex flex-col min-h-screen bg-base-100 text-base-content overflow-x-hidden">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        {/* TODO: add the back to top button */}
-        <BackToTop />
+        <ClientWrapper>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <BackToTop />
+        </ClientWrapper>
       </body>
     </html>
   );
