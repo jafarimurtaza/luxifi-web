@@ -8,7 +8,7 @@ export default function BlogDetailsHero({ post }) {
     <>
       {/* Hero Image */}
       {post.cover_image && (
-        <div className="relative w-full h-[600px] rounded-2xl overflow-hidden mb-10">
+        <div className="relative w-full lg:h-[600px] md:h-[300px] h-[200px] rounded-2xl overflow-hidden mb-10">
           <Image
             src={post.cover_image.url}
             alt={post.title}

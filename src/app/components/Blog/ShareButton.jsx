@@ -89,7 +89,7 @@ export default function ShareButton({ post }) {
       {/* Share Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-lg hover:bg-secondary hover:text-white transition-all duration-300 cursor-pointer border border-secondary/20"
+        className="flex items-center w-fit gap-2 px-4 py-2 bg-secondary/80 rounded-lg hover:bg-secondary hover:text-white transition-all duration-300 cursor-pointer border border-secondary/20"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
