@@ -86,7 +86,7 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-secondary backdrop-blur-md shadow-xl border-t border-white/20 h-screen">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#121214] backdrop-blur-md shadow-xl border-t border-white/20 h-screen">
             <div className="px-4 py-6 space-y-4">
               {menuItems.map((item) => (
                 <Link
