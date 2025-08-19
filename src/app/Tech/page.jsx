@@ -3,6 +3,7 @@ import FAQSection from "../components/Tech/FAQ/FAQSection";
 import HeroSection from "../components/Tech/HeroSection";
 import IntroImage from "../components/Layout/Images/IntroImage";
 
+//
 export default function TechPage() {
   return (
     <>
