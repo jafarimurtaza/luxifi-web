@@ -17,6 +17,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // TODO: Centeraliz the menu items
   const menuItems = [
     {
       label: "Home",
