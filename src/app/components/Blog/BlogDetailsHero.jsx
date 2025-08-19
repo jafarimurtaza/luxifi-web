@@ -30,7 +30,7 @@ export default function BlogDetailsHero({ post }) {
           <AiOutlineCalendar size={16} /> {formatDate(post.publishedAt)}
         </span>
         <span className="flex items-center gap-1">
-          <AiOutlineUser size={16} /> Luxifi Team
+          <AiOutlineUser size={16} /> Adam Taheri
         </span>
       </div>
     </>
