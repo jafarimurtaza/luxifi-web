@@ -69,7 +69,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative"
+          className="relative z-10 text-center pt-8 md:pt-4"
         >
           <div className="relative">
             <SectionTitle
