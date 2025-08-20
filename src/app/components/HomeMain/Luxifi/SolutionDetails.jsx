@@ -1,35 +1,70 @@
 export function SolutionDetails({ solution, isTransitioning }) {
   return (
     <div
-      className={`p-2 md:p-3 transition-all duration-700 ease-in-out ${
-        isTransitioning
-          ? "opacity-0 translate-y-4"
-          : "opacity-100 translate-y-0"
+      className={`p-3 transition-all duration-200 ease-out ${
+        isTransitioning ? "opacity-0" : "opacity-100"
       }`}
     >
-      <p className="text-gray-300 leading-relaxed text-base mb-6 transition-all duration-500">
+      <h3 className="text-xl font-semibold mb-4 text-[#C59649] transition-colors duration-200">
+        {solution.title}
+      </h3>
+
+      <p className="text-gray-300 leading-relaxed text-base mb-8 transition-all duration-200">
         {solution.description}
       </p>
 
-      {/* Problems List */}
+      {/* Enhanced Problems List with 2-Column Grid */}
       {solution.problems && (
-        <div className="space-y-3">
-          <h4 className="text-sm font-medium text-red-400 uppercase tracking-wide">
+        <div className="mb-8">
+          <h4 className="text-base font-semibold text-red-400 uppercase tracking-wider mb-6 border-b border-red-400/20 pb-2">
             Common Issues:
           </h4>
-          <div className="grid grid-cols-2 gap-2">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             {solution.problems.map((problem, index) => (
               <div
-                key={problem}
-                className="flex items-center space-x-2 text-sm text-gray-400"
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
+                key={problem.title || problem}
+                className="transition-all duration-200"
               >
-                <div className="w-2 h-2 bg-red-500 rounded-full opacity-75"></div>
-                <span>{problem}</span>
+                {/* Enhanced problem display for objects with title and quote */}
+                {typeof problem === "object" && problem.title ? (
+                  <div className="bg-gray-800/30 rounded-lg p-4 border-l-4 border-red-500/60 h-full">
+                    <div className="flex items-start space-x-3">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-3 h-3 bg-red-500 rounded-full shadow-lg"></div>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h5 className="text-red-400 font-semibold text-sm uppercase tracking-wide mb-3">
+                          {problem.title}
+                        </h5>
+                        {problem.quote && (
+                          <blockquote className="text-gray-300 text-sm leading-relaxed italic border-l-2 border-gray-600 pl-3">
+                            "{problem.quote}"
+                          </blockquote>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* Fallback for simple string problems */
+                  <div className="flex items-center space-x-3 text-sm text-gray-400 bg-gray-800/20 rounded-lg p-4 h-full">
+                    <div className="w-2 h-2 bg-red-500 rounded-full opacity-75"></div>
+                    <span>{problem}</span>
+                  </div>
+                )}
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Enhanced Conclusion */}
+      {solution.conclusion && (
+        <div className="border-t border-gray-700/50 pt-6">
+          <div className="bg-gray-800/40 rounded-lg p-4 border border-gray-700/30">
+            <p className="text-gray-200 leading-relaxed italic text-center">
+              {solution.conclusion}
+            </p>
           </div>
         </div>
       )}

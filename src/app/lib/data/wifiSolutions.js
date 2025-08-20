@@ -2,7 +2,7 @@ export const wifiSolutions = {
   router: {
     title: "ROUTER ONLY",
     description:
-      "Limited in both range and functionality, a router alone is insufficient for today's connected home. Dead zones and weak signals plague most areas of your home.",
+      "Your home deserves seamless connection, but a single router simply can't keep up. The result is dead zones, weak signals, and constant interruptions that disrupt daily life.",
     signals: [
       {
         name: "router",
@@ -11,12 +11,32 @@ export const wifiSolutions = {
         y: "42%",
       },
     ],
-    problems: ["Limited Range", "Dead Zones", "Weak Signal", "Frequent Drops"],
+    problems: [
+      {
+        title: "Limited range",
+        quote: "My WiFi barely reaches half the house.",
+      },
+      {
+        title: "Dead zones",
+        quote:
+          "Every time I step into the guest suite or patio, the connection disappears.",
+      },
+      {
+        title: "Weak signal",
+        quote: "Streaming upstairs is impossible without constant buffering.",
+      },
+      {
+        title: "Frequent drops",
+        quote: "Important calls cut out as I move from room to room.",
+      },
+    ],
+    conclusion:
+      "In a home designed for comfort, WiFi shouldn't be the source of constant frustration.",
   },
   extender: {
     title: "ROUTER + EXTENDER",
     description:
-      "Wi-Fi extenders offer a small boost to the router's range, however there is a significant trade-off in performance and user experience. Signal quality degrades significantly.",
+      "Extenders seem like a quick fix, but they sacrifice performance for coverage. Instead of reliable WiFi, you end up with slower speeds, awkward network names, and an inconsistent experience.",
     signals: [
       {
         name: "extender",
@@ -32,16 +52,30 @@ export const wifiSolutions = {
       },
     ],
     problems: [
-      "Reduced Speed",
-      "Signal Degradation",
-      "Network Switching",
-      "Still Patchy",
+      {
+        title: "Slower speeds",
+        quote: "The extender works, but everything feels twice as slow.",
+      },
+      {
+        title: "Multiple networks",
+        quote: "Why do I have to keep switching WiFi names in my own house?",
+      },
+      {
+        title: "Lag & delay",
+        quote: "Zoom freezes mid-meeting — it's embarrassing.",
+      },
+      {
+        title: "Gaps remain",
+        quote: "Even with extenders, certain rooms are still offline.",
+      },
     ],
+    conclusion:
+      "Instead of peace of mind, extenders create more hassle — leaving you managing WiFi instead of enjoying your home.",
   },
   mesh: {
     title: "Wi-Fi MESH",
     description:
-      "Wi-Fi mesh products solve some key issues found in other systems, but are still challenged by factors such as wall density and consumer-grade software constraints.",
+      "Mesh Wi-Fi feels modern, but in larger homes with multiple floors, thick walls, and dozens of devices, it simply can't deliver consistent, high-performance coverage.",
     signals: [
       {
         name: "mesh",
@@ -57,10 +91,25 @@ export const wifiSolutions = {
       },
     ],
     problems: [
-      "Wall Interference",
-      "Weather Sensitive",
-      "Inconsistent Performance",
-      "Software Limits",
+      {
+        title: "Bandwidth loss",
+        quote:
+          "The farther I go from the main hub, the slower everything gets.",
+      },
+      {
+        title: "Weak through walls/floors",
+        quote: "Rooms with thicker walls feel cut off from the internet.",
+      },
+      {
+        title: "Poor roaming",
+        quote: "My phone clings to weak WiFi until I manually reset it.",
+      },
+      {
+        title: "Device overload",
+        quote: "With all our smart devices, the network keeps crashing.",
+      },
     ],
+    conclusion:
+      "For homes filled with technology and activity, mesh still feels like a compromise.",
   },
 };

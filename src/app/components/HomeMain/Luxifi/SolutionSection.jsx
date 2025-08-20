@@ -9,18 +9,26 @@ export default function SolutionSection() {
       <div className="container mx-auto px-4 sm:px-6 py-12 lg:py-20">
         {/* Simple Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            THE SOLUTION?
-            <br />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
+            The Luxifi Difference
           </h2>
-          <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent text-2xl">
-            IT'S LUXIFI.
-          </span>
 
-          <Description
-            description="Luxifi delivers high-performance, enterprise-grade WiFi throughout your home using a fully wired network foundation. Every access point is hardwired for maximum speed, stability, and reach — giving you flawless coverage from room to room and wall to wall."
-            className="mt-4 !text-center mx-auto"
-          />
+          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
+            Luxifi designs{" "}
+            <span className="text-yellow-400 font-semibold">
+              enterprise-grade, custom WiFi solutions
+            </span>{" "}
+            that eliminate dead zones, ensure seamless roaming, and support
+            every device inside and out.
+          </p>
+
+          <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Because your home should feel effortless — and your WiFi should be{" "}
+            <span className="text-white font-medium">
+              invisible, powerful, and always on
+            </span>
+            .
+          </p>
         </div>
 
         {/* Clean Coverage Visualization */}
