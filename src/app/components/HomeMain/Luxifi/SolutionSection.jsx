@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-
+import Description from "../../Layout/Descriptions/Description";
+import { motion } from "framer-motion";
 export default function SolutionSection() {
   return (
     <div className="min-h-screen lg:px-10 md:px-4 text-white bg-gradient-to-br from-gray-900 via-black to-gray-800">
@@ -12,14 +12,24 @@ export default function SolutionSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
             THE SOLUTION?
             <br />
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-              IT'S LUXIFI.
-            </span>
           </h2>
+          <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent text-2xl">
+            IT'S LUXIFI.
+          </span>
+
+          <Description
+            description="Luxifi delivers high-performance, enterprise-grade WiFi throughout your home using a fully wired network foundation. Every access point is hardwired for maximum speed, stability, and reach — giving you flawless coverage from room to room and wall to wall."
+            className="mt-4 !text-center mx-auto"
+          />
         </div>
 
         {/* Clean Coverage Visualization */}
-        <div className="flex justify-center items-center lg:min-h-[600px] min-h-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center items-center lg:min-h-[600px] min-h-auto"
+        >
           <div className="relative max-w-4xl w-full">
             {/* House Image */}
             <div className="relative flex justify-center">
@@ -64,17 +74,10 @@ export default function SolutionSection() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Simple Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Complete Wi-Fi coverage for your entire property
-          </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black font-bold rounded-lg transition-all duration-300 transform hover:scale-105">
-            <Link href="/contact">GET STARTED</Link>
-          </button>
-        </div>
+        <div className="text-center mt-16"></div>
       </div>
 
       <style jsx>{`

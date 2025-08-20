@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { HouseVisualization } from "./HouseVisualization";
-import { ContentSection } from "./ContentSection";
 import { wifiSolutions } from "../../../lib/data/wifiSolutions";
+import { ContentSection } from "./ContentSection";
+import { HouseVisualization } from "./HouseVisualization";
 
 export default function WifiShowcase() {
   const [activeTab, setActiveTab] = useState("router");
@@ -32,6 +32,17 @@ export default function WifiShowcase() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="container mx-auto px-4 sm:px-6 py-12 lg:py-20">
+        {/* Simple Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
+            Seamless Wi-Fi.
+            <br />
+          </h2>
+          <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent text-2xl">
+            Because today’s homes demand more.
+          </span>
+        </div>
+
         {/* Problem Showcase Section - Improved Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* House Visualization */}
