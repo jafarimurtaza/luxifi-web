@@ -187,19 +187,6 @@ export function WifiSignal({ signal, index, animationKey }) {
               PATCHY
             </div>
           )}
-
-          {config.coverage === "perfect" && (
-            <div
-              className="absolute text-xs font-bold text-yellow-400"
-              style={{
-                left: `calc(${signal.x} + 30px)`,
-                top: `calc(${signal.y} - 15px)`,
-                textShadow: "0 1px 2px rgba(0,0,0,0.5)",
-              }}
-            >
-              PERFECT
-            </div>
-          )}
         </>
       )}
 
