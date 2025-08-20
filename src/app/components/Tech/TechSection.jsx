@@ -20,7 +20,7 @@ export default function TechSection() {
         className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
       >
         <div className="relative z-10">
-          <SectionTitle title="🔌 network" subTitle="technology" />
+          <SectionTitle title="network" subTitle="technology" />
           <Container>
             {networkTechnology?.map((card) => (
               <TechCard key={card.id} card={card} />
@@ -37,7 +37,7 @@ export default function TechSection() {
         className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
       >
         <div className="relative z-10">
-          <SectionTitle title="⚙️ premium cabling" subTitle="& hardware" />
+          <SectionTitle title="premium cabling" subTitle="& hardware" />
           <Container>
             {premiumCabling?.map((card) => (
               <TechCard key={card.id} card={card} />
@@ -52,7 +52,7 @@ export default function TechSection() {
         className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
       >
         <div className="relative z-10">
-          <SectionTitle title="🔐 integrated security" subTitle="& video" />
+          <SectionTitle title="integrated security" subTitle="& video" />
           <Container>
             {integratedSecurity?.map((card) => (
               <TechCard key={card.id} card={card} />

@@ -1,12 +1,12 @@
 export const techCards = [
   {
     id: 1,
-    title: "In-Wall WiFi Access Points",
+    title: "In-Wall Access Points",
     image: "/images/tech/in-wall-wifi-access-points.webp",
     description:
-      "These low-profile WiFi 6 access points mount directly on your wall and deliver powerful wireless performance. They include 4 built-in Ethernet ports to support wired connections where needed.",
+      "These access points mount directly on your wall and deliver powerful wireless performance. They include 4 built-in Ethernet ports to support wired connections where needed.",
     features:
-      "• Eliminates clutter from extenders and cables\n• Keeps performance high in rooms that need strong WiFi\n• Lets you hardwire smart TVs, gaming consoles, and desktops",
+      "• Eliminates clutter from extenders and cables\n• Keeps performance high in rooms that need strong Wi-Fi\n• Lets you hardwire smart TVs, gaming consoles, and desktops",
     isLeft: true,
   },
   {
@@ -14,15 +14,15 @@ export const techCards = [
     title: "Ceiling-Mount Access Points",
     image: "/images/tech/ceiling-mount.webp",
     description:
-      "Ceiling-mounted units distribute a wide, balanced WiFi signal from above — perfect for open-plan layouts or large rooms.",
+      "Ceiling-mounted units distribute a wide, balanced Wi-Fi signal from above — perfect for open-plan layouts or large rooms.",
     features:
       "• Ensures stable coverage across wide areas\n• Blends discreetly into ceilings\n• Handles multiple devices without drop-offs",
     isLeft: false,
   },
   {
     id: 3,
-    title: "Cloud Control System – Dream Machine Pro",
-    image: "/images/tech/cloud-control-systems.webp",
+    title: "Cloud System – Dream Machine Pro",
+    image: "/images/tech/dream-machine.avif",
     description:
       "This all-in-one controller manages your entire network. It acts as a high-end router, firewall, managed switch, and cloud-based control system. Add a hard drive to record video from your UniFi cameras.",
     features:
@@ -31,20 +31,20 @@ export const techCards = [
   },
   {
     id: 4,
-    title: "Outdoor WiFi Access Points – U6 Mesh",
+    title: "Outdoor Wi-Fi Access Points",
     image: "/images/tech/outdoor-access-points.webp",
     description:
-      "These waterproof WiFi 6 mesh access points expand your network outdoors. They cast all-directional coverage to keep your entire property connected.",
+      "These waterproof Wi-Fi 6 mesh access points expand your network outdoors. They cast all-directional coverage to keep your entire property connected.",
     features:
-      "• Adds seamless WiFi to yards, patios, and garages\n• Withstands rain and heat\n• Great for smart lighting, outdoor cameras, and guests",
+      "• Adds seamless Wi-Fi to yards, patios, and garages\n• Withstands rain and heat\n• Great for smart lighting, outdoor cameras, and guests",
     isLeft: false,
   },
   {
     id: 5,
-    title: "Premium Data Cabling – Cat6a",
+    title: "Premium Data Cabling",
     image: "/images/tech/premium-data-cabling.webp",
     description:
-      "Our high-performance Cat6a cabling runs behind the walls, providing the backbone for your network — supporting ultra-fast and interference-free connectivity.",
+      "Our high-performance cabling runs behind the walls, providing the backbone for your network — supporting ultra-fast and interference-free connectivity.",
     features:
       "• Keeps your network fast and reliable long-term\n• Future-proofs your home for more devices\n• Leaves no mess — installed invisibly and professionally",
     isLeft: true,
@@ -52,11 +52,11 @@ export const techCards = [
   {
     id: 6,
     title: "Pro Cameras – UniFi Protect",
-    image: "/images/tech/camera.webp",
+    image: "/images/tech/pro-camera.png",
     description:
       "Capture every detail with these AI-powered, weather-resistant indoor/outdoor cameras. View footage anytime from your phone or computer.",
     features:
-      "• Monitors your home 24/7 in ultra HD\n• Sends smart alerts for motion or unusual activity\n• Deters threats and protects what matters most",
+      "• Monitors your home 24/7 with 4k clarity\n• collect, categorize and send  smart alerts (AI) for motion or unusual activity\n• Deters threats and protects what matters most",
     isLeft: false,
   },
   {
@@ -66,17 +66,17 @@ export const techCards = [
     description:
       "These secure devices store and organize your camera footage locally. They support large camera networks and provide easy access to recordings.",
     features:
-      "• Stores video safely without relying on the cloud\n• Supports up to 50 cameras\n• Makes reviewing or exporting footage simple",
+      "• Stores video safely locally and optionaly with cloud backup\n• Supports up to security cameras\n• Makes reviewing or exporting footage the simplest way",
     isLeft: true,
   },
   {
     id: 8,
     title: "ViewPort – Live Camera Streaming Display",
-    image: "/images/tech/office-graphic.jpg",
+    image: "/images/tech/security-camera.png",
     description:
       "Plug this device into any TV or monitor and stream live camera feeds instantly — no computer needed.",
     features:
-      "• Lets you monitor your property in real time\n• Works without logging into an app\n• Perfect for 24/7 surveillance screens",
+      "• Lets you monitor your property in real time\n• Works without logging into an app\n• Ideal for entry visibility 24/7 surveillance screens",
     isLeft: false,
   },
   {
@@ -96,7 +96,7 @@ export const techCards = [
     description:
       "See and talk to visitors from anywhere using high-definition video, motion alerts, and two-way audio — all from your smartphone.",
     features:
-      "• Instantly know who’s at the door\n• Talk to guests or deliveries without opening\n• Adds convenience and security",
+      "• Instantly know who’s at the door\n• Talk to guests or deliveries without opening\n• Adds convenience and safety to your home entrance",
     isLeft: false,
   },
 ];
