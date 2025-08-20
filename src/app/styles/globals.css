@@ -348,3 +348,47 @@ html {
           }
         }
       
+
+        .luxifi-coverage {
+          animation: luxifiGlow 6s ease-in-out infinite;
+        }
+
+        .luxifi-point {
+          animation: luxifiPulse 3s ease-in-out infinite;
+          box-shadow: 0 0 10px rgba(102, 187, 106, 0.6);
+        }
+
+        @keyframes luxifiGlow {
+          0%,
+          100% {
+            opacity: 0.6;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+
+        @keyframes luxifiPulse {
+          0%,
+          100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          50% {
+            opacity: 0.7;
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .luxifi-coverage,
+          .luxifi-point {
+            animation: none;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .luxifi-point {
+            animation-duration: 4s;
+          }
+        }
