@@ -6,9 +6,9 @@ import Description from "../Layout/Descriptions/Description";
 import SectionTitle from "../Layout/Titles/SectionTitle";
 
 const features = [
-  { title: "Engineered to Perform.", icon: "⚡", href: "#network" },
-  { title: "Installed to Disappear.", icon: "🧩", href: "#premium" },
-  { title: "Loved for the Experience.", icon: "✨", href: "#security" },
+  { title: "Engineered to Perform.", href: "#network" },
+  { title: "Installed to Disappear.", href: "#premium" },
+  { title: "Loved for the Experience.", href: "#security" },
 ];
 
 export default function HeroSection() {
