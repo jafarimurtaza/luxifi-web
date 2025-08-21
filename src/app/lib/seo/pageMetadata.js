@@ -16,7 +16,7 @@ export const pageMetadata = {
       "whole home WiFi",
       "professional network installation",
     ],
-    image: `${WEBSITE_URL_DETAILS.URL}home/logo.png`,
+    image: `${WEBSITE_URL_DETAILS.URL}/images/home/logo.png`,
   }),
 
   tech: getMetadata({
@@ -30,7 +30,7 @@ export const pageMetadata = {
       "luxury home networking",
       "professional WiFi hardware",
     ],
-    image: `${WEBSITE_URL_DETAILS.URL}tech/intro-house-image.jpg`,
+    image: `${WEBSITE_URL_DETAILS.URL}/images/tech/intro-house-image.jpg`,
   }),
 
   approach: getMetadata({
@@ -44,7 +44,7 @@ export const pageMetadata = {
       "luxury home WiFi planning",
       "professional WiFi consultation",
     ],
-    image: `${WEBSITE_URL_DETAILS.URL}approach/villa-house.jpg`,
+    image: `${WEBSITE_URL_DETAILS.URL}/images/approach/villa-house.jpg`,
   }),
 
   maintenance: getMetadata({
@@ -58,7 +58,7 @@ export const pageMetadata = {
       "WiFi troubleshooting",
       "luxury home network care",
     ],
-    image: `${WEBSITE_URL_DETAILS.URL}maintenance/maintenace-hero-image.webp`,
+    image: `${WEBSITE_URL_DETAILS.URL}/images/maintenance/maintenace-hero-image.webp`,
   }),
 
   contact: getMetadata({
@@ -72,6 +72,6 @@ export const pageMetadata = {
       "luxury home WiFi quote",
       "network installation inquiry",
     ],
-    image: `${WEBSITE_URL_DETAILS.URL}contact/hero-image.jpg`,
+    image: `${WEBSITE_URL_DETAILS.URL}/images/contact/hero-image.jpg`,
   }),
 };
