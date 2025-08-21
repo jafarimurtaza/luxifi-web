@@ -70,7 +70,7 @@ export default function PromiseItem({ item }) {
       </div>
 
       <div
-        className={`font-black text-center transition-all duration-700 ${
+        className={`font-black text-center capitalize transition-all duration-700 ${
           isCenter
             ? "text-primary text-lg font-black drop-shadow-lg"
             : "text-base-content text-base font-bold"

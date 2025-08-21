@@ -59,10 +59,12 @@ export default function CoreServicesSection() {
           </div>
         ))}
 
-        <div className="w-full mx-auto flex items-center justify-center">
-          <button className="group mx-auto px-6 cursor-pointer py-3 border-2 border-white/30 text-primary font-semibold rounded-lg transition-all duration-300 hover:border-base-200  hover:shadow-lg  hover:scale-105">
+        <div className="w-full mx-auto flex items-center justify-center md:mt-10 mt-24">
+          <button className="group mx-auto px-5 md:px-8 cursor-pointer py-3 md:py-5 border-2 border-white/30 text-primary font-semibold rounded-lg transition-all duration-300 hover:border-base-200 hover:shadow-lg hover:scale-105">
             <Link href="/contact">
-              <span className="flex items-center gap-3">LEARN MORE</span>
+              <span className="flex items-center gap-3 text-2xl md:text-3xl">
+                LEARN MORE
+              </span>
             </Link>
           </button>
         </div>
