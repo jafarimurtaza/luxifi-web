@@ -11,7 +11,7 @@ export default function HowWeWork() {
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <SectionTitle title="how it works" />
+          {/* <SectionTitle title="how it works" /> */}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             From first call to final install, we make it easy.
           </p>
@@ -35,7 +35,7 @@ export default function HowWeWork() {
               `,
             }}
           >
-            <Link href="/approach">Get Started</Link>
+            <Link href="/contact">Get Started</Link>
           </button>
         </div>
       </div>
