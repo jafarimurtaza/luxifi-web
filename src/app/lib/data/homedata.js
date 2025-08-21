@@ -852,10 +852,9 @@ export const workSteps = [
 export const testimonials = [
   {
     name: "Sarah W.",
-    text: "After years of poor Wi-Fi in our estate, Luxifi provided a flawless solution. Professional, discreet, and now we have perfect coverage throughout. Highly recommended!",
+    text: "After years of poor WiFi in our estate, Luxifi provided a flawless solution. Professional, discreet, and now we have perfect coverage throughout. Highly recommended!",
     rating: 5,
     title: "Estate Owner",
-    avatar: "👩‍💼",
     location: "Beverly Hills, CA",
   },
   {
@@ -863,23 +862,20 @@ export const testimonials = [
     text: "Adam (Luxifi) resolved all our network issues with professionalism and patience. Excellent service. Highly recommend it!",
     rating: 5,
     title: "Luxury Homeowner",
-    avatar: "👨‍💻",
     location: "Manhattan, NY",
   },
   {
     name: "James Mackenzie",
-    text: "Luxifi (Adam) transformed my home office with a flawless Ethernet installation. As a tech-savvy client, I'm impressed by his expertise. Absolutely recommended for networking needs!",
+    text: "Luxifi (Adam) transformed my home office with a flawless Ethernet installation. As a tech-savvy client, I’m impressed by his expertise. Absolutely recommended for networking needs!",
     rating: 5,
     title: "Tech Executive",
-    avatar: "👨‍💼",
     location: "Silicon Valley, CA",
   },
   {
     name: "Sam Mishael",
-    text: "Luxifi solved our weak Wi-Fi problem with a wired access point. Timely, professional, and effective. Highly recommended!",
+    text: "Luxifi solved our weak WiFi problem with a wired access point. Timely, professional, and effective. Highly recommended!",
     rating: 5,
     title: "Property Owner",
-    avatar: "🏡",
     location: "Miami, FL",
   },
   {
@@ -887,7 +883,6 @@ export const testimonials = [
     text: "Exceptional service from a professional company. Adam was extremely helpful throughout the process!",
     rating: 5,
     title: "Residential Client",
-    avatar: "👨‍🏫",
     location: "Austin, TX",
   },
   {
@@ -895,7 +890,6 @@ export const testimonials = [
     text: "Adam (Luxifi) brought my project to life quickly and with expertise. Clear communication and fast work. Would definitely hire him again!",
     rating: 5,
     title: "Project Manager",
-    avatar: "👩‍🔧",
     location: "Seattle, WA",
   },
   {
@@ -903,7 +897,6 @@ export const testimonials = [
     text: "Adam is highly professional, honest, and organized. Provided clear estimates and outstanding service. Best company I’ve worked with in years!",
     rating: 5,
     title: "Satisfied Client",
-    avatar: "👨‍💼",
     location: "Toronto, ON",
   },
 ];
