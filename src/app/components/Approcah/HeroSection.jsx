@@ -136,12 +136,6 @@ export default function HeroSection() {
           >
             <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-400 to-orange-500 rounded-full opacity-60"></div>
             <div className="absolute -right-4 top-0 w-1 h-full bg-gradient-to-b from-orange-500 to-amber-400 rounded-full opacity-60"></div>
-            <div className="rounded-xl bg-black/40 backdrop-blur px-4 py-3">
-              <Description
-                textClassName="text-white/90 text-soft-shadow"
-                description="Our promise is simple: We make your Wi-Fi invisible — because when it works flawlessly, you shouldn't have to think about it."
-              />
-            </div>
           </motion.div>
         </motion.div>
 
@@ -153,15 +147,14 @@ export default function HeroSection() {
           className="pt-8"
         >
           <motion.button
-            className="relative group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="relative group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl"
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 20px 40px rgba(245, 158, 11, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative z-10">
-              <Link href="#promise">Discover Our Approach</Link>
+              <span className="text-2xl capitalize">how it works</span>
             </div>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-orange-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
