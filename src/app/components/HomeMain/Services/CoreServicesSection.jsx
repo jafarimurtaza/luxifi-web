@@ -4,6 +4,7 @@ import { services } from "../../../lib/data/homedata";
 import { useState, useEffect, useRef } from "react";
 import { ServiceCard } from "./ServiceCard";
 import LinearRight from "../../Layout/Images/LinearRight";
+import Link from "next/link";
 
 export default function CoreServicesSection() {
   const [visibleServices, setVisibleServices] = useState(new Set());
@@ -60,7 +61,9 @@ export default function CoreServicesSection() {
 
         <div className="w-full mx-auto flex items-center justify-center">
           <button className="group mx-auto px-6 cursor-pointer py-3 border-2 border-white/30 text-primary font-semibold rounded-lg transition-all duration-300 hover:border-base-200  hover:shadow-lg  hover:scale-105">
-            <span className="flex items-center gap-3">LEARN MORE</span>
+            <Link href="/contact">
+              <span className="flex items-center gap-3">LEARN MORE</span>
+            </Link>
           </button>
         </div>
       </div>
