@@ -3,7 +3,7 @@ import BlogDetailsHero from "../../components/Blog/BlogDetailsHero";
 import BlogDetailsSkeleton from "../../components/Blog/BlogDetailsSkeleton";
 import BlogNotFound from "../../components/Blog/BlogNotFound";
 import { getBlogDetails } from "../../lib/apiCleint";
-import { WEBSITE_URL_DETAILS } from "../../lib/constants";
+import { WEBSITE_DETAILS } from "../../lib/constants";
 import { getBlogMetadata } from "../../lib/seo/getMetadata";
 
 export default async function BlogDetails({ params }) {
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }) {
         : post.short_description;
 
     // Create canonical URL
-    const canonical = `${WEBSITE_URL_DETAILS.URL}/blog/${post.slug}`;
+    const canonical = `${WEBSITE_DETAILS.URL}/blog/${post.slug}`;
 
     // Image URL
     const image = post.cover_image?.url || "/images/blog/default-og.jpg";
@@ -75,7 +75,7 @@ export async function generateMetadata({ params }) {
       image,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      author: "Luxifi Team",
+      author: WEBSITE_DETAILS.AUTHOR,
       structuredData: {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -92,15 +92,15 @@ export async function generateMetadata({ params }) {
         author: {
           "@type": "Organization",
           name: "Luxifi",
-          url: WEBSITE_URL_DETAILS.URL,
+          url: WEBSITE_DETAILS.URL,
         },
         publisher: {
           "@type": "Organization",
           name: "Luxifi",
-          url: WEBSITE_URL_DETAILS.URL,
+          url: WEBSITE_DETAILS.URL,
           logo: {
             "@type": "ImageObject",
-            url: WEBSITE_URL_DETAILS.LOGO,
+            url: WEBSITE_DETAILS.LOGO,
             width: 512,
             height: 512,
           },

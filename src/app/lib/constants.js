@@ -16,11 +16,12 @@ export const TAGS = {
   BLOG_DETAILS: "blog-details",
 };
 
-export const WEBSITE_URL_DETAILS = {
+export const WEBSITE_DETAILS = {
   // URL: "https://luxifi.us",
   URL: "https://staging.luxifi.us",
   NAME: "Luxifi",
   DESCRIPTION: "Premium Home WiFi Installation Houston",
   IMAGE: "/images/",
   LOGO: "/images/logo.png",
+  AUTHOR: "Adam Taheri",
 };

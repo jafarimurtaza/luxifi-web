@@ -1,5 +1,5 @@
 // lib/seo/getMetadata.js
-import { WEBSITE_URL_DETAILS } from "../constants";
+import { WEBSITE_DETAILS } from "../constants";
 
 export function getMetadata({
   title,
@@ -9,7 +9,7 @@ export function getMetadata({
   image = "/og-default.jpg",
   type = "website",
   structuredData = null,
-  author = "Luxifi Team",
+  author = WEBSITE_DETAILS.AUTHOR,
   publishedTime = null,
   modifiedTime = null,
 }) {
@@ -38,7 +38,7 @@ export function getMetadata({
         {
           url: image.startsWith("http")
             ? image
-            : `${WEBSITE_URL_DETAILS.URL}${image}`,
+            : `${WEBSITE_DETAILS.URL}${image}`,
           width: 1200,
           height: 630,
           alt: title || "Luxifi - Premium WiFi Installation",
@@ -52,7 +52,7 @@ export function getMetadata({
       title: baseTitle,
       description: finalDescription,
       images: [
-        image.startsWith("http") ? image : `${WEBSITE_URL_DETAILS.URL}${image}`,
+        image.startsWith("http") ? image : `${WEBSITE_DETAILS.URL}${image}`,
       ],
       creator: "@luxifi",
       site: "@luxifi",
@@ -76,9 +76,7 @@ export function getMetadata({
     classification: "WiFi Installation Services",
 
     // Set metadata base for relative URLs
-    metadataBase: canonical
-      ? new URL(canonical).origin
-      : WEBSITE_URL_DETAILS.URL,
+    metadataBase: canonical ? new URL(canonical).origin : WEBSITE_DETAILS.URL,
   };
 
   // Add article-specific metadata for blog posts

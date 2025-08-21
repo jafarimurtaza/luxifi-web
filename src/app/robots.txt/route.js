@@ -1,8 +1,8 @@
 // app/robots.txt/route.js
-import { WEBSITE_URL_DETAILS } from "../lib/constants";
+import { WEBSITE_DETAILS } from "../lib/constants";
 
 export async function GET() {
-  const baseUrl = WEBSITE_URL_DETAILS.URL;
+  const baseUrl = WEBSITE_DETAILS.URL;
 
   const robotsTxt = `User-agent: *
 Allow: /
