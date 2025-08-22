@@ -50,7 +50,7 @@ export default function PriceCard({ plan, isMonthly }) {
 
             {/* Discount indicator for annual billing */}
             {!isMonthly && (
-              <div className="mt-2 text-sm text-base-content">
+              <div className="mt-2 text-xl text-base-content">
                 <span className="line-through opacity-70 mr-2">
                   ${plan.priceMonthly * 12} / year
                 </span>

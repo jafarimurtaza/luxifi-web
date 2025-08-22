@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
-// Separate components for better maintainability
 const RenderImage = ({ src, alt = "Render image" }) => (
   <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 flex items-center justify-center p-4 md:p-6 lg:p-8">
     <Image
@@ -19,7 +18,7 @@ const RenderImage = ({ src, alt = "Render image" }) => (
 );
 
 const RenderContent = ({ children }) => (
-  <div className="p-4 w-fit h-full flex items-center justify-center text-left bg-base-100">
+  <div className="p-4 w-full flex items-center justify-center text-left bg-base-100">
     <div className="max-w-xl">{children}</div>
   </div>
 );
@@ -35,17 +34,23 @@ export default function CardLayout({
       variants={variants}
       className="w-full rounded-xl overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
     >
-      {isLeft ? (
-        <>
-          <RenderImage src={image} />
-          <RenderContent>{children}</RenderContent>
-        </>
-      ) : (
-        <>
-          <RenderContent>{children}</RenderContent>
-          <RenderImage src={image} />
-        </>
-      )}
+      {/* Image */}
+      <div
+        className={`${
+          isLeft ? "md:order-1" : "md:order-2"
+        } order-1`} // always first on mobile
+      >
+        <RenderImage src={image} />
+      </div>
+
+      {/* Content */}
+      <div
+        className={`${
+          isLeft ? "md:order-2" : "md:order-1"
+        } order-2`} // always second on mobile
+      >
+        <RenderContent>{children}</RenderContent>
+      </div>
     </motion.div>
   );
 }
