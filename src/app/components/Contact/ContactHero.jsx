@@ -1,7 +1,7 @@
-
-
-export function ContactHero({
-  backgroundImage,
+  
+  
+  export function ContactHero({
+  backgroundVideo,
   title = "Let's Get You Connected",
   subtitle = "Fast. Reliable. Done Right.",
   description = "Serving Houston and surrounding areas.",
@@ -9,12 +9,17 @@ export function ContactHero({
 }) {
   return (
     <section className="relative pt-32 pb-16 text-center overflow-hidden">
-      {backgroundImage && (
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+      {backgroundVideo && (
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={backgroundVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       )}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -22,7 +27,9 @@ export function ContactHero({
           {title}
         </h1>
         <div className="text-2xl md:text-3xl font-bold mb-4 text-golden">{subtitle}</div>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">{description}</p>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
+          {description}
+        </p>
         <p className="text-xl font-medium text-white/90">{callToAction}</p>
       </div>
     </section>

@@ -4,6 +4,7 @@ import SolutionSection from "./Luxifi/SolutionSection";
 import WifiShowcase from "./Luxifi/wifishowcase";
 import LuxifiPromiseSection from "./Promise/LuxifiPromiseSection";
 import CoreServicesSection from "./Services/CoreServicesSection";
+import Testimonials from "./Testimonial/Testimonials";
 import { TestimonialsSlider } from "./Testimonial/TestimonialsSlider";
 
 export default function HomeMain() {
@@ -16,6 +17,7 @@ export default function HomeMain() {
       <LuxifiPromiseSection />
       <HowWeWork />
       <TestimonialsSlider />
+      <Testimonials/>
     </main>
   );
 }
