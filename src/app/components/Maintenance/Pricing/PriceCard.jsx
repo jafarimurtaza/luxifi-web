@@ -41,10 +41,30 @@ export default function PriceCard({ plan, isMonthly }) {
 
         {/* Top Price: always base price only */}
         {hasPrice ? (
-          <div className="mb-6 flex items-baseline whitespace-nowrap rounded-md bg-primary px-4 py-2 text-2xl font-extrabold text-black w-fit">
-            <span className="mr-1">$</span>
-            <CountUp end={basePrice} duration={0.6} preserveValue />
-            <span className="ml-1 text-sm font-normal">{billingLabel}</span>
+          <div className="mb-6 flex flex-col">
+            <div className="flex items-baseline whitespace-nowrap rounded-md bg-primary px-4 py-2 text-2xl font-extrabold text-black w-fit">
+              <span className="mr-1">$</span>
+              <CountUp end={basePrice} duration={0.6} preserveValue />
+              <span className="ml-1 text-sm font-normal">{billingLabel}</span>
+            </div>
+
+            {/* Discount indicator for annual billing */}
+            {!isMonthly && (
+              <div className="mt-2 text-sm text-base-content">
+                <span className="line-through opacity-70 mr-2">
+                  ${plan.priceMonthly * 12} / year
+                </span>
+                <span className="text-primary font-semibold">
+                  Save{" "}
+                  {Math.round(
+                    ((plan.priceMonthly * 12 - plan.priceAnnual) /
+                      (plan.priceMonthly * 12)) *
+                      100
+                  )}
+                  %
+                </span>
+              </div>
+            )}
           </div>
         ) : (
           <div className="mb-6 text-xl font-extrabold text-primary">
