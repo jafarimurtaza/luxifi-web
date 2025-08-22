@@ -100,10 +100,12 @@ export default function Testimonials() {
     <div className="min-h-screen bg-black flex items-center justify-center p-8 overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         {/* Header Section - restored original styling */}
-        <div className="mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary py-8 mb-4 leading-tight">
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary pb-10 mb-4 leading-tight">
             What Client Are Saying
+
           </h1>
+       
         </div>
 
         <div
@@ -113,10 +115,11 @@ export default function Testimonials() {
             perspectiveOrigin: "center center",
           }}
         >
-          {/* Original binding  visual effect */}
+          {/* Original binding mechanism visual effect */}
           <div className="absolute  top-0 left-1/2 transform -translate-x-1/2 z-40">
            {/* <div className="absolute -top-24 -z-40  left-10 w-12 h-32 rotate-12 bg-[#CECECE]   rounded-lg shadow-inner"></div> */}
             <div className="h-6 w-32  top-4 border-8 mt-2 shadow-gray-600 border-[#CECECE] rounded-full shadow-inner   transform  opacity-80"></div>
+           
           </div>
 
           <div className="opacity-0 absolute   -z-10">

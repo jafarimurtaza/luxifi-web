@@ -381,8 +381,8 @@ export const services = [
 export const promiseItems = [
   {
     id: 1,
-    title: "built by",
-    subtitle: "specialists",
+    title: "Built by",
+    subtitle: "Specialists",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -412,8 +412,8 @@ export const promiseItems = [
   },
   {
     id: 2,
-    title: "zero dead",
-    subtitle: "zones",
+    title: "Zero Dead",
+    subtitle: "Zones",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -458,8 +458,8 @@ export const promiseItems = [
   },
   {
     id: 3,
-    title: "full-service",
-    subtitle: "delivery",
+    title: "Full-Service",
+    subtitle: "Delivery",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -514,8 +514,8 @@ export const promiseItems = [
   },
   {
     id: 4,
-    title: "turnkey",
-    subtitle: "execution",
+    title: "Turnkey",
+    subtitle: "Execution",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -571,8 +571,8 @@ export const promiseItems = [
   },
   {
     id: 5,
-    title: "premium hardware",
-    subtitle: "only",
+    title: "Premium hardware",
+    subtitle: "Only",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -619,8 +619,8 @@ export const promiseItems = [
   },
   {
     id: 6,
-    title: "outage",
-    subtitle: "protection",
+    title: "Outage",
+    subtitle: "Protection",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -655,8 +655,8 @@ export const promiseItems = [
   },
   {
     id: 7,
-    title: "proactive",
-    subtitle: "support",
+    title: "Proactive",
+    subtitle: "Support",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -702,8 +702,8 @@ export const promiseItems = [
   },
   {
     id: 8,
-    title: "security that",
-    subtitle: "fits you",
+    title: "Security that",
+    subtitle: "Fits you",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>
@@ -737,8 +737,8 @@ export const promiseItems = [
   },
   {
     id: 9,
-    title: "outdoor &",
-    subtitle: "indoor",
+    title: "Outdoor &",
+    subtitle: "Indoor",
     icon: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <defs>

@@ -33,7 +33,7 @@ export default function PromiseItem({ item }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center promise-item transition-all duration-700"
+      className="flex flex-col py-10 items-center justify-center promise-item transition-all duration-700"
       data-item-id={item.id}
     >
       <div className="relative mb-8 mt-16">
@@ -58,7 +58,7 @@ export default function PromiseItem({ item }) {
                 style={{ animationDuration: "1s" }}
               />
               <div
-                className="absolute inset-2 border-2 border-yellow-300/50 rounded-full animate-spin"
+                className="absolute  inset-2 border-2 border-yellow-300/50 rounded-full animate-spin"
                 style={{
                   animationDuration: "2s",
                   animationDirection: "reverse",
@@ -72,7 +72,7 @@ export default function PromiseItem({ item }) {
       <div
         className={`font-black text-center transition-all duration-700 ${
           isCenter
-            ? "text-primary text-lg font-black drop-shadow-lg"
+            ? "text-primary  text-lg font-black drop-shadow-lg"
             : "text-base-content text-base font-bold"
         }`}
         style={{
