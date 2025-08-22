@@ -4,14 +4,19 @@ import Link from "next/link";
 import { workSteps } from "../../../lib/data/homedata";
 import { StepCard } from "./StepCard";
 import SectionTitle from "../../Layout/Titles/SectionTitle";
+import { usePathname } from "next/navigation";
 
 export default function HowWeWork() {
+  const router = usePathname();
+
+  const isApprocah = router.includes("approach");
+
   return (
     <div className="min-h-screen bg-black text-white py-20 px-3">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          {/* <SectionTitle title="how it works" /> */}
+          {!isApprocah && <SectionTitle title="how it works" />}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             From first call to final install, we make it easy.
           </p>
