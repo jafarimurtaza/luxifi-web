@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 export default function ContactFooter() {
   const socialLinks = [
@@ -39,14 +38,16 @@ export default function ContactFooter() {
       ),
       href: "https://www.linkedin.com/company/luxifi-tx/about/",
     },
-  ]
+  ];
 
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-foreground">WiFi Solutions</span>
+            <span className="text-xl font-bold text-foreground">
+              WiFi Solutions
+            </span>
           </div>
           <div className="flex justify-center md:justify-end space-x-4">
             {socialLinks.map((social, index) => (
@@ -67,10 +68,13 @@ export default function ContactFooter() {
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             Empowering connectivity through innovative WiFi solutions.
-            <span className="text-accent"> Ready to transform your network?</span>
+            <span className="text-accent">
+              {" "}
+              Ready to transform your network?
+            </span>
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

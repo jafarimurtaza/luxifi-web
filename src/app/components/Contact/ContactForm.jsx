@@ -1,7 +1,6 @@
+"use client";
 
-"use client"
-
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,61 +10,71 @@ export default function ContactForm() {
     phone: "",
     service: "",
     message: "",
-  })
-  const [isVisible, setIsVisible] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
-    const element = document.getElementById("contact-form")
-    if (element) observer.observe(element)
+    const element = document.getElementById("contact-form");
+    if (element) observer.observe(element);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    setIsSubmitting(false)
-    alert("Thank you for your message! We'll get back to you soon.")
-    setFormData({ name: "", email: "", company: "", phone: "", service: "", message: "" })
-  }
+    setIsSubmitting(false);
+    alert("Thank you for your message! We'll get back to you soon.");
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  };
 
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section id="contact-form" className="py-16">
       <div
-        className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+        className={`max-w-4xl mx-auto transition-all duration-1000 ${
+          isVisible ? "animate-fade-in-up" : "opacity-0"
+        }`}
       >
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Start Your <span className="text-primary">WiFi Journey</span>
           </h2>
-        
         </div>
 
         <div className="bg-card rounded-2xl p-8 md:p-12 shadow-2xl border border-border animate-pulse-glow">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Full Name *</label>
+                <label className="text-sm font-medium text-foreground">
+                  Full Name *
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -77,7 +86,9 @@ export default function ContactForm() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Email Address *</label>
+                <label className="text-sm font-medium text-foreground">
+                  Email Address *
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -92,7 +103,9 @@ export default function ContactForm() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Company</label>
+                <label className="text-sm font-medium text-foreground">
+                  Company
+                </label>
                 <input
                   type="text"
                   name="company"
@@ -103,7 +116,9 @@ export default function ContactForm() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Phone Number</label>
+                <label className="text-sm font-medium text-foreground">
+                  Phone Number
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -116,7 +131,9 @@ export default function ContactForm() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Service Interest</label>
+              <label className="text-sm font-medium text-foreground">
+                Service Interest
+              </label>
               <select
                 name="service"
                 value={formData.service}
@@ -124,17 +141,27 @@ export default function ContactForm() {
                 className="w-full px-4 py-3 cursor-pointer bg-input border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
               >
                 <option value="">Select a service</option>
-                <option value="enterprise-wifi">Enterprise WiFi Solutions</option>
-                <option value="network-design">Network Design & Planning</option>
-                <option value="wifi-installation">WiFi Installation & Setup</option>
-                <option value="network-security">Network Security Solutions</option>
+                <option value="enterprise-wifi">
+                  Enterprise WiFi Solutions
+                </option>
+                <option value="network-design">
+                  Network Design & Planning
+                </option>
+                <option value="wifi-installation">
+                  WiFi Installation & Setup
+                </option>
+                <option value="network-security">
+                  Network Security Solutions
+                </option>
                 <option value="maintenance">Maintenance & Support</option>
                 <option value="consultation">Technical Consultation</option>
               </select>
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-foreground">Project Details *</label>
+              <label className="text-sm font-medium text-foreground">
+                Project Details *
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -153,7 +180,11 @@ export default function ContactForm() {
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">
-                  <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+                  <svg
+                    className="animate-spin w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
                     <circle
                       className="opacity-25"
                       cx="12"
@@ -178,5 +209,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-  )
+  );
 }
