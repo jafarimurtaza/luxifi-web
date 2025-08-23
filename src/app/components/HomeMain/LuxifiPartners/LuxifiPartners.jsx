@@ -2,7 +2,6 @@ import Description from "../../Layout/Descriptions/Description";
 import SectionTitle from "../../Layout/Titles/SectionTitle";
 import { LogoRail } from "./LogoRail";
 
-
 export function LuxifiPartners() {
   const brands = [
     { name: "Ubiquiti", image: "/images/home/partners/Ubiquiti-Logo-2.png" },

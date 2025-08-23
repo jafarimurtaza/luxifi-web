@@ -13,9 +13,6 @@ export function ServiceCard({ service, index, isVisible }) {
       {/* Image Section */}
       <div className={`relative ${isImageLeft ? "lg:order-1" : "lg:order-2"}`}>
         <div className="relative w-full h-96 flex items-center justify-center">
-          {/* Animated Background Glow */}
-          <div className="absolute inset-0 bg-gradient-radial from-blue-500/20 via-cyan-500/10 to-transparent rounded-full animate-pulse-glow" />
-
           {/* Secondary Glow Ring */}
           <div className="absolute inset-8 bg-gradient-radial from-emerald-400/15 via-blue-400/8 to-transparent rounded-full animate-pulse-glow-delayed" />
 

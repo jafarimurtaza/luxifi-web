@@ -7,7 +7,7 @@ export function HouseVisualization({
 }) {
   return (
     <div className="relative">
-      <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[480px] p-3 sm:p-4 lg:p-6">
+      <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[480px] p-3 sm:p-4">
         {/* Enhanced House Image Container */}
         <div className="relative w-full h-full overflow-hidden p-2 sm:p-3 lg:p-4">
           <img

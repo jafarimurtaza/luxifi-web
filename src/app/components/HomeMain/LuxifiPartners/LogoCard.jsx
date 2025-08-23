@@ -15,7 +15,9 @@ export function LogoCard({ brand }) {
             />
           ) : (
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br  rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg sm:text-xl">{brand.name.charAt(0)}</span>
+              <span className="text-black font-bold text-lg sm:text-xl">
+                {brand.name.charAt(0)}
+              </span>
             </div>
           )}
         </div>
@@ -27,5 +29,5 @@ export function LogoCard({ brand }) {
         </span>
       </div>
     </div>
-  )
+  );
 }
