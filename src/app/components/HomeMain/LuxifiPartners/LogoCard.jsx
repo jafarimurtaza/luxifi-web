@@ -2,7 +2,7 @@ export function LogoCard({ brand }) {
   return (
     <div className="group relative flex-shrink-0 w-full flex flex-col items-center">
       {/* Inner glow effect */}
-      <div className="relative w-40 h-28 sm:w-48 sm:h-32 p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:-rotate-1 hover:shadow-2xl hover:shadow-amber-500/20">
+      <div className="relative w-36 h-36 rounded-full sm:w-40 sm:h-40 p-4 sm:p-6  bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:-rotate-1 hover:shadow-2xl hover:shadow-amber-500/20">
         {/* Shine effect */}
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
 
@@ -22,7 +22,7 @@ export function LogoCard({ brand }) {
       </div>
 
       <div className="mt-3 sm:mt-4 text-center w-full max-w-[200px]">
-        <span className="text-amber-400 text-sm sm:text-base font-semibold tracking-wide uppercase text-shadow-sm block">
+        <span className="text-base-content text-sm sm:text-base font-semibold tracking-wide uppercase text-shadow-sm block">
           {brand.name}
         </span>
       </div>
