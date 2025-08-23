@@ -28,7 +28,7 @@ export function SolutionDetails({ solution, isTransitioning }) {
               >
                 {/* Enhanced problem display for objects with title and quote */}
                 {typeof problem === "object" && problem.title ? (
-                  <div className="bg-gray-800/30 rounded-lg p-4 border-l-4 border-red-500/60 h-full">
+                  <div className="bg-gray-800/30 rounded-lg p-4 border-l-4 border-white h-full">
                     <div className="flex items-start space-x-3">
                       <div className="flex-shrink-0 mt-1">
                         <div className="w-3 h-3 bg-red-500 rounded-full shadow-lg"></div>
@@ -62,7 +62,7 @@ export function SolutionDetails({ solution, isTransitioning }) {
       {solution.conclusion && (
         <div className="border-t border-gray-700/50 pt-6">
           <div className="bg-gray-800/40 rounded-lg p-4 border border-gray-700/30">
-            <p className="text-gray-200 leading-relaxed italic text-center">
+            <p className="text-green-600 leading-relaxed italic text-center font-extrabold">
               {solution.conclusion}
             </p>
           </div>

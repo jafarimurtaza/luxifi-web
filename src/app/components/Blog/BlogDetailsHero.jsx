@@ -2,6 +2,7 @@ import Image from "next/image";
 import { AiOutlineCalendar, AiOutlineUser } from "react-icons/ai";
 import { formatDate } from "../../lib/utils/dateFormatter";
 import ShareButton from "./ShareButton";
+import { WEBSITE_DETAILS } from "../../lib/constants";
 
 export default function BlogDetailsHero({ post }) {
   return (
@@ -28,7 +29,7 @@ export default function BlogDetailsHero({ post }) {
             <AiOutlineCalendar size={16} /> {formatDate(post.publishedAt)}
           </span>
           <span className="flex items-center gap-1">
-            <AiOutlineUser size={16} /> Luxifi Team
+            <AiOutlineUser size={16} /> {WEBSITE_DETAILS.AUTHOR}
           </span>
         </div>
 

@@ -1,40 +1,80 @@
-"use client"
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { testimonials } from "../../../lib/data/homedata";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import { Quote } from "lucide-react"
-import Description from "../../Layout/Descriptions/Description"
+const splideOptions = {
+  type: "loop",
+  perPage: 1,
+  perMove: 1,
+  arrows: false,
+  pagination: true,
+  autoplay: false,
+  speed: 1000,
+  easing: "ease-out",
+  focus: "center",
+  trimSpace: false,
+};
 
-
-export function TestimonialCard({ testimonial, index }) {
+export default function TestimonialStack() {
   return (
-    <div className="group relative h-full">
-      <div className="relative bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-4 h-full border border-white/[0.12] transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-white/[0.12] group-hover:to-white/[0.04] group-hover:border-white/[0.2]">
-        <div className="mb-4 md:mb-5">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg md:rounded-xl flex items-center justify-center transition-all duration-300 border border-white/10">
-            <Quote className="w-5 h-5 md:w-6 md:h-6 text-white/90" />
-          </div>
-        </div>
+    <>
+      <Splide
+        options={splideOptions}
+        className="relative w-full max-w-3xl h-[400px] p-4 sm:h-[420px] md:h-[440px] lg:h-[460px] mx-auto px-4 md:px-0"
+      >
+        {testimonials.map((card, idx) => {
+          const rotation =
+            idx === 0 ? "rotate-2" : idx === 1 ? "-rotate-1" : "rotate-1";
+          const zIndex = 10 - idx;
 
-        <div className="mb-4 md:mb-6 flex-1">
-          <div className="text-white/95 text-sm  leading-relaxed font-light">
-            <Description description={testimonial.text} />
-          </div>
-        </div>
+          return (
+            <SplideSlide
+              key={`${card.name}-${idx}`}
+              className={`w-full !h-full cursor-pointer transition-all duration-500 ${rotation}`}
+              style={{
+                height: "100% !important",
+                zIndex,
+              }}
+            >
+              <div className="relative w-full h-full rounded-2xl bg-black border-2 border-primary p-8 sm:p-10 md:p-12 shadow-[0_8px_30px_rgba(255,193,7,0.3),0_12px_40px_rgba(255,193,7,0.2)] flex flex-col justify-between text-center">
+                {/* Calendar Hook on Top */}
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-12 bg-black border-2 border-primary rounded-b-lg shadow-[0_4px_12px_rgba(255,193,7,0.3)]">
+                  <div className="absolute left-1/2 top-3 h-1.5 w-12 -translate-x-1/2 rounded-full bg-primary shadow-[inset_0_1px_3px_rgba(255,193,7,0.2)]" />
+                </div>
 
-        <div className="border-t border-white/[0.08]  pt-4 md:pt-5">
-          <div className="flex items-center gap-3 md:gap-4">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gray-700/80 to-gray-900/80 rounded-lg md:rounded-xl flex items-center justify-center text-base md:text-lg font-bold text-white border border-white/10 backdrop-blur-sm flex-shrink-0">
-              {testimonial.avatar}
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="font-bold text-white text-sm md:text-base mb-1 tracking-wide truncate">
-                {testimonial.name}
+                {/* Company Logo Placeholder */}
+                <div className="flex justify-center mb-8">
+                  <div className="w-16 h-16 bg-gray-800 border border-primary rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-primary rounded opacity-80"></div>
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="text-lg sm:text-xl md:text-2xl font-medium text-white leading-relaxed max-w-lg">
+                    <span className="text-4xl text-primary font-serif">"</span>
+                    {card.text}
+                    <span className="text-4xl text-primary font-serif">"</span>
+                  </div>
+                </div>
+
+                {/* Author Info */}
+                <div className="mt-8 pt-6 border-t border-primary/30">
+                  <div className="text-center">
+                    <h4 className="text-lg font-semibold text-white mb-1">
+                      {card.name}
+                    </h4>
+                    <p className="text-sm text-gray-300">
+                      {card.title} — {card.location}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="text-blue-400 text-xs md:text-sm font-semibold mb-0.5 truncate">{testimonial.title}</div>
-              <div className="text-white/60 text-xs font-medium truncate">{testimonial.location}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+            </SplideSlide>
+          );
+        })}
+      </Splide>
+    </>
+  );
 }

@@ -14,22 +14,6 @@ export default function ContactForm() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById("contact-form");
-    if (element) observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -56,12 +40,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="py-16">
-      <div
-        className={`max-w-4xl mx-auto transition-all duration-1000 ${
-          isVisible ? "animate-fade-in-up" : "opacity-0"
-        }`}
-      >
+    <section className="py-16" id="book-consultation">
+      <div className={`max-w-4xl mx-auto transition-all duration-1000`}>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Start Your <span className="text-primary">WiFi Journey</span>
