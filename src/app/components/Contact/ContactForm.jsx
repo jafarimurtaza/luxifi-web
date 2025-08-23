@@ -8,6 +8,7 @@ export default function ContactForm() {
     email: "",
     company: "",
     phone: "",
+    service: "",
     message: "",
   });
   const [isVisible, setIsVisible] = useState(false);
@@ -108,6 +109,35 @@ export default function ContactForm() {
                 />
               </div>
             </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-foreground">
+                Service Interest
+              </label>
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full px-4 py-3 cursor-pointer bg-input border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+              >
+                <option value="">Select a service</option>
+                <option value="enterprise-wifi">
+                  Enterprise WiFi Solutions
+                </option>
+                <option value="network-design">
+                  Network Design & Planning
+                </option>
+                <option value="wifi-installation">
+                  WiFi Installation & Setup
+                </option>
+                <option value="network-security">
+                  Network Security Solutions
+                </option>
+                <option value="maintenance">Maintenance & Support</option>
+                <option value="consultation">Technical Consultation</option>
+              </select>
+            </div>
+
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground">
                 Project Details *
@@ -126,7 +156,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full cursor-pointer bg-primary hover:bg-base-content hover:text-primary text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full cursor-pointer bg-primary hover:bg-text-base text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">

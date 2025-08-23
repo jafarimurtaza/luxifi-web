@@ -1,54 +1,61 @@
-"use client"
+"use client";
 
 export default function ContactFooter() {
   const socialLinks = [
     {
+      name: "Google",
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21.35 11.1h-9.4v2.9h5.4c-.25 1.4-1.6 4.1-5.4 4.1-3.25 0-5.9-2.7-5.9-6s2.65-6 5.9-6c1.85 0 3.1.8 3.8 1.5l2.6-2.5C16.6 3.6 14.2 2.5 11 2.5 5.9 2.5 1.9 6.5 1.9 11.5s4 9 9.1 9c5.25 0 8.7-3.7 8.7-8.9 0-.6-.1-1-.25-1.5z" />
+        </svg>
+      ),
+      href: "https://g.page/r/CeTMjhiF6gwJEAE/review",
+    },
+    {
+      name: "Yelp",
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21.46 16.87c-.17-.58-.74-.91-1.3-.74l-3.77 1.1c-.55.16-.86.75-.7 1.31l1.1 3.78c.16.56.74.89 1.3.73l3.77-1.1c.55-.16.87-.75.7-1.31l-1.1-3.77zM15.74 12.36c.47-.38.47-1.1 0-1.49l-3.14-2.51c-.47-.38-1.18-.09-1.28.51l-.62 3.94c-.1.6.4 1.12 1 .98l3.94-.62c.26-.04.49-.18.65-.39zM12.07 2.54c-.6-.1-1.13.43-1 .98l.62 3.94c.1.6.81.89 1.28.51l3.14-2.51c.47-.38.47-1.1 0-1.49L12.07 2.54zM7.34 8.08c.26.21.6.29.91.22l3.94-.62c.6-.1.89-.81.51-1.28L10.19 2.9c-.38-.47-1.1-.47-1.49 0L6.19 6.05c-.38.47-.09 1.18.51 1.28l.64.1zM7.38 12.36l-3.94.62c-.6.1-.89.81-.51 1.28l2.51 3.14c.38.47 1.1.47 1.49 0l2.51-3.14c.38-.47.09-1.18-.51-1.28l-3.55-.62z" />
+        </svg>
+      ),
+      href: "https://www.yelp.com/biz/luxifi-houston",
+    },
+    {
+      name: "Pinterest",
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.04 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.14 2.53 7.68 6.15 9.18-.09-.78-.17-1.98.04-2.84.19-.81 1.23-5.18 1.23-5.18s-.31-.62-.31-1.53c0-1.43.83-2.5 1.86-2.5.88 0 1.31.66 1.31 1.46 0 .89-.56 2.21-.85 3.44-.24 1.01.5 1.83 1.49 1.83 1.79 0 3.16-1.89 3.16-4.61 0-2.41-1.73-4.09-4.2-4.09-2.86 0-4.55 2.14-4.55 4.35 0 .87.34 1.81.77 2.32.08.1.09.19.07.29-.07.32-.23 1.01-.26 1.15-.04.19-.15.23-.35.14-1.31-.61-2.13-2.52-2.13-4.05 0-3.31 2.4-6.35 6.93-6.35 3.63 0 6.45 2.59 6.45 6.05 0 3.61-2.27 6.52-5.43 6.52-1.06 0-2.05-.55-2.39-1.2l-.65 2.48c-.23.87-.86 1.96-1.29 2.63.97.3 2 .47 3.08.47 5.5 0 9.96-4.46 9.96-9.96s-4.46-9.96-9.96-9.96z" />
+        </svg>
+      ),
+      href: "https://pin.it/4bPdParIk",
+    },
+    {
       name: "LinkedIn",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
         </svg>
       ),
-      href: "#",
+      href: "https://www.linkedin.com/company/luxifi-tx/about/",
     },
-    {
-      name: "Twitter",
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-        </svg>
-      ),
-      href: "#",
-    },
-    {
-      name: "GitHub",
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg>
-      ),
-      href: "#",
-    },
-  ]
+  ];
 
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 border-amber-50 border-2 rounded-lg flex items-center justify-center">
-             <img src="/images/home/logo.png"
-             alt="Logo"
-             className="bg-contain"
-             />
-            </div>
-            <span className="text-xl font-bold text-foreground">WiFi Solutions</span>
+            <span className="text-xl font-bold text-foreground">
+              WiFi Solutions
+            </span>
           </div>
           <div className="flex justify-center md:justify-end space-x-4">
             {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-secondary hover:bg-primary text-secondary-foreground hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                 aria-label={social.name}
               >
@@ -61,10 +68,13 @@ export default function ContactFooter() {
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             Empowering connectivity through innovative WiFi solutions.
-            <span className="text-accent"> Ready to transform your network?</span>
+            <span className="text-accent">
+              {" "}
+              Ready to transform your network?
+            </span>
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

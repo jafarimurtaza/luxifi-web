@@ -97,13 +97,13 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-8 overflow-hidden">
+ 
+    <div className="min-h-screen  flex items-center justify-center p-8 overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         {/* Header Section - restored original styling */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-primary pb-10 mb-4 leading-tight">
             What Client Are Saying
-
           </h1>
        
         </div>
@@ -239,5 +239,6 @@ export default function Testimonials() {
         </div>
       </div>
     </div>
+    
   )
 }
