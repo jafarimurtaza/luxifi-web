@@ -34,22 +34,22 @@ export default function CardLayout({
       variants={variants}
       className="w-full rounded-xl overflow-hidden shadow-xl grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
     >
-      {/* Image */}
-      <div
-        className={`${
-          isLeft ? "md:order-1" : "md:order-2"
-        } order-1`} // always first on mobile
-      >
-        <RenderImage src={image} />
-      </div>
-
-      {/* Content */}
+      {/* Content first on mobile */}
       <div
         className={`${
           isLeft ? "md:order-2" : "md:order-1"
-        } order-2`} // always second on mobile
+        } order-1`} // content first on mobile
       >
         <RenderContent>{children}</RenderContent>
+      </div>
+
+      {/* Image second on mobile */}
+      <div
+        className={`${
+          isLeft ? "md:order-1" : "md:order-2"
+        } order-2`} // image second on mobile
+      >
+        <RenderImage src={image} />
       </div>
     </motion.div>
   );

@@ -1,13 +1,10 @@
 "use client";
 
 import Description from "../Layout/Descriptions/Description";
-import LinearLeft from "../Layout/Images/LinearLeft";
-import RenderBigIntroImage from "../Layout/Images/RenderBigIntroImage";
 import SectionTitle from "../Layout/Titles/SectionTitle";
 import IntroImage from "../Layout/Images/IntroImage";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
-import Link from "next/link";
 
 function mulberry32(seed) {
   let t = seed + 0x6d2b79f5;
@@ -36,6 +33,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative px-4 flex flex-col items-center justify-center md:min-h-screen overflow-hidden">
+      <IntroImage src={"/images/approach/villa-house.jpg"} alt="Hero Image" />
       {/* Dimmed overlay for contrast */}
       <div className="absolute inset-0 bg-black/50" />
       {/* Animated Background Gradient */}
