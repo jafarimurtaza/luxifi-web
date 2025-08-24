@@ -14,6 +14,7 @@ export const BLOG = {
 export const TAGS = {
   BLOGS: "blogs",
   BLOG_DETAILS: "blog-details",
+  MAINTENANCE_PLANS: "maintenance-plans",
 };
 
 export const WEBSITE_DETAILS = {
@@ -24,4 +25,10 @@ export const WEBSITE_DETAILS = {
   IMAGE: "/images/",
   LOGO: "/images/logo.png",
   AUTHOR: "Adam Taheri",
+};
+
+export const PLAN_CONFIG = {
+  BANK_PAYMENT_LINK: "/bank-account",
+  CAMERA_MONTHLY_PRICE: 25,
+  CAMERA_YEARLY_PRICE: 100,
 };

@@ -3,27 +3,39 @@
 import { useState } from "react";
 import CountUp from "react-countup";
 import { FiChevronDown } from "react-icons/fi";
+import ReactMarkdown from "react-markdown";
+import { PLAN_CONFIG } from "../../../lib/constants";
 
 export default function PriceCard({ plan, isMonthly }) {
   const cameraOptions = [
     "Select Cameras",
     "No Cameras",
-    isMonthly
-      ? "Add Camera Maintenance +$25"
-      : "Add Camera Maintenance +$100",
+    isMonthly ? "Add Camera Maintenance +$25" : "Add Camera Maintenance +$100",
   ];
 
   const [selectedCamera, setSelectedCamera] = useState(cameraOptions[0]);
 
-  const hasPrice = plan.priceMonthly !== null && plan.priceAnnual !== null;
+  // Convert API string prices to numbers for proper calculations
+  const monthlyPrice = parseFloat(
+    plan.price_monthly ?? plan.priceMonthly ?? plan.monthly ?? null
+  );
+  const annualPrice = parseFloat(
+    plan.price_annual ?? plan.priceAnnual ?? plan.annual ?? null
+  );
 
-  const basePrice = isMonthly ? plan.priceMonthly : plan.priceAnnual;
+  const hasPrice =
+    !isNaN(monthlyPrice) &&
+    !isNaN(annualPrice) &&
+    monthlyPrice !== null &&
+    annualPrice !== null;
+
+  const basePrice = isMonthly ? monthlyPrice : annualPrice;
 
   const extraCost =
     selectedCamera === cameraOptions[2]
       ? isMonthly
-        ? 25
-        : 100
+        ? PLAN_CONFIG.CAMERA_MONTHLY_PRICE
+        : PLAN_CONFIG.CAMERA_YEARLY_PRICE
       : 0;
 
   const totalPrice = hasPrice ? basePrice + extraCost : null;
@@ -49,16 +61,15 @@ export default function PriceCard({ plan, isMonthly }) {
             </div>
 
             {/* Discount indicator for annual billing */}
-            {!isMonthly && (
+            {!isMonthly && monthlyPrice && annualPrice && (
               <div className="mt-2 text-xl text-base-content">
                 <span className="line-through opacity-70 mr-2">
-                  ${plan.priceMonthly * 12} / year
+                  ${monthlyPrice * 12} / year
                 </span>
                 <span className="text-primary font-semibold">
                   Save{" "}
                   {Math.round(
-                    ((plan.priceMonthly * 12 - plan.priceAnnual) /
-                      (plan.priceMonthly * 12)) *
+                    ((monthlyPrice * 12 - annualPrice) / (monthlyPrice * 12)) *
                       100
                   )}
                   %
@@ -75,7 +86,7 @@ export default function PriceCard({ plan, isMonthly }) {
         {/* Description */}
         <p className="mb-6 text-base-content">{plan.description}</p>
 
-        <Section title="Best For" items={plan.bestFor} />
+        <Section title="Best For" items={plan.best_for} />
         <Section title="Includes" items={plan.includes} />
       </div>
 
@@ -122,14 +133,21 @@ export default function PriceCard({ plan, isMonthly }) {
 }
 
 function Section({ title, items }) {
+  const customComponents = {
+    ul: ({ children }) => (
+      <ul className="mb-4 space-y-1 list-disc list-inside text-base-content">
+        {children}
+      </ul>
+    ),
+
+    li: ({ children }) => <li className="text-base-content">{children}</li>,
+    p: ({ children }) => <p className="mb-2 text-base-content">{children}</p>,
+  };
+
   return (
     <>
-      <p className="mb-2 text-lg font-bold uppercase text-primary">{title}</p>
-      <ul className="mb-6 list-inside list-disc space-y-1 text-base-content">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <p className="text-lg font-bold uppercase text-primary">{title}</p>
+      <ReactMarkdown components={customComponents}>{items}</ReactMarkdown>
     </>
   );
 }

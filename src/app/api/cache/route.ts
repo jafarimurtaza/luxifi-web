@@ -4,6 +4,7 @@ import { TAGS } from "../../lib/constants";
 export async function GET() {
   revalidateTag(TAGS.BLOGS);
   revalidateTag(TAGS.BLOG_DETAILS);
+  revalidateTag(TAGS.MAINTENANCE_PLANS);
   return new Response(JSON.stringify({ message: "Cache revalidated" }), {
     status: 200,
     headers: { "Content-Type": "application/json" },

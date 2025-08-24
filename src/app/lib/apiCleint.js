@@ -42,3 +42,12 @@ export async function getBlogDetails(slug) {
     message: "Failed to fetch blog details",
   });
 }
+
+export async function getMaintenancePlans() {
+  return endpointTemplate({
+    endpoint: "plans",
+    params: `sort=id:ASC`,
+    tags: [TAGS.MAINTENANCE_PLANS],
+    message: "Failed to fetch maintenance plans",
+  });
+}
