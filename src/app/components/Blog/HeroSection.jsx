@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useMemo } from "react";
 import Description from "../Layout/Descriptions/Description";
 import SectionTitle from "../Layout/Titles/SectionTitle";
+import IntroImage from "../Layout/Images/IntroImage";
 
 function mulberry32(seed) {
   let t = seed + 0x6d2b79f5;
@@ -32,6 +33,11 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex flex-col items-center md:min-h-screen md:justify-center px-4 overflow-hidden">
+       <IntroImage
+              src={"/images/blog/hero.jpg"}
+              alt="Hero Image - Blog"
+              className="!top-0"
+            />
       {/* Enhanced overlay for better readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/40 pointer-events-none" />
 

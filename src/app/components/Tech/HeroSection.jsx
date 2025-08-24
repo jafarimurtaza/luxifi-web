@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import FeatureCards from "../Layout/Cards/FeatureCards";
 import Description from "../Layout/Descriptions/Description";
 import SectionTitle from "../Layout/Titles/SectionTitle";
+import IntroImage from "../Layout/Images/IntroImage";
 
 const features = [
   { title: "Engineered to Perform.", href: "#network" },
@@ -14,6 +15,7 @@ const features = [
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col items-center md:min-h-screen md:justify-center px-4">
+      <IntroImage src={"/images/tech/intro-house-image.jpg"} alt="Hero Image" />
       {/* Soft overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-black/30 pointer-events-none" />
 
