@@ -1,9 +1,7 @@
 import React from "react";
 import { ContactHero } from "./ContactHero";
-
-
-import ContactForm from "./ContactForm";
 import ContactFooter from "./ContactFooter";
+import ContactForm from "./ContactForm/ContactForm";
 
 export default function ContactSection() {
   return (

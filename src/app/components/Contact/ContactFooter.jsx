@@ -48,7 +48,7 @@ export default function ContactFooter() {
           {/* Left side (Brand name) */}
           <div className="flex justify-center md:justify-start">
             <span className="text-xl font-bold text-foreground">
-             Luxifi WiFi Solutions
+              Luxifi WiFi Solutions
             </span>
           </div>
 
@@ -73,7 +73,10 @@ export default function ContactFooter() {
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             Empowering connectivity through innovative WiFi solutions.
-            <span className="text-accent"> Ready to transform your network?</span>
+            <span className="text-accent">
+              {" "}
+              Ready to transform your network?
+            </span>
           </p>
         </div>
       </div>
