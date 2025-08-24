@@ -25,13 +25,24 @@ export function LuxifiPartners() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-16">
         {/* Main content */}
         <div className="text-center max-w-4xl mx-auto mb-6">
-          <SectionTitle
-            title="Seamless Technology. Luxurious Experience."
-            textClassName=" text-soft-shadow"
-          />
-
+        <SectionTitle
+  title={
+    <span className="
+      text-4xl md:text-5xl 
+      font-extrabold 
+      leading-snug md:leading-tight 
+      text-center
+      bg-gradient-to-r from-gray-500 via-gray-300 to-gray-500
+      bg-clip-text text-transparent
+      drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]
+    ">
+      Seamless Technology Luxurious <br className="hidden md:block" /> Experience
+    </span>
+  }
+  
+/>
           <Description
-            textClassName="text-white/90 text-soft-shadow"
+            textClassName="text-base-content text-soft-shadow"
             description={`Luxifi integrates world-class, enterprise-grade solutions — engineered for unmatched speed, security, and
             stability. Every connection is crafted with precision and elegance.`}
           />

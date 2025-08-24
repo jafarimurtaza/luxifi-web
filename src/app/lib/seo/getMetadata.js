@@ -1,5 +1,6 @@
 // lib/seo/getMetadata.js
 import { WEBSITE_DETAILS } from "../constants";
+import { companyInfo, generateLocalBusinessSchema } from "./pageData";
 
 export function getMetadata({
   title,
@@ -12,16 +13,21 @@ export function getMetadata({
   author = WEBSITE_DETAILS.AUTHOR,
   publishedTime = null,
   modifiedTime = null,
+  includeBusinessSchema = false,
 }) {
   const baseTitle = title ? `${title} | Luxifi` : "Luxifi — Premium Home WiFi";
   const finalDescription =
     description ||
     "Premium whole-home WiFi installation in Houston — design, install, optimize.";
 
+  // Merge business keywords with page-specific keywords
+  const businessKeywords = includeBusinessSchema ? companyInfo.keywords : [];
+  const allKeywords = [...new Set([...keywords, ...businessKeywords])];
+
   const metadata = {
     title: baseTitle,
     description: finalDescription,
-    keywords: keywords.join(", "),
+    keywords: allKeywords.join(", "),
 
     // Canonical URL
     alternates: { canonical },
@@ -71,7 +77,7 @@ export function getMetadata({
       },
     },
 
-    // Additional metadata
+    // Additional metadata for business
     category: "Technology",
     classification: "WiFi Installation Services",
 
@@ -88,11 +94,32 @@ export function getMetadata({
     metadata.openGraph.tags = keywords;
   }
 
-  // Add structured data if provided
+  // Add structured data
+  const finalStructuredData = [];
+
+  // Add business schema if requested
+  if (includeBusinessSchema) {
+    finalStructuredData.push(generateLocalBusinessSchema());
+  }
+
+  // Add custom structured data if provided
   if (structuredData) {
+    if (Array.isArray(structuredData)) {
+      finalStructuredData.push(...structuredData);
+    } else {
+      finalStructuredData.push(structuredData);
+    }
+  }
+
+  // Add structured data to metadata if any exists
+  if (finalStructuredData.length > 0) {
     metadata.other = {
       ...metadata.other,
-      "application/ld+json": JSON.stringify(structuredData),
+      "application/ld+json": JSON.stringify(
+        finalStructuredData.length === 1
+          ? finalStructuredData[0]
+          : finalStructuredData
+      ),
     };
   }
 
@@ -112,5 +139,23 @@ export function getBlogMetadata(blogData) {
     modifiedTime: blogData.modifiedTime,
     author: blogData.author,
     structuredData: blogData.structuredData,
+  });
+}
+
+// Helper function for business pages (homepage, services, contact)
+export function getBusinessMetadata(pageData) {
+  return getMetadata({
+    title: pageData.title,
+    description:
+      pageData.description ||
+      `${companyInfo.description} Serving ${companyInfo.serviceArea.join(
+        ", "
+      )}.`,
+    canonical: pageData.canonical,
+    keywords: pageData.keywords || companyInfo.keywords,
+    image: pageData.image,
+    type: "website",
+    structuredData: pageData.structuredData,
+    includeBusinessSchema: true,
   });
 }
