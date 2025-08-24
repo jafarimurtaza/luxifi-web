@@ -1,6 +1,4 @@
-  
-  
-  export function ContactHero({
+export function ContactHero({
   backgroundVideo,
   title = "Let's Get You Connected",
   subtitle = "Fast. Reliable. Done Right.",
@@ -26,12 +24,14 @@
         <h1 className="text-5xl md:text-7xl font-black font-[family-name:var(--font-heading)] mb-6 tracking-tight bg-gradient-to-r from-golden via-white to-golden bg-clip-text text-transparent">
           {title}
         </h1>
-        <div className="text-2xl md:text-3xl font-bold mb-4 text-golden">{subtitle}</div>
+        <div className="text-2xl md:text-3xl font-bold mb-4 text-golden">
+          {subtitle}
+        </div>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
           {description}
         </p>
         <p className="text-xl font-medium text-white/90">{callToAction}</p>
       </div>
     </section>
-  )
+  );
 }

@@ -67,8 +67,18 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <Link href="/contact" className="hidden md:block">
-            <button className="btn btn-lg btn-outline rounded-lg cursor-pointer">
-              Get Started
+            <button
+              className="
+      relative px-6 py-3 text-lg font-semibold
+      rounded-xl cursor-pointer overflow-hidden
+      text-amber-400 border border-amber-400
+      bg-black shadow-[0_0_20px_rgba(255,191,0,0.2)]
+      transition-all duration-300
+      hover:scale-105 hover:text-black hover:bg-amber-400
+      hover:shadow-[0_0_30px_rgba(255,191,0,0.6)]
+    "
+            >
+              <span className="relative z-10">Get Started</span>
             </button>
           </Link>
 
