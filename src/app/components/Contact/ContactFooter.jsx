@@ -43,12 +43,16 @@ export default function ContactFooter() {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex items-center space-x-2">
+        {/* Responsive layout */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          {/* Left side (Brand name) */}
+          <div className="flex justify-center md:justify-start">
             <span className="text-xl font-bold text-foreground">
-              WiFi Solutions
+             Luxifi WiFi Solutions
             </span>
           </div>
+
+          {/* Right side (Social icons) */}
           <div className="flex justify-center md:justify-end space-x-4">
             {socialLinks.map((social, index) => (
               <a
@@ -65,13 +69,11 @@ export default function ContactFooter() {
           </div>
         </div>
 
+        {/* Bottom text */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             Empowering connectivity through innovative WiFi solutions.
-            <span className="text-accent">
-              {" "}
-              Ready to transform your network?
-            </span>
+            <span className="text-accent"> Ready to transform your network?</span>
           </p>
         </div>
       </div>

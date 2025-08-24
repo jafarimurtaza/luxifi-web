@@ -40,7 +40,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-16" id="book-consultation">
+    <section className="py-16 px-3" id="book-consultation">
       <div className={`max-w-4xl mx-auto transition-all duration-1000`}>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

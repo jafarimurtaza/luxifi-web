@@ -14,13 +14,51 @@ export default function FooterCTA() {
         </span>{" "}
         and experience a premium network solution today.
       </p>
-      <Link
-        href="/contact"
-        className="inline-block px-8 py-3 md:px-10 md:py-4  rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-      >
-        <button className="relative bg-base-content hover:bg-orange-600 cursor-pointer text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-colors duration-200 flex items-center gap-3 z-10">
-          <span className="text-lg tracking-wide">Get Started</span>
-          <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
+      <Link href="/contact" className="inline-block group relative">
+        <button
+          className="
+      relative flex items-center gap-3
+      px-10 py-4 rounded-full
+      font-semibold text-lg tracking-wide
+      text-black bg-base-content
+      shadow-[0_5px_20px_rgba(255,191,0,0.4)]
+      transition-all duration-300
+      hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,191,0,0.7)]
+      overflow-hidden cursor-pointer
+    "
+        >
+          {/* Text */}
+          <span className="relative z-10">Get Started</span>
+
+          {/* Arrow */}
+          <div
+            className="
+        w-0 h-0 border-l-[12px] border-l-black
+        border-t-[8px] border-t-transparent
+        border-b-[8px] border-b-transparent
+        transition-all duration-300
+        group-hover:border-l-white
+      "
+          ></div>
+
+          {/* Glowing ring */}
+          <span
+            className="
+        absolute inset-0 rounded-full border border-base-100
+        opacity-50 group-hover:opacity-80 transition-opacity duration-500
+      "
+          ></span>
+
+          {/* Golden shimmer animation */}
+          <span
+            className="
+        absolute -left-40 top-0 w-40 h-full bg-gradient-to-r 
+        from-white/20 via-white/50 to-white/20
+        transform -skew-x-12 translate-x-0
+        group-hover:translate-x-[120%]
+        transition-transform duration-1000
+      "
+          ></span>
         </button>
       </Link>
     </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Logo() {
   return (
-    <div className="flex gap-3">
+    <div className="flex">
       <Link href="/">
         <img
           src="/images/home/logo.png"
