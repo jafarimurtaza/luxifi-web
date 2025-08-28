@@ -5,6 +5,7 @@ import { testimonials } from "../../../lib/data/homedata";
 export default function TestimonialStack() {
   const [visibleCards, setVisibleCards] = useState([0, 1, 2]);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isPaused, setIsPaused] = useState(false); // pause autoplay on hover/click
   const totalCards = testimonials.length;
 
   const handleNext = () => {
@@ -18,19 +19,25 @@ export default function TestimonialStack() {
         return [...rest, nextIndex];
       });
       setIsAnimating(false);
-    }, 500);
+    }, 700); // smooth normal speed
   };
 
-  // autoplay every 2 seconds
+  // autoplay slower
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(() => {
       handleNext();
-    }, 2000);
+    }, 5000); // autoplay every 5s
     return () => clearInterval(interval);
-  }, [isAnimating]);
+  }, [isAnimating, isPaused]);
 
   return (
-    <div className="relative w-full max-w-3xl h-[300px] sm:h-[340px] md:h-[360px] lg:h-[380px] mx-auto px-4 md:px-0 cursor-pointer">
+    <div
+      className="relative w-full max-w-3xl h-[300px] sm:h-[340px] md:h-[360px] lg:h-[380px] mx-auto px-4 md:px-0 cursor-grab hover:cursor-grabbing"
+      onMouseEnter={() => setIsPaused(true)} // pause autoplay
+      onMouseLeave={() => setIsPaused(false)} // resume autoplay
+      onClick={handleNext} // click triggers normal animation
+    >
       {visibleCards.map((idx, i) => {
         const card = testimonials[idx];
         const zIndex = 10 - i;
@@ -42,7 +49,9 @@ export default function TestimonialStack() {
         return (
           <div
             key={`${card.name}-${idx}`}
-            className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ${rotation}`}
+            className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ${rotation} ${
+              isTop ? "hover:scale-[1.02] transition-transform duration-300" : ""
+            }`}
             style={{
               zIndex,
               top: offset,
@@ -90,6 +99,11 @@ export default function TestimonialStack() {
           </div>
         );
       })}
+
+      {/* Interaction Hint */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-xs sm:text-sm text-gray-400/70 select-none pointer-events-none">
+        Swipe or Click to Navigate
+      </div>
     </div>
   );
 }

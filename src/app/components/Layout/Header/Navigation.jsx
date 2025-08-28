@@ -17,29 +17,12 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // TODO: Centeraliz the menu items
   const menuItems = [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Tech",
-      href: "/tech",
-    },
-    {
-      label: "Approach",
-      href: "/approach",
-    },
-    {
-      label: "Maintenance",
-      href: "/maintenance",
-    },
-
-    {
-      label: "Blog",
-      href: "/blog",
-    },
+    { label: "Home", href: "/" },
+    { label: "Tech", href: "/tech" },
+    { label: "Approach", href: "/approach" },
+    { label: "Maintenance", href: "/maintenance" },
+    { label: "Blog", href: "/blog" },
   ];
 
   return (
@@ -51,8 +34,9 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20 z-50">
           <Logo />
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+
+          {/* Desktop & Tablet Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
@@ -66,38 +50,24 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <Link href="/contact" className="hidden md:block">
-            <button
-              className="
-      relative px-6 py-3 text-lg font-semibold
-      rounded-xl cursor-pointer overflow-hidden
-      text-amber-400 border border-amber-400
-      bg-black shadow-[0_0_20px_rgba(255,191,0,0.2)]
-      transition-all duration-300
-      hover:scale-105 hover:text-black hover:bg-amber-400
-      hover:shadow-[0_0_30px_rgba(255,191,0,0.6)]
-    "
-            >
+          <Link href="/contact" className="hidden lg:block">
+            <button className="relative px-6 py-3 text-lg font-semibold rounded-xl cursor-pointer overflow-hidden text-amber-400 border border-amber-400 bg-black shadow-[0_0_20px_rgba(255,191,0,0.2)] transition-all duration-300 hover:scale-105 hover:text-black hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(255,191,0,0.6)]">
               <span className="relative z-10">Get Started</span>
             </button>
           </Link>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile & Tablet Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden cursor-pointer w-10 h-10 flex items-center justify-center text-primary"
+            className="lg:hidden cursor-pointer w-10 h-10 flex items-center justify-center text-primary"
           >
-            {isOpen ? (
-              <X className="w-6 h-6 cursor-pointer" />
-            ) : (
-              <Menu className="w-6 h-6 cursor-pointer" />
-            )}
+            {isOpen ? <X className="w-6 h-6 cursor-pointer" /> : <Menu className="w-6 h-6 cursor-pointer" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile & Tablet Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-[#121214] backdrop-blur-md shadow-xl border-t border-white/20 h-screen">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-[#121214] backdrop-blur-md shadow-xl border-t border-white/20 min-h-screen">
             <div className="px-4 py-6 space-y-4">
               {menuItems.map((item) => (
                 <Link

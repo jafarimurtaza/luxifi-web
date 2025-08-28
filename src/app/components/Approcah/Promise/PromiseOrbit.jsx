@@ -20,8 +20,8 @@ export default function PromiseOrbit({ items }) {
       {/* Calm divider top */}
       <div className="mx-auto h-px w-24 bg-amber-500/20" />
 
-      {/* Minimal list, two columns on large screens */}
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-16">
+      {/* Minimal list, responsive layout */}
+      <div className="mt-10 grid grid-cols-1 gap-y-10 gap-x-16 lg:grid-cols-2">
         {items.map((item) => (
           <motion.article
             key={item.id}
@@ -29,9 +29,14 @@ export default function PromiseOrbit({ items }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex items-start gap-5"
+            className="
+              flex items-start gap-5
+              max-[425px]:flex-col
+              max-[425px]:items-center
+              max-[425px]:text-center
+            "
           >
-            {/* Quiet icon badge */}
+            {/* Icon badge */}
             <div className="flex-none rounded-xl border border-amber-500/20 bg-base-200/50 p-3 text-primary shadow-sm">
               <PromiseIcon className="scale-90" iconType={item.iconType} />
             </div>

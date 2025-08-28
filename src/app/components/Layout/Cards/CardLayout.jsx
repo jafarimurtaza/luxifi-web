@@ -18,7 +18,7 @@ const RenderImage = ({ src, alt = "Render image" }) => (
 );
 
 const RenderContent = ({ children }) => (
-  <div className="p-4 w-full flex items-center justify-center text-left bg-base-100">
+  <div className="p-4 w-full h-full flex items-start text-left bg-base-100">
     <div className="max-w-xl">{children}</div>
   </div>
 );
