@@ -5,7 +5,7 @@ import { TECH_CARD_TABS } from "../../lib/constants";
 
 function RenderTabContent({ children }) {
   return (
-    <pre className="whitespace-pre-wrap text-base md:text-2xl lg:text-3xl leading-snug font-sans text-base-content h-auto">
+    <pre className="whitespace-pre-wrap text-base md:text-2xl lg:text-3xl leading-snug font-sans text-base-content h-auto md:h-[16rem] lg:h-[18rem]">
       {children}
     </pre>
   );
