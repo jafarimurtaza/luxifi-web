@@ -13,7 +13,7 @@ export default function HowWeWork() {
 
   return (
     <div className="min-h-screen bg-black text-white  px-3">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 py-8">
         {/* Section Title */}
         <div className="text-center mb-6">
           {!isApprocah && <SectionTitle title="how it works" />}
@@ -32,7 +32,7 @@ export default function HowWeWork() {
         {/* Learn More Button */}
         <div className="text-center">
           <button
-            className="px-12 cursor-pointer py-4 border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-white/50 hover:bg-white/5 transition-all duration-300"
+            className="px-12 cursor-pointer py-4 border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-white/50 hover:bg-white/5 transition-all duration-300 mb-12"
             style={{
               boxShadow: `
                 0px 4px 16px rgba(255, 255, 255, 0.1),

@@ -73,6 +73,7 @@ export default function HeroSection() {
             <SectionTitle
               title="How We Set the Bar"
               textClassName="text-white text-soft-shadow"
+              className="mt-20"
             />
 
             {/* Animated underline with gradient */}
@@ -145,14 +146,16 @@ export default function HeroSection() {
           className="pt-8"
         >
           <motion.button
-            className="relative group px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl"
+            className="relative mb-4 group px-4 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl"
             whileHover={{
               scale: 1.05,
             }}
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative z-10">
-              <span className="text-2xl capitalize">how it works</span>
+              <span className="text-baes lg:text-2xl capitalize">
+                how it works
+              </span>
             </div>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-orange-600 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"

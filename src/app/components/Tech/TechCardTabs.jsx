@@ -3,11 +3,28 @@
 import { useState } from "react";
 import { TECH_CARD_TABS } from "../../lib/constants";
 
-function RenderTabContent({ children }) {
+function RenderTabContent({ children, isFeatures = false }) {
+  if (isFeatures) {
+    // Convert bullet points to proper list items
+    const features = children.split("\n").filter((line) => line.trim());
+    return (
+      <div className="space-y-3">
+        {features.map((feature, index) => (
+          <div key={index} className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+            <p className="text-base md:text-lg text-base-content leading-relaxed">
+              {feature.replace(/^•\s*/, "")}
+            </p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
-    <pre className="whitespace-pre-wrap text-base md:text-2xl lg:text-3xl leading-relaxed font-light text-base-content h-[18rem]">
+    <p className="text-base md:text-lg text-base-content leading-relaxed">
       {children}
-    </pre>
+    </p>
   );
 }
 
@@ -19,7 +36,9 @@ export default function TechCardTabs({ description, features }) {
       case TECH_CARD_TABS.DESCRIPTION:
         return <RenderTabContent>{description}</RenderTabContent>;
       case TECH_CARD_TABS.FEATURES:
-        return <RenderTabContent>{features}</RenderTabContent>;
+        return (
+          <RenderTabContent isFeatures={true}>{features}</RenderTabContent>
+        );
       default:
         return null;
     }

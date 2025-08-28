@@ -90,7 +90,7 @@ export default function PromiseSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="my-20 px-8 max-w-7xl mx-auto"
+        className="my-4 lg:my-20 px-8 max-w-7xl mx-auto"
       >
         <SectionTitle title="our promise" textClassName="text-white" />
         <Description
