@@ -12,10 +12,10 @@ export default function HowWeWork() {
   const isApprocah = router.includes("approach");
 
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-3">
+    <div className="min-h-screen bg-black text-white  px-3">
       <div className="container mx-auto px-6">
         {/* Section Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           {!isApprocah && <SectionTitle title="how it works" />}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             From first call to final install, we make it easy.

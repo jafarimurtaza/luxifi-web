@@ -1,4 +1,5 @@
-import BackgroundPaths from "../LastHome/background-paths";
+import BackgroundPaths from "./BackgroundPaths";
+
 
 export function HeroSection() {
   return (

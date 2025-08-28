@@ -11,9 +11,12 @@ export default function BackgroundPaths({
   const words = title.split(" ");
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+    <div className="relative min-h-screen w-full flex items-end justify-center overflow-hidden bg-black">
+      {/* Background Video */}
       <RenderSectionVideo videoPath="/videos/home-page-video.mp4" />
-      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center pb-20 sm:pb-28 md:pb-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -42,9 +45,10 @@ export default function BackgroundPaths({
               </span>
             ))}
           </h1>
+
           <Description description="Proudly Serving Houston & Surrounding Areas" />
 
-          <div className="inline-block mt-6 group relative bg-gradient-to-b from-black/10 to-white/10  dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg  overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="inline-block mt-6 group relative bg-gradient-to-b from-black/10 to-white/10 dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
             <button className="btn btn-xl btn-primary">
               <Link
                 href="/contact#book-consultation"

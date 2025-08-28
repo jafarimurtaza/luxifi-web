@@ -56,18 +56,18 @@ export default function LuxifiPromiseSection() {
   };
 
   return (
-    <div className="container mx-auto px-8 bg-black text-white py-16 min-h-screen">
+    <div className="container mx-auto px-4 md:px-8 text-white min-h-[auto] md:min-h-screen">
       <div className="w-full max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-6xl  mb-4 font-extrabold">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl mb-4 font-extrabold">
             <span className="text-base-content drop-shadow-2xl capitalize">
               the luxifi
             </span>
             <br />
             <span className="text-primary font-black capitalize">promise</span>
           </h1>
-          <p className="text-xl text-primary font-bold">
+          <p className="text-base sm:text-lg md:text-xl text-primary font-bold">
             More than service — it's an experience.
           </p>
         </div>

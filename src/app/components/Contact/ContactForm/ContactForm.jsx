@@ -98,7 +98,7 @@ export default function ContactForm() {
               className="w-full cursor-pointer bg-primary hover:bg-text-base text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               Submit
-            </button>
+            </button>l
           </form>
         </div>
       </div>

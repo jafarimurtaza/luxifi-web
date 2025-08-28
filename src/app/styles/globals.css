@@ -508,3 +508,38 @@ html {
 .splide__track--loop {
   height: 100% !important;
 }
+
+
+
+
+
+
+
+/* Make Splide pagination dots smaller in luxifipromiseSection */
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: #facc15; /* yellow-400 */
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.splide__pagination__page.is-active {
+  transform: scale(1.2);
+  opacity: 1;
+  background: #fbbf24; /* yellow-500 */
+}
+
+/* On mobile: even smaller */
+@media (max-width: 768px) {
+  .splide__pagination__page {
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 2px !important;
+  }
+
+  .splide__pagination {
+    bottom: -1.5rem !important; 
+  }
+}
