@@ -829,21 +829,21 @@ export const workSteps = [
   {
     id: 1,
     number: "01.",
-    title: "CONSULTATION",
+    title: "Consultation",
     description:
       "Schedule your free consultation. We'll walk you through the process, answer your questions, and help you understand how Luxifi works.",
   },
   {
     id: 2,
     number: "02.",
-    title: "ONSITE ASSESSMENT",
+    title: "Onsite Assessment",
     description:
       "We visit your home to evaluate layout, materials, and signal challenges. Then, we create a detailed, tailored solution — no guesswork.",
   },
   {
     id: 3,
     number: "03.",
-    title: "PROFESSIONAL INSTALLATION",
+    title: "Professional Installation",
     description:
       "Our team handles everything: cabling, hardware, configuration, testing, and training. Most installs are done in 1-2 days.",
   },

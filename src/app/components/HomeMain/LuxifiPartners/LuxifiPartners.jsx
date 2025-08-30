@@ -36,7 +36,7 @@ export function LuxifiPartners() {
       bg-clip-text text-transparent
       drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]
     ">
-      Seamless Technology Luxurious <br className="hidden md:block" /> Experience
+      Seamless Technology, <br className="hidden md:block" /> Luxurious Experience
     </span>
   }
   

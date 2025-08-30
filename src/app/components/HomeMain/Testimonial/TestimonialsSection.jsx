@@ -13,7 +13,7 @@ export default function TestimonialSection() {
       />
 
       {/* Testimonial stack */}
-      <div className="mt-8 sm:mt-12 md:mt-16">
+      <div className="p-7 md:p-14 lg:p-16 overflow-hidden">
         <TestimonialCard />
       </div>
     </section>

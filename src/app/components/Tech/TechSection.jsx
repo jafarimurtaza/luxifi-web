@@ -20,7 +20,7 @@ export default function TechSection() {
         className="relative py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24"
       >
         <div className="relative z-10">
-          <SectionTitle title="network" subTitle="technology" />
+          <SectionTitle title="network technology" />
           <Container>
             {networkTechnology?.map((card) => (
               <TechCard key={card.id} card={card} />

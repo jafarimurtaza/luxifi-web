@@ -40,9 +40,9 @@ export default function CoreServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-0">
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight animate-fade-in-up">
-            <span className=" bg-clip-text text-primary">core services</span>
+            <span className=" bg-clip-text text-primary capitalize">core services</span>
             <br />
-            <span className="bg-gradient-to-r text-base-content bg-clip-text">
+            <span className="bg-gradient-to-r text-base-content bg-clip-text capitalize">
               we specialize in:
             </span>
           </h2>
