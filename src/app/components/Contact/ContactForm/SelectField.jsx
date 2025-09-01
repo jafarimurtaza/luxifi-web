@@ -1,8 +1,9 @@
-export function SelectField({ label, name, value, onChange, options = [] }) {
+export function SelectField({ label, name, value, onChange, options = [] ,id}) {
   return (
     <div className="space-y-2">
-      <label className="text-sm font-medium text-foreground">{label}</label>
+      <label htmlFor={id} className="text-sm font-medium text-foreground ">{label}</label>
       <select
+        id={id}
         name={name}
         value={value}
         onChange={onChange}

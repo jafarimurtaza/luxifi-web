@@ -70,6 +70,8 @@ export default function ContactForm() {
             </div>
 
             <SelectField
+             
+              id="service-interest" 
               label="Service Interest"
               name="service"
               value={formData.service}
@@ -93,12 +95,13 @@ export default function ContactForm() {
               onChange={handleChange}
             />
 
-            <button
-              type="button"
-              className="w-full cursor-pointer bg-primary hover:bg-text-base text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-            >
-              Submit
-            </button>l
+          <button
+          type="button"
+          className="w-full cursor-pointer bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+        >
+          Submit
+        </button>
+
           </form>
         </div>
       </div>
