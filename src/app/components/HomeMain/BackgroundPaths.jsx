@@ -16,7 +16,7 @@ export default function BackgroundPaths({
       <RenderSectionVideo videoPath="/videos/home-page-video.mp4" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center pb-20 sm:pb-28 md:pb-32">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center pb-20 sm:pb-28 md:pb-32 lg:top-auto top-[7rem">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -49,17 +49,14 @@ export default function BackgroundPaths({
           <Description description="Proudly Serving Houston & Surrounding Areas" />
 
           <div className="inline-block mt-6 group relative bg-gradient-to-b from-black/10 to-white/10 dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <button className="btn btn-xl btn-primary">
+            <button className="btn md:btn-xl btn-lg btn-primary">
               <Link
                 href="/contact#book-consultation"
                 className="opacity-90 group-hover:opacity-100 transition-opacity"
               >
                 BOOK A CONSULTATION{" "}
               </Link>
-              <span
-                className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
-                                transition-all duration-300"
-              >
+              <span className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all duration-300">
                 →
               </span>
             </button>

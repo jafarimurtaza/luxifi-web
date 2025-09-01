@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function SolutionSection() {
   return (
     <div className="min-h-screen lg:px-10 md:px-4 text-white bg-gradient-to-br from-gray-900 via-black to-gray-800">
-      <div className="container mx-auto px-4 sm:px-6 py-12 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 py-4 lg:py-20">
         {/* Simple Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
@@ -57,15 +57,22 @@ export default function SolutionSection() {
                 <div className="absolute inset-0">
                   {/* Center overlap area */}
                   <div
-                    className="absolute lg:w-[252px] w-[100px] sm:w-[150px] md:w-[200px] lg:h-[252px] h-[100px] sm:h-[150px] md:h-[200px] rounded-full left-[62%] lg:left-[64%] top-[67%] lg:top-[69%] translate-x-[-50%] translate-y-[-50%]"
+                    className="absolute lg:w-[286px] w-[100px] sm:w-[150px] md:w-[200px] lg:h-[286px] h-[100px] sm:h-[150px] md:h-[200px] rounded-full left-[62%] lg:left-[78%] top-[67%] lg:top-[71%] translate-x-[-50%] translate-y-[-50%]"
                     style={{
                       backgroundColor: "rgb(34 197 94 / 71%)",
                       animation: "overlapGlow 6s ease-in-out infinite",
                     }}
                   />
+                  <div
+                    className="absolute lg:w-[252px] w-[100px] sm:w-[150px] md:w-[200px] lg:h-[252px] h-[100px] sm:h-[150px] md:h-[200px] rounded-full left-[78%] lg:left-[64%] top-[67%] lg:top-[69%] translate-x-[-50%] translate-y-[-50%]"
+                    style={{
+                      backgroundColor: "rgb(34 197 94 / 71%)",
+                      animation: "overlapGlow 3s ease-in-out infinite",
+                    }}
+                  />
 
                   <div
-                    className="absolute lg:w-[270px] w-[100px] sm:w-[150px] md:w-[200px] lg:h-[270px] h-[100px] sm:h-[150px] md:h-[200px] rounded-full right-[11%] top-[63%] lg:top-[63%] translate-x-[50%] translate-y-[-50%]"
+                    className="absolute lg:w-[270px] w-[100px] sm:w-[150px] md:w-[200px] lg:h-[270px] h-[100px] sm:h-[150px] md:h-[200px] rounded-full right-[2%] top-[63%] lg:top-[72%] translate-x-[50%] translate-y-[-50%]"
                     style={{
                       backgroundColor: "rgb(34 197 94 / 71%)",
                       animation: "overlapGlow 12s ease-in-out infinite",
