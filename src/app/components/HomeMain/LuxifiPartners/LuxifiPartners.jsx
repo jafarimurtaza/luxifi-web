@@ -57,7 +57,7 @@ export function LuxifiPartners() {
           {/* Desktop: Two rails */}
           <div className="hidden md:block space-y-8">
             <LogoRail brands={brands} direction="left" />
-            <LogoRail brands={brands} direction="right" />
+            {/* <LogoRail brands={brands} direction="right" /> */}
           </div>
 
           {/* Mobile: Single rail */}

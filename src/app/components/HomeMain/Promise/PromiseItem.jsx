@@ -31,7 +31,7 @@ export default function PromiseItem({ item }) {
 
   return (
     <div
-      className="flex flex-col py-4 sm:py-6 md:py-8 items-center justify-center promise-item transition-all duration-700"
+      className="flex flex-col py-6 sm:py-8 md:py-10 items-center justify-center promise-item transition-all duration-700"
       data-item-id={item.id}
     >
       <div className="relative mb-4 sm:mb-6 mt-4 sm:mt-8 md:mt-12">
@@ -50,21 +50,7 @@ export default function PromiseItem({ item }) {
           }`}
         >
           <div className="text-lg sm:text-2xl md:text-2xl">{item.icon}</div>
-          {isCenter && (
-            <>
-              <div
-                className="absolute inset-0 border-2 border-yellow-400/70 rounded-full animate-spin"
-                style={{ animationDuration: "1s" }}
-              />
-              <div
-                className="absolute inset-2 border-2 border-yellow-300/50 rounded-full animate-spin"
-                style={{
-                  animationDuration: "2s",
-                  animationDirection: "reverse",
-                }}
-              />
-            </>
-          )}
+      
         </div>
       </div>
 
@@ -73,7 +59,7 @@ export default function PromiseItem({ item }) {
           ${
             isCenter
               ? "text-primary text-sm sm:text-base md:text-lg font-black drop-shadow-lg"
-              : "text-base-content text-[10px] sm:text-sm md:text-base font-bold"
+              : "text-base-content text-[8px] sm:text-sm md:text-base font-bold"
           }`}
         style={{
           textShadow: isCenter

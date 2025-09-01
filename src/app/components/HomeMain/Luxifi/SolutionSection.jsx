@@ -10,7 +10,7 @@ export default function SolutionSection() {
         {/* Simple Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white">
-            The Luxifi Difference
+            Luxifi is Solution
           </h2>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6">
