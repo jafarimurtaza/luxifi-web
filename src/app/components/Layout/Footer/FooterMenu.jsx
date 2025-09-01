@@ -42,7 +42,7 @@ export function FooterMenu() {
 
       <div className="text-center text-xs text-gray-500 space-y-2 pt-6 border-t border-gray-800">
         <h3 className="font-semibold text-gray-400">Privacy Statement</h3>
-        <p className="max-w-3xl mx-auto text">
+        <p className="max-w-3xl mx-auto text-gray-400">
           No mobile information will be shared with third parties or affiliates
           for marketing or promotional purposes. Additionally, all categories of
           data collection exclude text messaging originator opt-in data and
