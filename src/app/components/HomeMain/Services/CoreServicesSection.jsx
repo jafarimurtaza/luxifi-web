@@ -40,7 +40,9 @@ export default function CoreServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-0">
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight animate-fade-in-up">
-            <span className=" bg-clip-text text-primary capitalize">core services</span>
+            <span className=" bg-clip-text text-primary capitalize">
+              core services
+            </span>
             <br />
             <span className="bg-gradient-to-r text-base-content bg-clip-text capitalize">
               we specialize in:
@@ -61,7 +63,10 @@ export default function CoreServicesSection() {
 
         <div className="w-full mx-auto flex items-center justify-center md:mt-10 mt-24">
           <button className="group mx-auto px-3 md:px-6 cursor-pointer py-3 md:py-4 border-2 border-white/30 text-primary font-semibold rounded-lg transition-all duration-300 hover:border-base-200 hover:shadow-lg hover:scale-105">
-            <Link href="/contact">
+            <Link
+              href="/contact"
+              aria-label="Learn More about our services / contact us"
+            >
               <span className="flex items-center gap-3">LEARN MORE</span>
             </Link>
           </button>

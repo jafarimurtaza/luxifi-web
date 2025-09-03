@@ -40,7 +40,7 @@ export default function HowWeWork() {
               `,
             }}
           >
-            <Link href="/contact">Get Started</Link>
+            <Link href="/contact" aria-label="Get Started">Get Started</Link>
           </button>
         </div>
       </div>
