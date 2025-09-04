@@ -95,6 +95,7 @@ export default function ContactForm() {
 
             <button
               type="button"
+              aria-label="Submit contact form"
               className="w-full cursor-pointer bg-primary hover:bg-text-base text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               Submit

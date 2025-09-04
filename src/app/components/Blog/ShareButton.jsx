@@ -89,6 +89,7 @@ export default function ShareButton({ post }) {
       {/* Share Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
+        aria-label="Open share options"
         className="flex items-center w-fit gap-2 px-4 py-2 bg-secondary/80 rounded-lg hover:bg-secondary hover:text-white transition-all duration-300 cursor-pointer border border-secondary/20"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -108,6 +109,9 @@ export default function ShareButton({ post }) {
               exit={{ opacity: 0 }}
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
+              aria-label="Close share popup overlay"
+              role="button"
+              tabIndex={0}
             />
 
             {/* Popup Content */}
@@ -121,6 +125,7 @@ export default function ShareButton({ post }) {
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close share popup"
                 className="absolute top-4 right-4 p-2 cursor-pointer hover:bg-base-200 rounded-full transition-colors"
               >
                 <X className="w-5 h-5 text-base-content/60" />
@@ -144,6 +149,7 @@ export default function ShareButton({ post }) {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Share this post on ${social.name}`}
                     className={`flex items-center gap-3 p-4 rounded-xl text-white transition-all duration-300 ${social.color} w-full`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -158,7 +164,8 @@ export default function ShareButton({ post }) {
               {/* Copy Link Button */}
               <motion.button
                 onClick={handleCopyLink}
-                className="w-full cursor-pointer  flex items-center justify-center gap-3 p-4 rounded-xl bg-base-200 hover:bg-base-300 text-base-content transition-all duration-300 border border-base-300"
+                aria-label="Copy link to clipboard"
+                className="w-full cursor-pointer flex items-center justify-center gap-3 p-4 rounded-xl bg-base-200 hover:bg-base-300 text-base-content transition-all duration-300 border border-base-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

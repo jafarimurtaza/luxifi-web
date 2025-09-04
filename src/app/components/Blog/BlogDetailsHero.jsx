@@ -15,6 +15,7 @@ export default function BlogDetailsHero({ post }) {
             alt={post.title}
             fill
             className="object-cover aspect-video"
+            priority={true}
           />
         </div>
       )}

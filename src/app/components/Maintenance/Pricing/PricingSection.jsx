@@ -43,6 +43,8 @@ export default function PricingSection({ plans }) {
                 {index === 2 ? (
                   <Link
                     href="/contact"
+                    aria-label="Contact us for custom plan"
+                    role="button"
                     className="w-1/2 rounded-md border border-gray-500 bg-transparent py-2 text-sm uppercase tracking-wider text-primary transition cursor-pointer hover:bg-primary hover:text-black mt-16 text-center"
                   >
                     {plan.button_label}
@@ -51,6 +53,8 @@ export default function PricingSection({ plans }) {
                   // First two buttons → Bank account page (same tab)
                   <Link
                     href={PLAN_CONFIG.BANK_PAYMENT_LINK}
+                    aria-label="Pay via bank transfer"
+                    role="button"
                     className="w-1/2 rounded-md border border-gray-500 bg-transparent py-2 text-sm uppercase tracking-wider text-primary transition cursor-pointer hover:bg-primary hover:text-black mt-4 text-center"
                   >
                     {plan.button_label}
