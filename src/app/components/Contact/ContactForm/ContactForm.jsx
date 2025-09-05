@@ -1,11 +1,9 @@
-
-"use client"
+"use client";
 
 import { useState } from "react";
 import { InputField } from "./InputField";
 import { SelectField } from "./SelectField";
 import { TextAreaField } from "./TextAreaField";
-
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -37,7 +35,7 @@ export default function ContactForm() {
               <InputField
                 label="Full Name"
                 name="name"
-                placeholder="Murtaza jafari"
+                placeholder="Your Full Name"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -45,12 +43,11 @@ export default function ContactForm() {
                 label="Email Address"
                 name="email"
                 type="email"
-                placeholder="murtaza@company.com"
+                placeholder="example@example.com"
                 value={formData.email}
                 onChange={handleChange}
               />
             </div>
-
             <div className="grid md:grid-cols-2 gap-6">
               <InputField
                 label="Company"
@@ -68,25 +65,31 @@ export default function ContactForm() {
                 onChange={handleChange}
               />
             </div>
-
             <SelectField
-             
-              id="service-interest" 
+              id="service-interest"
               label="Service Interest"
               name="service"
               value={formData.service}
               onChange={handleChange}
               options={[
                 { value: "", label: "Select a service" },
-                { value: "enterprise-wifi", label: "Enterprise WiFi Solutions" },
+                {
+                  value: "enterprise-wifi",
+                  label: "Enterprise WiFi Solutions",
+                },
                 { value: "network-design", label: "Network Design & Planning" },
-                { value: "wifi-installation", label: "WiFi Installation & Setup" },
-                { value: "network-security", label: "Network Security Solutions" },
+                {
+                  value: "wifi-installation",
+                  label: "WiFi Installation & Setup",
+                },
+                {
+                  value: "network-security",
+                  label: "Network Security Solutions",
+                },
                 { value: "maintenance", label: "Maintenance & Support" },
                 { value: "consultation", label: "Technical Consultation" },
               ]}
             />
-
             <TextAreaField
               label="Project Details"
               name="message"
@@ -94,14 +97,13 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
             />
-
-          <button
-          type="button"
-          className="w-full cursor-pointer bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-        >
-          Submit
-        </button>
-
+            <button
+              type="button"
+              aria-label="Submit contact form"
+              className="w-full cursor-pointer bg-primary hover:bg-text-base text-primary-foreground font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>

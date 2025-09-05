@@ -76,7 +76,11 @@ export default function BlogError({ error, onRetry }) {
   } = getErrorDetails(error);
 
   return (
-    <section className="relative py-20 px-4">
+    <section
+      className="relative py-20 px-4"
+      aria-labelledby="error-title"
+      role="alert"
+    >
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -90,6 +94,7 @@ export default function BlogError({ error, onRetry }) {
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="flex justify-center mb-6"
+            aria-hidden="true"
           >
             <div className="w-20 h-20 bg-gradient-to-br from-orange-500/20 to-orange-500/10 rounded-full flex items-center justify-center border border-orange-500/20">
               <IconComponent className="w-10 h-10 text-orange-500" />
@@ -98,6 +103,7 @@ export default function BlogError({ error, onRetry }) {
 
           {/* Title */}
           <motion.h2
+            id="error-title"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -136,6 +142,7 @@ export default function BlogError({ error, onRetry }) {
             {onRetry && (
               <button
                 onClick={onRetry}
+                aria-label="Retry loading blog posts"
                 className="flex items-center gap-2 px-8 py-4 bg-secondary cursor-pointer text-white rounded-xl hover:bg-primary/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl text-base"
               >
                 <RefreshCw className="w-5 h-5" />
@@ -145,6 +152,7 @@ export default function BlogError({ error, onRetry }) {
 
             <button
               onClick={() => window.location.reload()}
+              aria-label="Refresh the page"
               className="flex items-center gap-2 px-8 py-4 bg-base-200 text-base-content rounded-xl hover:bg-base-300 transition-all duration-300 font-medium border border-base-300 text-base"
             >
               <Globe className="w-5 h-5" />

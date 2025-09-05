@@ -8,7 +8,10 @@ export default function BlogNotFound() {
   const router = useRouter();
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 mt-48 lg:mt-4">
+    <section
+      className="min-h-screen flex items-center justify-center px-6 mt-48 lg:mt-4"
+      aria-labelledby="not-found-title"
+    >
       <div className="max-w-2xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,6 +25,7 @@ export default function BlogNotFound() {
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="flex justify-center"
+            aria-hidden="true"
           >
             <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center border border-primary/20">
               <FileQuestion className="w-12 h-12 text-primary" />
@@ -30,6 +34,7 @@ export default function BlogNotFound() {
 
           {/* Title */}
           <motion.h1
+            id="not-found-title"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -58,6 +63,7 @@ export default function BlogNotFound() {
           >
             <button
               onClick={() => router.back()}
+              aria-label="Go back to the previous page"
               className="flex items-center cursor-pointer gap-2 px-6 py-3 bg-secondary  rounded-xl hover:bg-primary/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -66,6 +72,7 @@ export default function BlogNotFound() {
 
             <button
               onClick={() => router.push("/blog")}
+              aria-label="Browse all blog posts"
               className="flex items-center gap-2 px-6 cursor-pointer py-3 bg-base-200 text-base-content rounded-xl hover:bg-base-300 transition-all duration-300 font-medium border border-base-300"
             >
               <Search className="w-4 h-4" />
@@ -74,6 +81,7 @@ export default function BlogNotFound() {
 
             <button
               onClick={() => router.push("/")}
+              aria-label="Return to the home page"
               className="flex items-center gap-2 px-6 py-3 cursor-pointer text-base-content/70 hover:text-primary transition-colors duration-300 font-medium"
             >
               <Home className="w-4 h-4" />
@@ -87,6 +95,7 @@ export default function BlogNotFound() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
             className="pt-8"
+            aria-hidden="true"
           >
             <div className="w-32 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 mx-auto rounded-full"></div>
           </motion.div>
