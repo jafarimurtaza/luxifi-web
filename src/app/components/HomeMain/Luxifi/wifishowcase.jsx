@@ -33,7 +33,7 @@ export default function WifiShowcase() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="container mx-auto px-4 sm:px-6 py-8">
         {/* Problem Showcase Section */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           <HouseVisualization
             solution={currentSolution}
             animationKey={animationKey}

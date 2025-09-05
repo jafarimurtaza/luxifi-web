@@ -83,9 +83,9 @@ export default function TestimonialStack() {
 
               {/* Header */}
               <div className="mb-2">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white">
+                <span className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white">
                   {card.name}
-                </h3>
+                </span>
                 <div className="text-xs sm:text-sm text-gray-300">
                   {card.title} — {card.location}
                 </div>

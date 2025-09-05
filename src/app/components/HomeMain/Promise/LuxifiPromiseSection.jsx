@@ -39,6 +39,7 @@ export default function LuxifiPromiseSection() {
     pagination: false,
     focus: "center",
     trimSpace: false,
+    accessibility: false,
     breakpoints: {
       1024: {
         perPage: 3,

@@ -10,7 +10,7 @@ export function LogoCard({ brand }) {
           {brand.image ? (
             <img
               src={brand.image || "/placeholder.svg"}
-              alt={brand.name}
+              alt={`${brand.name} logo`}
               className="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 object-contain group-hover:brightness-100 transition-all duration-300 mx-auto"
             />
           ) : (
