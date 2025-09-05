@@ -73,7 +73,7 @@ export default function ContactFooter() {
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             Empowering connectivity through innovative WiFi solutions.
-            <span className="text-accent">
+            <span className="text-primary">
               {" "}
               Ready to transform your network?
             </span>

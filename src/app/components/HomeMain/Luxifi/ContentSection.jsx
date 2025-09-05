@@ -10,7 +10,7 @@ export function ContentSection({
   isTransitioning,
 }) {
   return (
-    <div className="space-y-2 container mx-auto px-1 lg:px-6">
+    <div className="space-y-2 container mx-auto px-1 lg:px-4">
       <div>
         <SectionTitle
           title="We Get It."

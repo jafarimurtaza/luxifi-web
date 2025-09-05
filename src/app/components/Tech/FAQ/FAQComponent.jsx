@@ -19,12 +19,12 @@ function FAQItem({ isOpen, onToggle, question, answer, delay }) {
         aria-expanded={isOpen}
         className="flex justify-between items-start w-full text-left py-2 cursor-pointer group"
       >
-        <h4
+        <h3
           className="max-w-[85%] leading-snug text-primary font-semibold text-base sm:text-lg md:text-xl lg:text-2xl
           group-hover:text-primary transition-colors"
         >
           {question}
-        </h4>
+        </h3>
         <motion.span
           aria-hidden="true"
           animate={{ rotate: isOpen ? 180 : 0 }}
