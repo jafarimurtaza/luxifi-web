@@ -39,8 +39,11 @@ export default function HowWeWork() {
                 0px 0px 0px 1px rgba(255, 255, 255, 0.05)
               `,
             }}
+            aria-label="Contact us to get started"
           >
-            <Link href="/contact" aria-label="Get Started">Get Started</Link>
+            <Link href="/contact" aria-label="Contact us to get started">
+              Get Started
+            </Link>
           </button>
         </div>
       </div>

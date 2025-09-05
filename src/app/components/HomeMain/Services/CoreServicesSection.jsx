@@ -63,7 +63,7 @@ export default function CoreServicesSection() {
           <Link
             href="/contact"
             className="group mx-auto px-3 md:px-6 cursor-pointer py-3 md:py-4 border-2 border-white/30 text-primary font-semibold rounded-lg transition-all duration-300 hover:border-base-200 hover:shadow-lg hover:scale-105 flex items-center gap-3 justify-center"
-            aria-label="Learn More about our services / contact us"
+            aria-label="Contact us to learn more about our services"
           >
             LEARN MORE
           </Link>
